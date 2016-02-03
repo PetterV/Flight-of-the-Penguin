@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{846DA790-B998-DAA1-92B1-B224EC314D9C}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_7_0;UNITY_4_7;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\AnimateBouncer.cs" />
+     <Compile Include="Assets\CamShakeSimple.cs" />
+     <Compile Include="Assets\CameraShake\PeriodicShake.cs" />
+     <Compile Include="Assets\CameraShake\PerlinShake.cs" />
+     <Compile Include="Assets\CameraShake\RandomShake.cs" />
+     <Compile Include="Assets\CameraShake\Sphere.cs" />
+     <Compile Include="Assets\CameraShake\Util_Easing.cs" />
+     <Compile Include="Assets\CameraShake\Util_Noise.cs" />
+     <Compile Include="Assets\ExpoBuild\ButtonSceneChange.cs" />
+     <Compile Include="Assets\FireGoalParticles.cs" />
+     <Compile Include="Assets\FlameAnimation1Fade.cs" />
+     <Compile Include="Assets\FlameAnimation2.cs" />
+     <Compile Include="Assets\FlameAnimation3.cs" />
+     <Compile Include="Assets\FlameAnimationBoost.cs" />
+     <Compile Include="Assets\FlameAnimationBoostFade.cs" />
+     <Compile Include="Assets\FlyShake.cs" />
+     <Compile Include="Assets\LaunchShake.cs" />
+     <Compile Include="Assets\ParticleSortingLayer.cs" />
+     <Compile Include="Assets\Scripts\Adjust.cs" />
+     <Compile Include="Assets\Scripts\Bobbing.cs" />
+     <Compile Include="Assets\Scripts\Bouncer.cs" />
+     <Compile Include="Assets\Scripts\Bouncer2.cs" />
+     <Compile Include="Assets\Scripts\Button.cs" />
+     <Compile Include="Assets\Scripts\ButtonFullScreen.cs" />
+     <Compile Include="Assets\Scripts\ButtonLoadLevel.cs" />
+     <Compile Include="Assets\Scripts\ButtonMute.cs" />
+     <Compile Include="Assets\Scripts\ButtonQuitDesktop.cs" />
+     <Compile Include="Assets\Scripts\ButtonQuitToMenu.cs" />
+     <Compile Include="Assets\Scripts\CameraOffset.cs" />
+     <Compile Include="Assets\Scripts\Cannon.cs" />
+     <Compile Include="Assets\Scripts\Collectable.cs" />
+     <Compile Include="Assets\Scripts\CursorChanger.cs" />
+     <Compile Include="Assets\Scripts\DeathCounterDisplay.cs" />
+     <Compile Include="Assets\Scripts\DestructibleWall.cs" />
+     <Compile Include="Assets\Scripts\DisableBlockTrigger.cs" />
+     <Compile Include="Assets\Scripts\EventHorizon.cs" />
+     <Compile Include="Assets\Scripts\Explosion.cs" />
+     <Compile Include="Assets\Scripts\FlameAnimation1.cs" />
+     <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\JetpackSound.cs" />
+     <Compile Include="Assets\Scripts\Lazer.cs" />
+     <Compile Include="Assets\Scripts\Load.cs" />
+     <Compile Include="Assets\Scripts\LoadGameOnClick.cs" />
+     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
+     <Compile Include="Assets\Scripts\LoadOnHit.cs" />
+     <Compile Include="Assets\Scripts\MouseCursorChange.cs" />
+     <Compile Include="Assets\Scripts\MovBloFollowingPlayer.cs" />
+     <Compile Include="Assets\Scripts\MoveFields.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\MovingBlocks.cs" />
+     <Compile Include="Assets\Scripts\NewMovingBlocks.cs" />
+     <Compile Include="Assets\Scripts\ObjectLiveTime.cs" />
+     <Compile Include="Assets\Scripts\ObjectRotation.cs" />
+     <Compile Include="Assets\Scripts\OlafSigh.cs" />
+     <Compile Include="Assets\Scripts\OnOff.cs" />
+     <Compile Include="Assets\Scripts\OptionsVolumeSlider.cs" />
+     <Compile Include="Assets\Scripts\Parallaxing.cs" />
+     <Compile Include="Assets\Scripts\ParticleScript.cs" />
+     <Compile Include="Assets\Scripts\Persistence.cs" />
+     <Compile Include="Assets\Scripts\PinguNoises.cs" />
+     <Compile Include="Assets\Scripts\ResetGame.cs" />
+     <Compile Include="Assets\Scripts\Save.cs" />
+     <Compile Include="Assets\Scripts\SaveLoad.cs" />
+     <Compile Include="Assets\Scripts\ScreenShake.cs" />
+     <Compile Include="Assets\Scripts\SmoothCamera2D.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Speed.cs" />
+     <Compile Include="Assets\Scripts\SptieChanger.cs" />
+     <Compile Include="Assets\Scripts\Teleporter.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\TriggerAreaZoom.cs" />
+     <Compile Include="Assets\Scripts\TriggerMovingBlock.cs" />
+     <Compile Include="Assets\Scripts\UI.cs" />
+     <Compile Include="Assets\Scripts\resetButtonScript.cs" />
+     <Compile Include="Assets\ShowAcceptedStamp.cs" />
+     <Compile Include="Assets\SignPhysics.cs" />
+     <Compile Include="Assets\SmokeTrigger.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.7.0/Standalone/UnityEngine.UI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
