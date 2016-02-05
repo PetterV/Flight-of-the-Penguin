@@ -239,6 +239,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &961934473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 139642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+  m_PrefabInternal: {fileID: 1245005685}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 961934476}
+  - 114: {fileID: 961934475}
+  - 114: {fileID: 961934474}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &961934474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 961934473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fe53b60316d4f6095dcb4ee732c33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+--- !u!114 &961934475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11439642, guid: 41a667902a44ee8439684e721f9df4b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1245005685}
+  m_GameObject: {fileID: 961934473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22513e6cfef3497ea4b8950fb1e460c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  level1: 0
+  deathCounter: 0
+  collectable: 0
+  mute: 0
+  soundVolume: 100
+--- !u!4 &961934476
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+  m_PrefabInternal: {fileID: 1245005685}
+  m_GameObject: {fileID: 961934473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.28862, y: 9.25781918, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1060942696
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +364,50 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060942696}
+--- !u!1001 &1245005685
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 32.28862
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.25781918
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
+  m_RootGameObject: {fileID: 961934473}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1360572438
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +614,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1671078285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 961934474}
+        m_MethodName: LoadFromUIButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1671078285
