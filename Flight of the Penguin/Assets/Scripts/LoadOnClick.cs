@@ -5,8 +5,15 @@ public class LoadOnClick : MonoBehaviour {
 	public GameObject loadingScreen;
 	// Use this for initialization
 
-	public float pageWidth = 500;
 	public float buttonTransitionSpeed = 10;
+	public int numOfPages = 5;
+	public int currentPage = 0;
+
+	//Holding areas for pages
+	public GameObject holdingAreaLeft;
+	public GameObject holdingAreaCenter;
+	public GameObject holdingAreaRight;
+
 
 	public void LoadScene(int level)
 	{
@@ -35,6 +42,18 @@ public class LoadOnClick : MonoBehaviour {
 			loadingScreen.SetActive (true);
 		Application.LoadLevel (level);
 		*/
+	}
+
+	public void IncreaseCurrentPage(){
+		if (currentPage < numOfPages){
+			currentPage++;
+		}
+	}
+
+	public void DecreaseCurrentPage(){
+		if (currentPage > 0){
+			currentPage--;
+		}
 	}
 
 	public void LoadFromUIButton(int levelToLoad)
