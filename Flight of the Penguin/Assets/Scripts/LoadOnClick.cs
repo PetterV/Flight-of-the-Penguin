@@ -5,6 +5,9 @@ public class LoadOnClick : MonoBehaviour {
 	public GameObject loadingScreen;
 	// Use this for initialization
 
+	public float pageWidth = 500;
+	public float buttonTransitionSpeed = 10;
+
 	public void LoadScene(int level)
 	{
 

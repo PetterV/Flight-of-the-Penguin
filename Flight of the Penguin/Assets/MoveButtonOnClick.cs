@@ -4,35 +4,41 @@ using System.Collections;
 public class MoveButtonOnClick : MonoBehaviour {
 
 	public float posX;
-	public float frameLength = 100;
-	public float targetPosX;
-	public float moveSpeed = 10f;
-	bool moveLeft = false;
-
-	void Start (){
-		posX = transform.position.x;
-		targetPosX = posX - frameLength;
-	}
+	float frameLength = 100;
+	float targetPosX;
+	float moveSpeed = 10f;
+	bool move = false;
+	public int pageNumber;
+	int currentPage;
+	int pageToBringIn;
 
 	// Update is called once per frame
 	void Update () {
 		posX = transform.position.x;
-		if (moveLeft == true) {
-			MoveButtonLeft();
+		if (move == true) {
+			MoveButton();
 		}
 	}
 
-	void MoveButtonLeft(){
+	void MoveButton(){
 		if (posX > targetPosX){
 			float moveTo = transform.position.x - moveSpeed;
 			transform.position = new Vector3 (moveTo, transform.position.y, transform.position.z);
 		}
 		if (posX <= targetPosX) {
-			moveLeft = false;
+			move = false;
 		}
 	}
 
-	public void Activate (){
-		moveLeft = true;
+	public void ActivateLeft (){
+		targetPosX = posX - frameLength;
+		currentPage = currentPage + 1;
+		move = true;
+	}
+
+	public void ActivateRight(){
+		targetPosX = posX + frameLength;
+		currentPage = currentPage - 1;
+		move = true;
 	}
 }
