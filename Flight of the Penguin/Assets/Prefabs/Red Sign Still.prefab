@@ -11,9 +11,10 @@ GameObject:
   - 212: {fileID: 21245744}
   - 50: {fileID: 5045744}
   - 61: {fileID: 6145744}
-  m_Layer: 0
+  - 61: {fileID: 6199604}
+  m_Layer: 2
   m_Name: Red Sign Still
-  m_TagString: Untagged
+  m_TagString: PhysicsObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7440004, y: 1.829, z: 0}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
+  m_LocalPosition: {x: 14.743, y: 1.83879995, z: 0}
+  m_LocalScale: {x: .0518750027, y: .0518749841, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -36,12 +37,12 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145744}
-  m_Mass: 1
+  m_Mass: .5
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -54,8 +55,19 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 10.1000004, y: 4.96999979}
+  m_Size: {x: 10.3500004, y: 5}
   m_Center: {x: 0, y: 2.29999995}
+--- !u!61 &6199604
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145744}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 15.4700003, y: 8.44999981}
+  m_Center: {x: 0, y: 2.4000001}
 --- !u!212 &21245744
 SpriteRenderer:
   m_ObjectHideFlags: 1

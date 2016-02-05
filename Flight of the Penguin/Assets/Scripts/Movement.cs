@@ -43,10 +43,15 @@ public class Movement : MonoBehaviour {
 	//Debug mode. Prevents Dead from becoming true.
 	public bool debug = false;
 	public Camera mainCamera;
+	//??? Brukes ikke til noe i dette scriptet, men muligens i et annet, så ikke slett.
 	public int touchTimer;
 	public bool surfaceTouched;
+	//Eksplosjonsjusteringer
 	public Material explosionMaterial;
 	public Light explosionLight;
+	//Physicsobjekter
+	Rigidbody2D pObjectToActivate;
+	float torqueToAdd = 5f;
 
 	//DONE WITH VARIABLES ADDED BY PETTER
 
@@ -352,6 +357,14 @@ public class Movement : MonoBehaviour {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
 			Dead();
 			
+		}
+
+		//Activate Physics objects
+		if (other.gameObject.tag == "PhysicsObject" && other.GetComponent<Rigidbody2D>().isKinematic == true) {
+			pObjectToActivate = other.GetComponent<Rigidbody2D>();
+			pObjectToActivate.isKinematic = false;
+			torqueToAdd = UnityEngine.Random.Range(-7f, 7f);
+			pObjectToActivate.AddTorque(torqueToAdd, ForceMode2D.Force);
 		}
 		
 		if (other.gameObject.tag == "Fuel") {		
