@@ -60,11 +60,11 @@ public class LoadOnHit : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Player" && notHit) {
 			completed = true;
-			notHit = false;
 			print ("Goal!");
 			fish1.particleSystem.enableEmission = true;
 			fish2.particleSystem.enableEmission = true;
 			fish3.particleSystem.enableEmission = true;
+			notHit = false;
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
 
