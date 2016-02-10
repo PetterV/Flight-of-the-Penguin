@@ -264,7 +264,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156694}
   m_LocalRotation: {x: .696708441, y: 0, z: 0, w: .717354417}
-  m_LocalPosition: {x: -.649999976, y: -2.8499999, z: .100000001}
+  m_LocalPosition: {x: -.649999976, y: -2.8499999, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 466656}
@@ -276,7 +276,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00999999978, y: .379999995, z: 7}
+  m_LocalPosition: {x: 0, y: -.150000006, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children:
   - {fileID: 471146}
@@ -299,8 +299,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.670620024, y: -3.17700005, z: 1}
-  m_LocalScale: {x: .225000009, y: .382256299, z: 1}
+  m_LocalPosition: {x: -.670000017, y: -3.25, z: 1}
+  m_LocalScale: {x: .220921174, y: .417029589, z: .969749749}
   m_Children: []
   m_Father: {fileID: 466656}
   m_RootOrder: 5
@@ -311,8 +311,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.670620024, y: -4.65700006, z: 1}
-  m_LocalScale: {x: .13499999, y: .300000012, z: 1}
+  m_LocalPosition: {x: -.662, y: -4.66699982, z: 1}
+  m_LocalScale: {x: .150187522, y: .300000012, z: 1}
   m_Children: []
   m_Father: {fileID: 466656}
   m_RootOrder: 4
@@ -323,8 +323,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.659380019, y: -3.75, z: 1}
-  m_LocalScale: {x: .13499999, y: .283124983, z: 1}
+  m_LocalPosition: {x: -.666999996, y: -3.7579999, z: 1}
+  m_LocalScale: {x: .147612154, y: .29483372, z: 1.04135537}
   m_Children: []
   m_Father: {fileID: 466656}
   m_RootOrder: 3
@@ -347,8 +347,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.666130006, y: -2.93000007, z: 1}
-  m_LocalScale: {x: .202500015, y: .215825051, z: 1}
+  m_LocalPosition: {x: -.670000017, y: -2.93000007, z: 1}
+  m_LocalScale: {x: .220806852, y: .26475361, z: 1.09040415}
   m_Children: []
   m_Father: {fileID: 466656}
   m_RootOrder: 6
@@ -1215,16 +1215,11 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 30
+      scalar: 217.34407
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
@@ -1977,7 +1972,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5ddcea3e090b74e43864065e13632e04, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1992,7 +1987,7 @@ ParticleSystemRenderer:
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
-  m_SortMode: 0
+  m_SortMode: 2
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
