@@ -640,7 +640,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125608}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -791,30 +791,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278072b1c3bb442dd99306110ed59520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 36
-  startBoost: 40
-  MaxVelocity: 100
-  MaxCrash: 30
   Fuel: 700
   Gravity: 32
-  MouseProx: .300000012
   image: {fileID: 0}
   maxFuel: 700
-  fuelPlaySound: 0
   detectable: 1
   minFuel: 9
-  Gincrease: .449999988
   GravityStart: 20
-  GincreaseReal: 900
-  GravityFactor: 32
-  GravityDivision: 30
-  maxGravity: 70
-  drag: 1.60000002
-  dragFall: .400000006
-  AnimCrazy: 2.52999997
-  screamLength: 50
-  screamTimer: 0
-  animStateTracker: 0
   speedCounter: 0
   debug: 0
   mainCamera: {fileID: 0}
@@ -822,8 +805,6 @@ MonoBehaviour:
   surfaceTouched: 0
   explosionMaterial: {fileID: 2100000, guid: 67eace36a07d5431c960100516293701, type: 2}
   explosionLight: {fileID: 10825608}
-  jetpackActive: 0
-  mouseAway: 0
   dead: 0
   jetpackOn: 0
   jetpackOnTime: 0
@@ -2048,7 +2029,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: ead1113864ef74731a1636f14c145373, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

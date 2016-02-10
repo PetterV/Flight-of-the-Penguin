@@ -5,37 +5,37 @@ using UnityEngine.UI;
 
 public class Movement : MonoBehaviour {
 	
-	public float Acceleration = 36.0f;
-	public int startBoost = 40;
-	public float MaxVelocity = 100;
-	public float MaxCrash = 30;
+	private float Acceleration = 36.0f;
+	private int startBoost = 38;
+	private float MaxVelocity = 100;
+	private float MaxCrash = 30;
 	public float Fuel = 1000;
 	public float Gravity = 32;
-	public float MouseProx = 0.3f;
+	private float MouseProx = 0.3f;
 	public Image image;
 	float timeLeft = 3.0f; // hvor lenge det tar før rakten sprenger når den er tom for bensin
 	public float maxFuel;
-	public bool fuelPlaySound = false;
+	private bool fuelPlaySound = false;
 	public bool detectable = true;
 	float percent;
 	public int minFuel = 9;
 	//VARIABLES ADDED BY PETTER
 	//Gravity stuff
-	public float Gincrease = 0.45f;
+	private float Gincrease = 0.45f;
 	public float GravityStart = 20.0f;
-	public float GincreaseReal = 900f;
-	public float GravityFactor = 32f;
-	public float GravityDivision = 30f;
-	public float maxGravity = 50f;
+	private float GincreaseReal = 900f;
+	private float GravityFactor = 32f;
+	private float GravityDivision = 30f;
+	private float maxGravity = 50f;
 	//Drag changes mid-gameplay allows more flexibility of adjustment.
-	public float drag = 1.6f;
-	public float dragFall = 0.4f;
+	private float drag = 1.6f;
+	private float dragFall = 0.4f;
 	//Animation variables
-	public float AnimCrazy = 2.53f;
+	private float AnimCrazy = 2.53f;
 	private Animator animator;
-	public int screamLength = 50;
-	public int screamTimer = 0;
-	public int animStateTracker = 0;
+	private int screamLength = 50;
+	private int screamTimer = 0;
+	private int animStateTracker = 0;
 	//Counting speed for the sake of animation
 	private float speed = 0;
 	public float speedCounter = 0;
@@ -58,8 +58,8 @@ public class Movement : MonoBehaviour {
 	int deathTime = 100;
 	bool goalHit;
 	Vector3 direction;
-	public bool jetpackActive = false;
-	public bool mouseAway = false;
+	private bool jetpackActive = false;
+	private bool mouseAway = false;
 	public bool dead = false;
 	public bool jetpackOn = false;
 	bool inCannon = false;
