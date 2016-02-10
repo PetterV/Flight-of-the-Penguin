@@ -87,7 +87,7 @@ public class Movement : MonoBehaviour {
 		direction = rigidbody2D.velocity.normalized;
 		Vector3 mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
-		if (dead == false){
+		if (dead == false && goalHit == false){
 		//Rotation of the sprite using Quaternion.LookRotation
 		Quaternion rot = Quaternion.LookRotation (transform.position - new Vector3 (mousePosition.x, mousePosition.y, -100), Vector3.forward);
 		transform.rotation = rot;
@@ -109,7 +109,7 @@ public class Movement : MonoBehaviour {
 		
 
 		
-		if (jetpackActive && Fuel > 0 && mouseAway && dead == false) {
+		if (jetpackActive && Fuel > 0 && mouseAway && dead == false && goalHit == false) {
 			if (!jetpackOn) {
 				jetpackOn = true;
 				Fuel -= minFuel;
