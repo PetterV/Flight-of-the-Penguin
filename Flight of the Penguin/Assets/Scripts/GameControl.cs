@@ -13,6 +13,7 @@ public class GameControl : MonoBehaviour {
 	public static GameControl control;
 	public bool mute = false;
 	public float soundVolume = 100.0f;
+	public bool pause = false;
 	PlayerData playerData;
 	AudioListener audio = new AudioListener();
 
@@ -153,6 +154,9 @@ public class GameControl : MonoBehaviour {
 			audio.audio.volume = soundVolume/100;
 		else
 			audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> (); // getting the audiosource from the new camera in the newly loaded level
+		if (Input.GetKeyDown ("p")){
+			pause = true;
+		}
 	}
 
 	public void Reset()

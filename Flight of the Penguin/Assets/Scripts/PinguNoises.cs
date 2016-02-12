@@ -7,9 +7,11 @@ public class PinguNoises : MonoBehaviour {
 	float Fuel;
 	public float occurrence;
 	bool makeSound=false;
+	Animator animator;
 	
 	void Start () {
 		player = GameObject.FindWithTag("Player");
+		animator = GetComponent<Animator> ();
 	}
 	
 	void Update () {
@@ -26,6 +28,7 @@ public class PinguNoises : MonoBehaviour {
 				audio.clip = noRepeat [random];
 				audio.Play ();
 				makeSound = false;
+				PlayAnimation();
 			}
 			
 		} else if (Input.GetButtonDown ("Fire1") && chance < occurrence && Fuel > 0) {
@@ -37,6 +40,12 @@ public class PinguNoises : MonoBehaviour {
 				//makeSound = false;
 			}
 		}
+	}
+
+	public void PlayAnimation(){
+		animator.SetInteger ("FlySpeed", 2);
+		GetComponent<Movement>().animStateTracker = 2;
+		GetComponent<Movement>().screamTimer++;
 	}
 
 	public AudioClip[] FilterCurrentClip()

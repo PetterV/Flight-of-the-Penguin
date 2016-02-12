@@ -34,11 +34,11 @@ public class Movement : MonoBehaviour {
 	private float AnimCrazy = 2.53f;
 	private Animator animator;
 	private int screamLength = 50;
-	private int screamTimer = 0;
-	private int animStateTracker = 0;
+	public int screamTimer = 0;
+	public int animStateTracker = 0;
 	//Counting speed for the sake of animation
 	private float speed = 0;
-	public float speedCounter = 0;
+	public float speedCounter = 0f;
 	Vector3 lastPosition = Vector3.zero;
 	//Debug mode. Prevents Dead from becoming true.
 	public bool debug = false;
