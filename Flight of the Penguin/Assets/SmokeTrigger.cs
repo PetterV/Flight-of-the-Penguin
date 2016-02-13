@@ -13,7 +13,7 @@ public class SmokeTrigger : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (this.transform.parent.GetComponent<Movement>().jetpackOn == true && this.transform.parent.GetComponent<Movement>().jetpackOnTime > 3) {
+		if (this.transform.parent.GetComponent<Movement>().jetpackOn == true && this.transform.parent.GetComponent<Movement>().jetpackOnTime > 1) {
 			this.GetComponent<ParticleSystem>().enableEmission = true;
 			jetpackFlameOffTimer = jetpackFlameOffAmount;
 		}

@@ -430,7 +430,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -758,6 +758,7 @@ MonoBehaviour:
   collectable: 0
   mute: 0
   soundVolume: 100
+  pause: 0
 --- !u!4 &995500710
 Transform:
   m_ObjectHideFlags: 0
@@ -782,6 +783,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 0}
+  buttonTransitionSpeed: 10
+  numOfPages: 5
+  currentPage: 0
+  holdingAreaLeft: {fileID: 0}
+  holdingAreaCenter: {fileID: 0}
+  holdingAreaRight: {fileID: 0}
 --- !u!114 &995500712
 MonoBehaviour:
   m_ObjectHideFlags: 0

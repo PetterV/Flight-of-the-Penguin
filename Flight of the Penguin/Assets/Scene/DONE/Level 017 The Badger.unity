@@ -31628,7 +31628,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436666, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
       propertyPath: levelNumber
-      value: 17
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 463070, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
       propertyPath: m_LocalScale.x
@@ -31641,6 +31641,10 @@ Prefab:
     - target: {fileID: 463070, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
       propertyPath: m_LocalScale.z
       value: .233841419
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436666, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
+      propertyPath: levelLoad
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
@@ -71160,7 +71164,7 @@ Transform:
   m_LocalScale: {x: .155728117, y: .176583171, z: .185944021}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 84
+  m_RootOrder: 83
 --- !u!1001 &1628528378
 Prefab:
   m_ObjectHideFlags: 0
@@ -75579,7 +75583,7 @@ Transform:
   m_LocalScale: {x: .155728117, y: .364556342, z: .185944021}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 84
 --- !u!1 &1714050510
 GameObject:
   m_ObjectHideFlags: 0
@@ -79976,9 +79980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7897316cb8fe427193c2ad989f41bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoad: 4
+  levelLoad: 13
   loadingScreen: {fileID: 0}
-  levelNumber: 17
+  levelNumber: 12
   collectable: 0
   crashCounter: {fileID: 0}
   completed: 0
