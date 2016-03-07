@@ -4702,7 +4702,7 @@ Transform:
   m_GameObject: {fileID: 178012843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.6500015, y: -6.63000011, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: .5, y: .5, z: .496813864}
   m_Children:
   - {fileID: 976786120}
   - {fileID: 601221539}
@@ -10826,7 +10826,7 @@ Transform:
   m_PrefabInternal: {fileID: 1582214948}
   m_GameObject: {fileID: 339244252}
   m_LocalRotation: {x: .696708441, y: 0, z: 0, w: .717354417}
-  m_LocalPosition: {x: -.649999976, y: -2.8499999, z: 0}
+  m_LocalPosition: {x: -.649999976, y: -3.46000004, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1825057668}
@@ -10872,7 +10872,7 @@ ParticleSystemRenderer:
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
-  m_SortMode: 2
+  m_SortMode: 3
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -15036,8 +15036,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 2
-    radius: 1
+    type: 3
+    radius: 2.13724804
     angle: 25
     length: 5
     boxX: 1
@@ -15099,14 +15099,14 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: .742268085
+          inSlope: 6.79307747
+          outSlope: 6.79307747
           tangentMode: 0
         - time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: .948453665
+          inSlope: -10.5670185
+          outSlope: -10.5670185
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -21786,8 +21786,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 2
-    radius: 1
+    type: 3
+    radius: 2.13724804
     angle: 25
     length: 5
     boxX: 1
@@ -21849,14 +21849,14 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: .680412352
+          inSlope: 12.8565292
+          outSlope: 12.8565292
           tangentMode: 0
         - time: 1
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: -8.87629509
+          outSlope: -8.87629509
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -34419,8 +34419,8 @@ Transform:
   m_PrefabParentObject: {fileID: 434542, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
   m_PrefabInternal: {fileID: 917269234}
   m_GameObject: {fileID: 976786119}
-  m_LocalRotation: {x: .998724878, y: .0504849777, z: 1.62712951e-07, w: 8.22507573e-09}
-  m_LocalPosition: {x: -.189999998, y: -.209999993, z: 0}
+  m_LocalRotation: {x: .976989388, y: .0524760261, z: .00421161018, w: -.206689134}
+  m_LocalPosition: {x: .100000001, y: -.180000007, z: .00999999978}
   m_LocalScale: {x: .620200634, y: .620200276, z: .620200276}
   m_Children: []
   m_Father: {fileID: 178012847}
@@ -34720,8 +34720,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 2
-    radius: 1
+    type: 3
+    radius: 2.13724804
     angle: 25
     length: 5
     boxX: 1
@@ -34783,14 +34783,14 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: .731958747
+          inSlope: 1.89477444
+          outSlope: 1.89477444
           tangentMode: 0
         - time: 1
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: -95.1031799
+          outSlope: -95.1031799
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -45823,7 +45823,7 @@ Transform:
   m_PrefabParentObject: {fileID: 498082, guid: dca6747653cd54fe49d9381604b63f0c, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1329170205}
-  m_LocalRotation: {x: 0, y: 0, z: -.524745166, w: .851259351}
+  m_LocalRotation: {x: 0, y: 0, z: -.524745226, w: .85125941}
   m_LocalPosition: {x: 24.8670006, y: 2.63700008, z: 0}
   m_LocalScale: {x: .320953995, y: .26878199, z: 1}
   m_Children: []
@@ -54126,6 +54126,14 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1976081879}
+    - target: {fileID: 11466656, guid: 8a4cb1f6359994d4388c31aa257c3855, type: 2}
+      propertyPath: maxFuel
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466656, guid: 8a4cb1f6359994d4388c31aa257c3855, type: 2}
+      propertyPath: Fuel
+      value: 700
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4cb1f6359994d4388c31aa257c3855, type: 2}
   m_RootGameObject: {fileID: 1825057661}

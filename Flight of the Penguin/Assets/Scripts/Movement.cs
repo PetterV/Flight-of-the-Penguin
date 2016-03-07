@@ -291,6 +291,11 @@ public class Movement : MonoBehaviour {
 		if( Input.GetKey(KeyCode.Space))
 			Application.LoadLevel(Application.loadedLevelName);
 
+		if (goalHit){
+			Vector3 vectorZero = new Vector3(0, 0, 0);
+			rigidbody2D.velocity = vectorZero;
+			rigidbody2D.isKinematic = true;
+		}
 		
 	}
 	public Vector3 getDir()
@@ -353,7 +358,7 @@ public class Movement : MonoBehaviour {
 			goalHit=true;
 			animator.SetInteger("FlySpeed", 5);
 		}
-		if (other.gameObject.tag == "Lazer" && debug == false) {
+		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
 			Dead();
 			
