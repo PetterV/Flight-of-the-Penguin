@@ -22,7 +22,7 @@ public class MovBloFollowingPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		move = false;
-	
+		Player = GameObject.FindWithTag("Player");
 		playerMove = Player.GetComponent<Movement>();
 	}
 	

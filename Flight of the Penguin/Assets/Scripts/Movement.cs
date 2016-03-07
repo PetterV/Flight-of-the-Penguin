@@ -291,6 +291,11 @@ public class Movement : MonoBehaviour {
 		if( Input.GetKey(KeyCode.Space))
 			Application.LoadLevel(Application.loadedLevelName);
 
+		if (goalHit){
+			Vector3 vectorZero = new Vector3(0, 0, 0);
+			rigidbody2D.velocity = vectorZero;
+			rigidbody2D.isKinematic = true;
+		}
 		
 	}
 	public Vector3 getDir()
