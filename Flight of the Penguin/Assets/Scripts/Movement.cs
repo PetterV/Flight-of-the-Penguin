@@ -358,7 +358,7 @@ public class Movement : MonoBehaviour {
 			goalHit=true;
 			animator.SetInteger("FlySpeed", 5);
 		}
-		if (other.gameObject.tag == "Lazer" && debug == false) {
+		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
 			Dead();
 			
