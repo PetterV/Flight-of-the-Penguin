@@ -8,7 +8,8 @@ public class SmokeTrigger : MonoBehaviour {
 	public int jetpackFlameOffAmount = 10;
 
 	void Start () {
-		//particleSystem.renderer.sortingLayerName = "Ignore Raycast";
+		particleSystem.renderer.sortingLayerName = "Fire";
+		particleSystem.renderer.sortingOrder = -5;
 	}
 
 	// Update is called once per frame
