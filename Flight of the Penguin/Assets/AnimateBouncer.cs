@@ -18,7 +18,6 @@ public class AnimateBouncer : MonoBehaviour {
 		animator.SetInteger ("Bounce", 1);
 		bounceTracker = 1;
 		bounceTime = bounceTimeSet;
-		renderer.material = bounceWide;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -31,7 +30,6 @@ public class AnimateBouncer : MonoBehaviour {
 		}
 		if (bounceTracker == 0){
 			animator.SetInteger ("Bounce", 0);
-			renderer.material = bounceThin;
 		}
 	}
 }
