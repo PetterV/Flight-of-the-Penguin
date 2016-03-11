@@ -19,6 +19,7 @@ public class Bouncer2 : MonoBehaviour {
 			if(speed>20)
 				speed = 20;
 			coll.gameObject.rigidbody2D.AddForce(Vector3.Reflect(direction, coll.contacts[0].normal) * (speed/1) , ForceMode2D.Impulse);
+			coll.gameObject.GetComponent<Movement>().Gravity = coll.gameObject.GetComponent<Movement>().GravityStart;
 		}
 
 		if(coll.gameObject.tag=="Mine")//add in mines when time

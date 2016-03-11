@@ -20,8 +20,8 @@ public class Bouncer : MonoBehaviour {
 			speed = Mathf.Floor(speed*100)/100;
 			print(speed);
 			print(Vector3.Reflect(direction, coll.contacts[0].normal) * (speed));
-			if(speed>100)
-				speed = 100;
+			if(speed>15)
+				speed = 15;
 			coll.gameObject.rigidbody2D.AddForce(Vector3.Reflect(direction, coll.contacts[0].normal) * (speed*0.9f) , ForceMode2D.Impulse);
 			coll.gameObject.GetComponent<Movement>().Gravity = coll.gameObject.GetComponent<Movement>().GravityStart;
 		}
