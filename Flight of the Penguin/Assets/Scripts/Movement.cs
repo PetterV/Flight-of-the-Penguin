@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Movement : MonoBehaviour {
 	
 	private float Acceleration = 36.0f;
-	private int startBoost = 38;
+	private int startBoost = 14;
 	private float MaxVelocity = 100;
 	private float MaxCrash = 30;
 	public float Fuel = 1000;
