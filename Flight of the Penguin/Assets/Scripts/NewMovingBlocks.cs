@@ -31,7 +31,7 @@ public class NewMovingBlocks : MonoBehaviour {
 		movetoY = MoveToTarget.transform.position.y;
 		movefromX = MoveFromTarget.transform.position.x;
 		movefromY = MoveFromTarget.transform.position.y;
-		startPos = rigidbody2D.position;
+		startPos = new Vector2 (movefromX, movefromY);
 		endPos = new Vector2 (movetoX, movetoY);
 		time = moveSpeed;
 		movePos = new Vector2 (0, 0);

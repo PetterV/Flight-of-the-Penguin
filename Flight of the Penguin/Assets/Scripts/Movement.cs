@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Movement : MonoBehaviour {
 	
 	private float Acceleration = 36.0f;
-	private int startBoost = 38;
+	private int startBoost = 20;
 	private float MaxVelocity = 100;
 	private float MaxCrash = 30;
 	public float Fuel = 1000;
@@ -295,6 +295,7 @@ public class Movement : MonoBehaviour {
 			Vector3 vectorZero = new Vector3(0, 0, 0);
 			rigidbody2D.velocity = vectorZero;
 			rigidbody2D.isKinematic = true;
+			animator.SetInteger("FlySpeed", 5);
 		}
 		
 	}
@@ -356,7 +357,6 @@ public class Movement : MonoBehaviour {
 		//DEAD DEBUG BELOW
 		if (other.gameObject.tag == "Goal") {
 			goalHit=true;
-			animator.SetInteger("FlySpeed", 5);
 		}
 		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
