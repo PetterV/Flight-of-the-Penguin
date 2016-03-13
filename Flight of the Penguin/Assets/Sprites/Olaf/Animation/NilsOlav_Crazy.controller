@@ -146,6 +146,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110151526
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110206146}
+  m_DstState: {fileID: 110289814}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: FlySpeed
+    m_EventTreshold: 5
+    m_ExitTime: .119832076
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110154556
 Transition:
   serializedVersion: 2
@@ -474,6 +494,7 @@ StateMachine:
       first: {fileID: 110206146}
       second:
       - {fileID: 110198360}
+      - {fileID: 110151526}
     data:
       first: {fileID: 110289814}
       second: []
