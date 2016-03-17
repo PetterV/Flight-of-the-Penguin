@@ -13,7 +13,19 @@ public class LoadOnClick : MonoBehaviour {
 	public GameObject holdingAreaLeft;
 	public GameObject holdingAreaCenter;
 	public GameObject holdingAreaRight;
+	public float buttonWait = 30.0f;
+	public float buttonTimer = 0.0f;
+	public bool canMoveOnButton = true;
 
+	void Update (){
+		if (buttonTimer > 0) {
+			buttonTimer++;
+			if(buttonTimer > buttonWait){
+				buttonTimer = 0.0f;
+				canMoveOnButton = true;
+			}
+		}
+	}
 
 	public void LoadScene(int level)
 	{
@@ -45,14 +57,22 @@ public class LoadOnClick : MonoBehaviour {
 	}
 
 	public void IncreaseCurrentPage(){
-		if (currentPage < numOfPages){
-			currentPage++;
+		if (canMoveOnButton) {
+			buttonTimer = 1f;
+			canMoveOnButton = false;
+			if (currentPage < numOfPages) {
+				currentPage++;
+			}
 		}
 	}
 
 	public void DecreaseCurrentPage(){
-		if (currentPage > 0){
-			currentPage--;
+		if (canMoveOnButton){
+			buttonTimer = 1f;
+			canMoveOnButton = false;
+			if (currentPage > 0){
+				currentPage--;
+			}
 		}
 	}
 

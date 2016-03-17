@@ -4695,7 +4695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228930b0167604b5c83769616275e692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 8300000, guid: 694d0e51e36cc4f8c9f858a9fc22a45a, type: 3}
+  explosion: {fileID: 8300000, guid: e6358be17c4d34446ac03ff70290e3e1, type: 3}
 --- !u!114 &258007853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11386,6 +11386,8 @@ GameObject:
   - 61: {fileID: 772546094}
   - 114: {fileID: 772546093}
   - 61: {fileID: 772546092}
+  - 82: {fileID: 772546097}
+  - 114: {fileID: 772546096}
   m_Layer: 2
   m_Name: GoalBlock
   m_TagString: Goal
@@ -11478,6 +11480,80 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8b60e71f9ce42475aa2d940b5e84a722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &772546096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 772546090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81f695fe7cb9fc4a98810d80a361ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  onlyOnce: 0
+  volume: 1
+  mineMakeSound: 0
+  audioSourceInParent: 0
+--- !u!82 &772546097
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 772546090}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &776508089
 GameObject:
   m_ObjectHideFlags: 0
@@ -12190,7 +12266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a37bc2f65c40cd48a2f8c0d10d24f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: a7d576d279167493489a0418ec685059, type: 3}
+  audioClip: {fileID: 8300000, guid: 6b2f92e5b1abe434c97608a69b4613ba, type: 3}
   deadBurn: {fileID: 8300000, guid: a158d3899033558438c5caa1f980bb18, type: 3}
 --- !u!82 &807516856
 AudioSource:
@@ -16110,6 +16186,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1073037388}
+  - 82: {fileID: 1073037389}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -16131,6 +16208,64 @@ Transform:
   - {fileID: 1668038364}
   m_Father: {fileID: 640555932}
   m_RootOrder: 0
+--- !u!82 &1073037389
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073037387}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1074413875
 GameObject:
   m_ObjectHideFlags: 0
@@ -16589,6 +16724,7 @@ GameObject:
   - 61: {fileID: 1098252944}
   - 114: {fileID: 1098252949}
   - 114: {fileID: 1098252943}
+  - 114: {fileID: 1098252946}
   m_Layer: 2
   m_Name: Trigger Switch
   m_TagString: Untagged
@@ -16659,6 +16795,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9259fecbd1111804dab946bb219f4361, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1098252946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098252941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81f695fe7cb9fc4a98810d80a361ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: c0b854d8e4f26c44594e522452e45060, type: 3}
+  onlyOnce: 1
+  volume: 1
+  mineMakeSound: 0
+  audioSourceInParent: 1
 --- !u!114 &1098252949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31101,7 +31253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b8cd0ce86e4469d962220a375236a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: d887e2a8fcc21456ba09f2e11c9adf20, type: 3}
+  cursorTexture: {fileID: 2800000, guid: a6ca610878f134e5a931e6c4d6e4457a, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: bdc144a5146884d489a806ba955c8df6, type: 3}
   cursorMode: 1
   hotSpot: {x: 70, y: 70}
@@ -31148,7 +31300,7 @@ CircleCollider2D:
     type: 2}
   m_PrefabInternal: {fileID: 987865003}
   m_GameObject: {fileID: 2031076656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: .529999971
