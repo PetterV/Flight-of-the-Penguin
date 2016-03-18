@@ -1313,6 +1313,7 @@ GameObject:
   - 58: {fileID: 53209952}
   - 114: {fileID: 53209951}
   - 114: {fileID: 53209950}
+  - 95: {fileID: 53209955}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -1402,6 +1403,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 760055030}
   m_RootOrder: 3
+--- !u!95 &53209955
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 53209949}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &62406637
 Prefab:
   m_ObjectHideFlags: 0
@@ -3140,7 +3156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b8cd0ce86e4469d962220a375236a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: d887e2a8fcc21456ba09f2e11c9adf20, type: 3}
+  cursorTexture: {fileID: 2800000, guid: a6ca610878f134e5a931e6c4d6e4457a, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: bdc144a5146884d489a806ba955c8df6, type: 3}
   cursorMode: 1
   hotSpot: {x: 70, y: 70}
@@ -3369,7 +3385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278072b1c3bb442dd99306110ed59520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fuel: 130
+  Fuel: 700
   Gravity: 32
   image: {fileID: 539534574}
   maxFuel: 700
@@ -3519,7 +3535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a37bc2f65c40cd48a2f8c0d10d24f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: a7d576d279167493489a0418ec685059, type: 3}
+  audioClip: {fileID: 8300000, guid: 6b2f92e5b1abe434c97608a69b4613ba, type: 3}
   deadBurn: {fileID: 8300000, guid: a158d3899033558438c5caa1f980bb18, type: 3}
 --- !u!82 &169450008
 AudioSource:
@@ -5486,6 +5502,7 @@ GameObject:
   - 58: {fileID: 295937486}
   - 114: {fileID: 295937485}
   - 114: {fileID: 295937483}
+  - 95: {fileID: 295937484}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -5509,6 +5526,21 @@ MonoBehaviour:
   waitTime: 2
   detectrRange: 1000
   Player: {fileID: 0}
+--- !u!95 &295937484
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295937482}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &295937485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5638,6 +5670,7 @@ GameObject:
   - 58: {fileID: 310620764}
   - 114: {fileID: 310620763}
   - 114: {fileID: 310620762}
+  - 95: {fileID: 310620767}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -5727,6 +5760,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 760055030}
   m_RootOrder: 11
+--- !u!95 &310620767
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310620761}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &318601967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,6 +5985,7 @@ GameObject:
   - 114: {fileID: 341650401}
   - 50: {fileID: 341650400}
   - 114: {fileID: 341650399}
+  - 95: {fileID: 341650404}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -6042,6 +6091,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &341650404
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 341650397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &344531216
 GameObject:
   m_ObjectHideFlags: 0
@@ -9900,6 +9964,7 @@ GameObject:
   - 58: {fileID: 561607722}
   - 114: {fileID: 561607721}
   - 114: {fileID: 561607720}
+  - 95: {fileID: 561607724}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -9989,6 +10054,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &561607724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561607718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &564537660
 GameObject:
   m_ObjectHideFlags: 0
@@ -10574,6 +10654,7 @@ GameObject:
   - 58: {fileID: 590875889}
   - 114: {fileID: 590875888}
   - 114: {fileID: 590875887}
+  - 95: {fileID: 590875891}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -10663,6 +10744,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &590875891
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 590875885}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &592274763
 GameObject:
   m_ObjectHideFlags: 0
@@ -12727,6 +12823,7 @@ GameObject:
   - 114: {fileID: 711477610}
   - 50: {fileID: 711477609}
   - 114: {fileID: 711477608}
+  - 95: {fileID: 711477613}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -12832,6 +12929,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &711477613
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711477606}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &713345273
 Prefab:
   m_ObjectHideFlags: 0
@@ -13260,6 +13372,7 @@ GameObject:
   - 114: {fileID: 729325957}
   - 50: {fileID: 729325956}
   - 114: {fileID: 729325955}
+  - 95: {fileID: 729325960}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -13365,6 +13478,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &729325960
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729325953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &730160347
 GameObject:
   m_ObjectHideFlags: 0
@@ -14896,7 +15024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228930b0167604b5c83769616275e692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 8300000, guid: 694d0e51e36cc4f8c9f858a9fc22a45a, type: 3}
+  explosion: {fileID: 8300000, guid: e6358be17c4d34446ac03ff70290e3e1, type: 3}
 --- !u!114 &846831929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15185,6 +15313,7 @@ GameObject:
   - 58: {fileID: 870624947}
   - 114: {fileID: 870624946}
   - 114: {fileID: 870624945}
+  - 95: {fileID: 870624949}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -15274,6 +15403,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &870624949
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870624943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &870626991
 GameObject:
   m_ObjectHideFlags: 0
@@ -17506,6 +17650,7 @@ GameObject:
   - 114: {fileID: 1004859732}
   - 50: {fileID: 1004859731}
   - 114: {fileID: 1004859730}
+  - 95: {fileID: 1004859735}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -17611,6 +17756,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1004859735
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1004859728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1005019274
 GameObject:
   m_ObjectHideFlags: 0
@@ -17725,6 +17885,7 @@ GameObject:
   - 58: {fileID: 1014678516}
   - 114: {fileID: 1014678515}
   - 114: {fileID: 1014678514}
+  - 95: {fileID: 1014678518}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -17814,6 +17975,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1014678518
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1014678512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1014965408
 Prefab:
   m_ObjectHideFlags: 0
@@ -21607,6 +21783,7 @@ GameObject:
   - 114: {fileID: 1155944436}
   - 50: {fileID: 1155944435}
   - 114: {fileID: 1155944434}
+  - 95: {fileID: 1155944439}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -21712,6 +21889,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1155944439
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155944432}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1162606320
 GameObject:
   m_ObjectHideFlags: 0
@@ -23010,6 +23202,7 @@ GameObject:
   - 58: {fileID: 1228353085}
   - 114: {fileID: 1228353084}
   - 114: {fileID: 1228353083}
+  - 95: {fileID: 1228353087}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -23099,6 +23292,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1228353087
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228353081}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1228408184
 GameObject:
   m_ObjectHideFlags: 0
@@ -25012,6 +25220,7 @@ GameObject:
   - 58: {fileID: 1352766678}
   - 114: {fileID: 1352766677}
   - 114: {fileID: 1352766675}
+  - 95: {fileID: 1352766676}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -25035,6 +25244,21 @@ MonoBehaviour:
   waitTime: 2
   detectrRange: 1000
   Player: {fileID: 0}
+--- !u!95 &1352766676
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352766674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1352766677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26075,6 +26299,7 @@ GameObject:
   - 114: {fileID: 1411543043}
   - 50: {fileID: 1411543042}
   - 114: {fileID: 1411543041}
+  - 95: {fileID: 1411543046}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -26180,6 +26405,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1411543046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411543039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1412677159
 Prefab:
   m_ObjectHideFlags: 0
@@ -26564,6 +26804,7 @@ GameObject:
   - 114: {fileID: 1434331912}
   - 50: {fileID: 1434331911}
   - 114: {fileID: 1434331910}
+  - 95: {fileID: 1434331915}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -26669,6 +26910,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1434331915
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434331908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1441135756
 GameObject:
   m_ObjectHideFlags: 0
@@ -26817,6 +27073,7 @@ GameObject:
   - 58: {fileID: 1455966241}
   - 114: {fileID: 1455966240}
   - 114: {fileID: 1455966239}
+  - 95: {fileID: 1455966243}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -26906,6 +27163,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1455966243
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455966237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1456242218
 GameObject:
   m_ObjectHideFlags: 0
@@ -29690,6 +29962,7 @@ GameObject:
   - 114: {fileID: 1655861101}
   - 50: {fileID: 1655861100}
   - 114: {fileID: 1655861099}
+  - 95: {fileID: 1655861104}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -29795,6 +30068,21 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8ca6131e3105ad40be07c6b347079a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1655861104
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655861097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1657073853
 GameObject:
   m_ObjectHideFlags: 0
@@ -38229,6 +38517,7 @@ GameObject:
   - 58: {fileID: 1968840503}
   - 114: {fileID: 1968840502}
   - 114: {fileID: 1968840500}
+  - 95: {fileID: 1968840501}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Mine
@@ -38252,6 +38541,21 @@ MonoBehaviour:
   waitTime: 2
   detectrRange: 1000
   Player: {fileID: 0}
+--- !u!95 &1968840501
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968840499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30b6c28a096f8141b668416e45c6cde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1968840502
 MonoBehaviour:
   m_ObjectHideFlags: 0

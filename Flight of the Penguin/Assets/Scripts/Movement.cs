@@ -347,9 +347,13 @@ public class Movement : MonoBehaviour {
 		}
 		//DEAD DEBUG BELOW
 		if (coll.gameObject.tag == "Mine" && debug == false) {
+			GameObject explodingMine = coll.gameObject;
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
-			coll.gameObject.GetComponent<Animator>().SetInteger("Explode", 1);
-			Destroy (coll.gameObject, 0.3f);
+			if (explodingMine.GetComponent<Rigidbody2D>() != null){
+				explodingMine.rigidbody2D.isKinematic = true;
+			}
+			explodingMine.GetComponent<Animator>().SetInteger("Explode", 1);
+			Destroy (explodingMine, 0.3f);
 			//add explosion for mines
 			Dead();
 		}
