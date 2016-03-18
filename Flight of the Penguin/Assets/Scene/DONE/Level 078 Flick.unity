@@ -821,11 +821,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40016379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.74000001, y: 1.73000002, z: 0}
+  m_LocalPosition: {x: -57.3599968, y: 10.7299995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 25
 --- !u!1 &40127448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ GameObject:
   - 61: {fileID: 49169496}
   m_Layer: 0
   m_Name: Beam1
-  m_TagString: Mine
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1188,7 +1188,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 49169494}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
   m_Center: {x: 0, y: 0}
 --- !u!212 &49169497
@@ -4523,7 +4523,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a8222f957fd43432cbd06d56697607e0, type: 3}
-  m_Color: {r: .462411255, g: .625, b: .00459559262, a: .250980407}
+  m_Color: {r: .766160071, g: .95588237, b: .231942043, a: .427450985}
 --- !u!4 &242213475
 Transform:
   m_ObjectHideFlags: 0
@@ -4531,11 +4531,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242213473}
   m_LocalRotation: {x: 0, y: 0, z: -9.99999997e-07, w: 1}
-  m_LocalPosition: {x: -29, y: 2.5999999, z: 0}
+  m_LocalPosition: {x: -89.0999985, y: 11.6000004, z: 0}
   m_LocalScale: {x: 3.83559704, y: 5.37366581, z: 15.7740355}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 28
 --- !u!1 &243324241
 GameObject:
   m_ObjectHideFlags: 0
@@ -24937,7 +24937,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a8222f957fd43432cbd06d56697607e0, type: 3}
-  m_Color: {r: .462411255, g: .625, b: .00459559262, a: .250980407}
+  m_Color: {r: .766160071, g: .95588237, b: .231942043, a: .427450985}
 --- !u!4 &1000605465
 Transform:
   m_ObjectHideFlags: 0
@@ -24945,11 +24945,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1000605463}
   m_LocalRotation: {x: 0, y: 0, z: -9.99999997e-07, w: 1}
-  m_LocalPosition: {x: 19.5, y: 2.5999999, z: 0}
+  m_LocalPosition: {x: -40.5999985, y: 11.6000004, z: 0}
   m_LocalScale: {x: 3.83559704, y: 5.37366581, z: 15.7740355}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 26
 --- !u!1 &1000940139
 GameObject:
   m_ObjectHideFlags: 0
@@ -27202,7 +27202,7 @@ GameObject:
   - 61: {fileID: 1081175889}
   m_Layer: 0
   m_Name: Beam1
-  m_TagString: Mine
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27228,7 +27228,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1081175887}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1081175890
@@ -30540,6 +30540,13 @@ Transform:
   - {fileID: 435048101}
   - {fileID: 675445685}
   - {fileID: 1650372071}
+  - {fileID: 40016381}
+  - {fileID: 1000605465}
+  - {fileID: 2083612274}
+  - {fileID: 242213475}
+  - {fileID: 2067010450}
+  - {fileID: 1351736121}
+  - {fileID: 1979345196}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1232037652
@@ -33751,11 +33758,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351736119}
   m_LocalRotation: {x: -2.12132181e-06, y: -2.12131863e-06, z: 7.61237629e-07, w: 1}
-  m_LocalPosition: {x: 2.97000003, y: -11.3800001, z: 0}
+  m_LocalPosition: {x: -57.1299973, y: -2.38000011, z: 0}
   m_LocalScale: {x: 3.51278305, y: 3.20936275, z: 9.39070606}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 30
 --- !u!1 &1351876088
 GameObject:
   m_ObjectHideFlags: 0
@@ -36648,7 +36655,7 @@ GameObject:
   - 61: {fileID: 1420971877}
   m_Layer: 0
   m_Name: Beam1
-  m_TagString: Mine
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36674,7 +36681,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1420971875}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1420971878
@@ -38182,7 +38189,7 @@ Transform:
   m_LocalScale: {x: .363841087, y: .363841057, z: .363841057}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 41
 --- !u!1 &1516310678
 GameObject:
   m_ObjectHideFlags: 0
@@ -46005,7 +46012,7 @@ GameObject:
   - 61: {fileID: 1812660513}
   m_Layer: 0
   m_Name: Beam1
-  m_TagString: Mine
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46019,7 +46026,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1812660512}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1812660514
@@ -49339,11 +49346,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1979345194}
   m_LocalRotation: {x: 7.61236947e-07, y: -1, z: 2.12132204e-06, w: -1.7230991e-06}
-  m_LocalPosition: {x: 24.0499992, y: -11.3800001, z: 0}
+  m_LocalPosition: {x: -36.0499992, y: -2.38000011, z: 0}
   m_LocalScale: {x: 3.51278305, y: 3.20936275, z: 9.39070606}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 31
 --- !u!1001 &1980916387
 Prefab:
   m_ObjectHideFlags: 0
@@ -51329,11 +51336,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2067010448}
   m_LocalRotation: {x: -2.12132181e-06, y: -2.12131863e-06, z: 7.61237629e-07, w: 1}
-  m_LocalPosition: {x: -19.4500008, y: -11.3800001, z: -0}
+  m_LocalPosition: {x: -79.5500031, y: -2.38000011, z: 0}
   m_LocalScale: {x: 3.51278305, y: 3.20936275, z: 9.39070606}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 29
 --- !u!1 &2067326354
 GameObject:
   m_ObjectHideFlags: 0
@@ -51857,7 +51864,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a8222f957fd43432cbd06d56697607e0, type: 3}
-  m_Color: {r: .462411255, g: .625, b: .00459559262, a: .250980407}
+  m_Color: {r: .766160071, g: .95588237, b: .231942043, a: .427450985}
 --- !u!4 &2083612274
 Transform:
   m_ObjectHideFlags: 0
@@ -51865,11 +51872,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2083612272}
   m_LocalRotation: {x: 0, y: 0, z: -9.99999997e-07, w: 1}
-  m_LocalPosition: {x: -5.19999981, y: 2.5999999, z: 0}
+  m_LocalPosition: {x: -65.2999954, y: 11.6000004, z: 0}
   m_LocalScale: {x: 3.83559704, y: 5.37366581, z: 15.7740355}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_Father: {fileID: 1231337575}
+  m_RootOrder: 27
 --- !u!1001 &2088786890
 Prefab:
   m_ObjectHideFlags: 0
@@ -52257,7 +52264,7 @@ GameObject:
   - 61: {fileID: 2109860022}
   m_Layer: 0
   m_Name: Beam1
-  m_TagString: Mine
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52271,7 +52278,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2109860021}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
   m_Center: {x: 0, y: 0}
 --- !u!212 &2109860023
