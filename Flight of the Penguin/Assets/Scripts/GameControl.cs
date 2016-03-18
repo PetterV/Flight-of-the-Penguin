@@ -157,6 +157,7 @@ public class GameControl : MonoBehaviour {
 		if (Input.GetKeyDown ("p")){
 			pause = true;
 		}
+
 	}
 
 	public void Reset()
