@@ -1174,7 +1174,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49169494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2950001, y: 4.63000011, z: 0}
+  m_LocalPosition: {x: 12.349, y: 4.63000011, z: 0}
   m_LocalScale: {x: .300000012, y: .593999982, z: 1}
   m_Children: []
   m_Father: {fileID: 384908909}
@@ -1190,7 +1190,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: -.180000007, y: 0}
 --- !u!212 &49169497
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1212,7 +1212,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2969b7b40852f407e9d88a834cad2fcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1641e984f485c42bc89d8e77e10f8585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &49651443
 Prefab:
@@ -3003,7 +3003,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 1526883082}
   m_GameObject: {fileID: 156142603}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -3014,7 +3014,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3241,7 +3241,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -6422,7 +6422,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 1526883082}
   m_GameObject: {fileID: 270392460}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -6433,7 +6433,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6660,7 +6660,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -8121,7 +8121,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 1526883082}
   m_GameObject: {fileID: 312037138}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -8132,7 +8132,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8359,7 +8359,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -22879,7 +22879,7 @@ GameObject:
   - 114: {fileID: 868502572}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: FuelImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28532,7 +28532,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1081175887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2950001, y: 4.63000011, z: 0}
+  m_LocalPosition: {x: 12.3509998, y: 4.63000011, z: 0}
   m_LocalScale: {x: .300000012, y: .593999982, z: 1}
   m_Children: []
   m_Father: {fileID: 1643479857}
@@ -28548,7 +28548,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: -.180000007, y: 0}
 --- !u!212 &1081175890
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28570,7 +28570,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2969b7b40852f407e9d88a834cad2fcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1641e984f485c42bc89d8e77e10f8585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1082312960
 Prefab:
@@ -30142,6 +30142,7 @@ GameObject:
   - 223: {fileID: 1171283172}
   - 114: {fileID: 1171283171}
   - 114: {fileID: 1171283170}
+  - 114: {fileID: 1171283173}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -30232,6 +30233,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 3697940041
   m_SortingOrder: 0
+--- !u!114 &1171283173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11434774, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 967698201}
+  m_GameObject: {fileID: 1171283168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7872077892462c84390b685e1cf9c620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1171481320
 GameObject:
   m_ObjectHideFlags: 0
@@ -31923,7 +31936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1231337575
 Transform:
   m_ObjectHideFlags: 0
@@ -36158,7 +36171,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 1526883082}
   m_GameObject: {fileID: 1385801457}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -36169,7 +36182,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -36396,7 +36409,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -38190,7 +38203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420971875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2950001, y: 4.63000011, z: 0}
+  m_LocalPosition: {x: 12.3500004, y: 4.63000011, z: 0}
   m_LocalScale: {x: .300000012, y: .593999982, z: 1}
   m_Children: []
   m_Father: {fileID: 65897961}
@@ -38206,7 +38219,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: -.180000007, y: 0}
 --- !u!212 &1420971878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38228,7 +38241,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2969b7b40852f407e9d88a834cad2fcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1641e984f485c42bc89d8e77e10f8585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1422036405
 Prefab:
@@ -47665,8 +47678,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1.10000002, y: 4.5}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1, y: 4.5}
+  m_Center: {x: -.170000002, y: 0}
 --- !u!212 &1812660514
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47688,7 +47701,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2969b7b40852f407e9d88a834cad2fcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1641e984f485c42bc89d8e77e10f8585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1812660515
 Transform:
@@ -47697,7 +47710,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1812660512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5799999, y: 4.63000011, z: 0}
+  m_LocalPosition: {x: 11.6400003, y: 4.63000011, z: 0}
   m_LocalScale: {x: .300000012, y: .593999982, z: 1}
   m_Children: []
   m_Father: {fileID: 1033055860}
@@ -53969,7 +53982,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1.10000002, y: 4.5}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: -.180000007, y: 0}
 --- !u!212 &2109860023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53991,7 +54004,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2969b7b40852f407e9d88a834cad2fcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1641e984f485c42bc89d8e77e10f8585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2109860024
 Transform:
@@ -54000,7 +54013,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2109860021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5799999, y: 4.63000011, z: 0}
+  m_LocalPosition: {x: 11.6350002, y: 4.63000011, z: 0}
   m_LocalScale: {x: .300000012, y: .593999982, z: 1}
   m_Children: []
   m_Father: {fileID: 1240044278}
