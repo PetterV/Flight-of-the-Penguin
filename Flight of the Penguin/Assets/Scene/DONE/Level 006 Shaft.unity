@@ -12709,7 +12709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228930b0167604b5c83769616275e692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 8300000, guid: 694d0e51e36cc4f8c9f858a9fc22a45a, type: 3}
+  explosion: {fileID: 8300000, guid: e6358be17c4d34446ac03ff70290e3e1, type: 3}
 --- !u!114 &496047136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17175,7 +17175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b8cd0ce86e4469d962220a375236a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: d887e2a8fcc21456ba09f2e11c9adf20, type: 3}
+  cursorTexture: {fileID: 2800000, guid: a6ca610878f134e5a931e6c4d6e4457a, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: bdc144a5146884d489a806ba955c8df6, type: 3}
   cursorMode: 1
   hotSpot: {x: 70, y: 70}
@@ -19749,62 +19749,6 @@ Prefab:
   m_RootGameObject: {fileID: 1290277868}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &918839580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 918839584}
-  - 61: {fileID: 918839581}
-  - 114: {fileID: 918839585}
-  m_Layer: 0
-  m_Name: TriggerlineMoveBlocks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &918839581
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 918839580}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 2.53999996, y: 1}
-  m_Center: {x: 0, y: 0}
---- !u!4 &918839584
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 918839580}
-  m_LocalRotation: {x: 0, y: 0, z: .70710665, w: .707106948}
-  m_LocalPosition: {x: -3.3599999, y: 2.61999989, z: 0}
-  m_LocalScale: {x: 2, y: .200000003, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1156522772}
-  m_RootOrder: 0
---- !u!114 &918839585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 918839580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 595d6a189cb0b4f039f28551caa83c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj1: {fileID: 1896479213}
-  obj2: {fileID: 918839580}
-  obj3: {fileID: 0}
-  obj4: {fileID: 0}
-  playerOnly: 1
 --- !u!1 &919360568
 GameObject:
   m_ObjectHideFlags: 0
@@ -24260,7 +24204,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 4.5, y: 4.5}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: .180000007, y: 0}
 --- !u!212 &1080196994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25839,9 +25783,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 918839584}
   - {fileID: 1787089565}
-  - {fileID: 1896479214}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1001 &1159697626
@@ -27498,6 +27440,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 43f775cb236e6624f80f6fffaf28ba7c,
         type: 3}
+    - target: {fileID: 6185532, guid: 04a39e6d9b28f41bc867f91e07badc7d, type: 2}
+      propertyPath: m_Center.x
+      value: .180000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04a39e6d9b28f41bc867f91e07badc7d, type: 2}
   m_RootGameObject: {fileID: 1080196992}
@@ -36532,7 +36478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a37bc2f65c40cd48a2f8c0d10d24f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: a7d576d279167493489a0418ec685059, type: 3}
+  audioClip: {fileID: 8300000, guid: 6b2f92e5b1abe434c97608a69b4613ba, type: 3}
   deadBurn: {fileID: 8300000, guid: a158d3899033558438c5caa1f980bb18, type: 3}
 --- !u!82 &1778098077
 AudioSource:
@@ -36856,7 +36802,7 @@ GameObject:
   - 114: {fileID: 1787089568}
   - 114: {fileID: 1787089567}
   - 61: {fileID: 1787089566}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerlinePlatformStand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36874,7 +36820,7 @@ Transform:
   m_LocalScale: {x: 2, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 1156522772}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!61 &1787089566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37929,9 +37875,9 @@ MonoBehaviour:
   level1: 0
   deathCounter: 0
   collectable: 0
+  levelTime: 0
   mute: 0
   soundVolume: 100
-  pause: 0
 --- !u!4 &1849995922
 Transform:
   m_ObjectHideFlags: 0
@@ -38978,45 +38924,6 @@ Prefab:
   m_RootGameObject: {fileID: 506161533}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1896479213
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1896479214}
-  - 61: {fileID: 1896479215}
-  m_Layer: 0
-  m_Name: BottomPlatformStand
-  m_TagString: Wall
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1896479214
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896479213}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0999999, y: -1.75, z: 0}
-  m_LocalScale: {x: .824999988, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1156522772}
-  m_RootOrder: 2
---- !u!61 &1896479215
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896479213}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.78999996, y: 1}
-  m_Center: {x: 0, y: 0}
 --- !u!1001 &1896598598
 Prefab:
   m_ObjectHideFlags: 0
