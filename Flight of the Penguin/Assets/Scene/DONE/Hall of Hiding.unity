@@ -8266,6 +8266,7 @@ GameObject:
   - 223: {fileID: 136786860}
   - 114: {fileID: 136786859}
   - 114: {fileID: 136786858}
+  - 114: {fileID: 136786861}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8356,6 +8357,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 3697940041
   m_SortingOrder: 0
+--- !u!114 &136786861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11434774, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 967698201}
+  m_GameObject: {fileID: 136786856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7872077892462c84390b685e1cf9c620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &137602994
 Prefab:
   m_ObjectHideFlags: 0
@@ -11607,7 +11620,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 470385760}
   m_GameObject: {fileID: 199759106}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -11618,7 +11631,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11845,7 +11858,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -79013,7 +79026,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 470385760}
   m_GameObject: {fileID: 1401003489}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -79024,7 +79037,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -79251,7 +79264,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -81514,7 +81527,7 @@ GameObject:
   - 114: {fileID: 1430370907}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: FuelImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87524,7 +87537,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 470385760}
   m_GameObject: {fileID: 1540890608}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -87535,7 +87548,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -87762,7 +87775,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -112171,7 +112184,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 470385760}
   m_GameObject: {fileID: 2002853112}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -112182,7 +112195,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -112409,7 +112422,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1

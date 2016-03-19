@@ -68,6 +68,7 @@ public class Movement : MonoBehaviour {
 	void Start () {
 		
 		rigidbody2D.interpolation = RigidbodyInterpolation2D.Extrapolate;
+		image = GameObject.FindWithTag ("FuelImage").GetComponent<Image>();
 		image.fillAmount = 1;
 		percent = maxFuel / 100;
 		dead = false;
