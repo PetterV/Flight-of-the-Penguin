@@ -10,7 +10,7 @@ public class TriggerAreaZoom : MonoBehaviour {
 	float zoomClamp;
 
 	void Start () {
-
+		camera = Camera.main;
 		zoomTo = Mathf.Floor(zoomTo*10)/10;
 		zoom = camera.orthographicSize;
 		zoomClamp = zoomSpeed + 0.1f;
