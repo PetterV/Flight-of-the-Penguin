@@ -16,6 +16,8 @@ public class MoveFields : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other){
-		other.rigidbody2D.AddForce (new Vector2(accX, accY));
+		if (other.GetComponent<Movement>().dead != true){
+			other.rigidbody2D.AddForce (new Vector2(accX, accY));
+		}
 	}
 }

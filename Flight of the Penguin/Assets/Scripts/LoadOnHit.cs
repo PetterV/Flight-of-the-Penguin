@@ -36,6 +36,7 @@ public class LoadOnHit : MonoBehaviour {
 	public GameObject fish1;
 	public GameObject fish2;
 	public GameObject fish3;
+	public GameObject fish4;
 
 
 	
@@ -45,6 +46,7 @@ public class LoadOnHit : MonoBehaviour {
 		fish1.particleSystem.enableEmission = false;
 		fish2.particleSystem.enableEmission = false;
 		fish3.particleSystem.enableEmission = false;
+		fish4.particleSystem.enableEmission = false;
 	}
 
 	public void Update() {
@@ -64,6 +66,7 @@ public class LoadOnHit : MonoBehaviour {
 			fish1.particleSystem.enableEmission = true;
 			fish2.particleSystem.enableEmission = true;
 			fish3.particleSystem.enableEmission = true;
+			fish4.particleSystem.enableEmission = true;
 			notHit = false;
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
