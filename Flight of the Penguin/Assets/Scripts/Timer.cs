@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Timer : MonoBehaviour {
+	bool startTimer = false;
 	public Sprite zero;
 	public Sprite one;
 	public Sprite two;
@@ -52,51 +53,62 @@ public class Timer : MonoBehaviour {
 		sprites.Add (eight);
 		sprites.Add (nine);
 
+		//Test
+		rendererhund1.sprite = zero;
+		rendererhund2.sprite = zero;
+		renderer.sprite = zero;
+		renderer2.sprite = zero;
+		renderer3.sprite = zero;
+		renderer4.sprite = zero;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetButton("Fire1")){
+			startTimer = true;
+		}
 
-		sek1 += Time.deltaTime;
-		hund1 += Time.deltaTime;
-		float seconds = sek1%60;
+		if (startTimer) {
+			sek1 += Time.deltaTime;
+			hund1 += Time.deltaTime;
+			float seconds = sek1 % 60;
 //		print ("Start this ConnectionTesterStatus");
 //		print(renderer.sprite.name);
 //		print (zero.name);
-		int sek1floor = (int)Mathf.Floor (seconds) ;
-		int hundFloor = (int)Mathf.Floor (hund1*100);
-		print (hundFloor);
-		if (hundFloor >= 10) {
-			print(hund1);
-			hund1 = 0;
-			hundFloor = 0;
-			hund2++;
-			if(hund2==10)
-				hund2 = 0;
+			int sek1floor = (int)Mathf.Floor (seconds);
+			int hundFloor = (int)Mathf.Floor (hund1 * 100);
+			print (hundFloor);
+			if (hundFloor >= 10) {
+				print (hund1);
+				hund1 = 0;
+				hundFloor = 0;
+				hund2++;
+				if (hund2 == 10)
+					hund2 = 0;
 
-			rendererhund2.sprite = (Sprite)sprites[hund2];
-		}
-		rendererhund1.sprite = (Sprite)sprites[hundFloor];
-		if (sek1floor == 10) {
-			sek1 = 0;
-			sek2 +=1;
-			sek1floor = 0;
-			if(sek2==6){
-				sek2=0;
-				min1++;
-				if(min1 == 10){
-					min1=0;
-					min2++;
-					if(min2==10)
-						Application.LoadLevel(Application.loadedLevelName);
-					renderer4.sprite = (Sprite) sprites [min2];
-				}
-				renderer3.sprite = (Sprite) sprites[min1];
+				rendererhund2.sprite = (Sprite)sprites [hund2];
 			}
-			renderer2.sprite = (Sprite) sprites[sek2];
+			rendererhund1.sprite = (Sprite)sprites [hundFloor];
+			if (sek1floor == 10) {
+				sek1 = 0;
+				sek2 += 1;
+				sek1floor = 0;
+				if (sek2 == 6) {
+					sek2 = 0;
+					min1++;
+					if (min1 == 10) {
+						min1 = 0;
+						min2++;
+						if (min2 == 10)
+							Application.LoadLevel (Application.loadedLevelName);
+						renderer4.sprite = (Sprite)sprites [min2];
+					}
+					renderer3.sprite = (Sprite)sprites [min1];
+				}
+				renderer2.sprite = (Sprite)sprites [sek2];
 
+			}
+			renderer.sprite = (Sprite)sprites [sek1floor];
 		}
-		renderer.sprite = (Sprite)sprites[sek1floor];
-
 	}
 }
