@@ -6,27 +6,48 @@ public class Persistence : MonoBehaviour {
 	GameObject[] musicObject;
 
 	public static int levelMusic = 0;
+	bool fadeDown = false;
+	AudioSource musicSource;
+	public float fadeSpeed = 0.1f;
+	public float setVolume = 1.0f;
 
 	// Use this for initialization
 	void Start () {
 		musicObject = GameObject.FindGameObjectsWithTag ("GameMusic");
+		musicSource = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource> ();
 		if (musicObject.Length == 1 ) {
 			audio.Play ();
 		}
-//		else {
-//			for(int i = 1; i < musicObject.Length; i++){
-//				Destroy(musicObject[i]);
-//			}
-//			
-//		}
+		else {
+			for(int i = 1; i < musicObject.Length; i++){
+				Destroy(musicObject[i]);
+			}
+			
+		}
 //		
 //		
 	}
 	
 	// Update is called once per frame
 	void Awake(){
+//		musicSource.volume = setVolume;
 		DontDestroyOnLoad (this.gameObject);
 	}
+
+	void Update (){
+		if (fadeDown && musicSource.volume > 0) {
+			musicSource.volume = musicSource.volume - fadeSpeed;
+		}
+	}
+
+	public void FadeMusic(){
+		fadeDown = true;
+	}
+
+	public void ReturnMusic(){
+		musicSource.volume = setVolume;
+	}
+
 
 //	void OnLevelWasLoaded(int level) {
 //		print (level);

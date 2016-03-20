@@ -32,7 +32,11 @@ public class LoadOnHit : MonoBehaviour {
 	public bool completed = false;
 	public int completedTimer=50;
 	bool notHit=true;
+	public GameObject gameMusic;
 
+	void Start (){
+		gameMusic = GameObject.FindWithTag("GameMusic");
+	}
 
 	public void Update() {
 		if (completed) {
@@ -46,6 +50,7 @@ public class LoadOnHit : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Player" && notHit) {
+			Destroy(gameMusic);
 			completed = true;
 			print ("Goal!");
 			notHit = false;

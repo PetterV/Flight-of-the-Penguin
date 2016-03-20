@@ -10,14 +10,14 @@ public class GoalCelebration : MonoBehaviour {
 	public GameObject fish4;
 	bool notHit = true;
 	bool completed = false;
-	AudioSource gameMusic;
+	GameObject gameMusic;
 	
 	void Awake () {
 		fish1.particleSystem.enableEmission = false;
 		fish2.particleSystem.enableEmission = false;
 		fish3.particleSystem.enableEmission = false;
 		fish4.particleSystem.enableEmission = false;
-		gameMusic = GameObject.FindWithTag ("GameMusic").GetComponent<AudioSource> ();
+		gameMusic = GameObject.FindWithTag ("GameMusic");
 
 	}
 
@@ -31,7 +31,7 @@ public class GoalCelebration : MonoBehaviour {
 			fish2.particleSystem.enableEmission = true;
 			fish3.particleSystem.enableEmission = true;
 			fish4.particleSystem.enableEmission = true;
-			gameMusic.Pause();
+			gameMusic.GetComponent<Persistence>().FadeMusic();
 		}
 		
 	}

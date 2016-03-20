@@ -64,7 +64,8 @@ public class GameControl : MonoBehaviour {
 
 	void Start()
 	{
-		audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> ();//works when changing level?
+		audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> ();//works when changing level
+		GameObject.FindWithTag("GameMusic").GetComponent<Persistence>().ReturnMusic();
 	}
 	
 	public bool CheckLevelClear(int levelNumber)
