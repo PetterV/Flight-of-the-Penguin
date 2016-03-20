@@ -363,6 +363,7 @@ public class Movement : MonoBehaviour {
 		//DEAD DEBUG BELOW
 		if (other.gameObject.tag == "Goal") {
 			goalHit=true;
+			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
 		}
 		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
@@ -491,6 +492,7 @@ public class Movement : MonoBehaviour {
 			explosionLight.enabled = true;
 			jetpackOn = false;
 			jetpackActive = false;
+			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
 		}
 	}
 }

@@ -8227,6 +8227,10 @@ Prefab:
       propertyPath: m_MatchWidthOrHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 147412, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_TagString
+      value: Timer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 197654150}
@@ -34725,6 +34729,7 @@ GameObject:
   - 223: {fileID: 1051839453}
   - 114: {fileID: 1051839452}
   - 114: {fileID: 1051839451}
+  - 114: {fileID: 1051839454}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -34815,6 +34820,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 3697940041
   m_SortingOrder: 0
+--- !u!114 &1051839454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11434774, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 256321231}
+  m_GameObject: {fileID: 1051839449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7872077892462c84390b685e1cf9c620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1054286628
 GameObject:
   m_ObjectHideFlags: 0
@@ -35502,7 +35519,7 @@ GameObject:
   - 114: {fileID: 1075724983}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: FuelImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49514,7 +49531,7 @@ GameObject:
   - 212: {fileID: 1591219249}
   m_Layer: 0
   m_Name: Timer 1
-  m_TagString: Untagged
+  m_TagString: Timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59489,7 +59506,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3027565169
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6105164aa2677e14ca8ad91c9c7994b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38f8843581d5e8f4c894b3b7e949128b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1909074962
 GameObject:
