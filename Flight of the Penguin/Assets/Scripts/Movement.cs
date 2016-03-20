@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour {
 	float percent;
 	public int minFuel = 9;
 	//VARIABLES ADDED BY PETTER
+	public bool useHelmet = false;
 	//Gravity stuff
 	private float Gincrease = 0.45f;
 	public float GravityStart = 20.0f;
@@ -74,6 +75,9 @@ public class Movement : MonoBehaviour {
 		dead = false;
 		//Debug.Log (percent + "%");
 		animator = GetComponent<Animator> ();
+		if (useHelmet == false){
+			GameObject.FindWithTag("Helmet").SetActive(false);
+		}
 	}
 	
 	// FixedUpdate is called at a fixed rate not once per frame, physics here
@@ -364,6 +368,7 @@ public class Movement : MonoBehaviour {
 		if (other.gameObject.tag == "Goal") {
 			goalHit=true;
 			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
+			GameObject.FindWithTag("Helmet").SetActive(false);
 		}
 		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
@@ -493,6 +498,7 @@ public class Movement : MonoBehaviour {
 			jetpackOn = false;
 			jetpackActive = false;
 			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
+			GameObject.FindWithTag("Helmet").SetActive(false);
 		}
 	}
 }
