@@ -82,6 +82,9 @@ GameObject:
   - 61: {fileID: 6163070}
   - 114: {fileID: 11436666}
   - 61: {fileID: 6119436}
+  - 82: {fileID: 8294942}
+  - 114: {fileID: 11494940}
+  - 114: {fileID: 11494942}
   m_Layer: 2
   m_Name: GoalBlock
   m_TagString: Goal
@@ -162,7 +165,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 164.869995, y: 38.25, z: 0}
+  m_LocalPosition: {x: 20.7299995, y: -61.6300011, z: 0}
   m_LocalScale: {x: 2, y: 2, z: .496813864}
   m_Children:
   - {fileID: 470338}
@@ -206,6 +209,64 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2.18000007, y: 2.42000008}
   m_Center: {x: .219999999, y: -.0199999996}
+--- !u!82 &8294942
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163070}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!108 &10821170
 Light:
   m_ObjectHideFlags: 1
@@ -259,10 +320,6 @@ MonoBehaviour:
   crashCounter: {fileID: 0}
   completed: 0
   completedTimer: 50
-  fish1: {fileID: 170338}
-  fish2: {fileID: 134544}
-  fish3: {fileID: 134546}
-  fish4: {fileID: 134542}
 --- !u!114 &11465994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,6 +368,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortingLayer: Obstacle
+--- !u!114 &11494940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81f695fe7cb9fc4a98810d80a361ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 5b6528937fd4d9d4ebab9feab1a67947, type: 3}
+  onlyOnce: 1
+  volume: 1
+  mineMakeSound: 0
+  audioSourceInParent: 0
+--- !u!114 &11494942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebddb239b779ab46b52a34687cfe205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish1: {fileID: 170338}
+  fish2: {fileID: 134544}
+  fish3: {fileID: 134546}
+  fish4: {fileID: 134542}
 --- !u!198 &19834542
 ParticleSystem:
   m_ObjectHideFlags: 1
