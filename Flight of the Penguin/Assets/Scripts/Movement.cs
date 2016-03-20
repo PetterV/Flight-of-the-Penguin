@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour {
 	public int minFuel = 9;
 	//VARIABLES ADDED BY PETTER
 	public bool useHelmet = false;
+	public GameObject helmet;
 	//Gravity stuff
 	private float Gincrease = 0.45f;
 	public float GravityStart = 20.0f;
@@ -75,8 +76,9 @@ public class Movement : MonoBehaviour {
 		dead = false;
 		//Debug.Log (percent + "%");
 		animator = GetComponent<Animator> ();
+		helmet = GameObject.FindWithTag ("Helmet");
 		if (useHelmet == false){
-			GameObject.FindWithTag("Helmet").SetActive(false);
+			helmet.SetActive(false);
 		}
 	}
 	
@@ -498,7 +500,7 @@ public class Movement : MonoBehaviour {
 			jetpackOn = false;
 			jetpackActive = false;
 			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
-			GameObject.FindWithTag("Helmet").SetActive(false);
+			helmet.SetActive(false);
 		}
 	}
 }

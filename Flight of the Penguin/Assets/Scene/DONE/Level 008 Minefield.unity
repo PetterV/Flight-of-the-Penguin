@@ -7738,7 +7738,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!1 &242622650
 GameObject:
   m_ObjectHideFlags: 0
@@ -17862,69 +17862,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &525141805
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 525141807}
-  - 108: {fileID: 525141806}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &525141806
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 525141805}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .100000001
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &525141807
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 525141805}
-  m_LocalRotation: {x: .354300469, y: -.350772381, z: -.0236849319, w: .866526961}
-  m_LocalPosition: {x: 40.4300003, y: -6.40999985, z: 4.38000011}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
 --- !u!1001 &527497151
 Prefab:
   m_ObjectHideFlags: 0
@@ -37819,6 +37756,10 @@ Prefab:
       propertyPath: image
       value: 
       objectReference: {fileID: 1075724983}
+    - target: {fileID: 11467490, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: useHelmet
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
   m_RootGameObject: {fileID: 1317603414}
@@ -42102,7 +42043,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!1 &1291542896
 GameObject:
   m_ObjectHideFlags: 0
@@ -42564,7 +42505,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!1 &1313094436
 GameObject:
   m_ObjectHideFlags: 0
@@ -43925,7 +43866,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!1 &1367460082
 GameObject:
   m_ObjectHideFlags: 0
@@ -57627,7 +57568,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1 &1818092191
 GameObject:
   m_ObjectHideFlags: 0
@@ -59886,7 +59827,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!1 &1916315623
 GameObject:
   m_ObjectHideFlags: 0
@@ -62775,7 +62716,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!1001 &2003775078
 Prefab:
   m_ObjectHideFlags: 0
@@ -62886,7 +62827,7 @@ Transform:
   m_LocalScale: {x: .156030029, y: .156029895, z: .156029895}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!1001 &2005731235
 Prefab:
   m_ObjectHideFlags: 0
@@ -67819,7 +67760,7 @@ MonoBehaviour:
   maxFuel: 700
   detectable: 1
   minFuel: 9
-  useHelmet: 0
+  useHelmet: 1
   GravityStart: 20
   screamTimer: 0
   animStateTracker: 0
