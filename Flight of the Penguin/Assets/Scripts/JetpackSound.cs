@@ -20,28 +20,28 @@ public class JetpackSound : MonoBehaviour {
 		 //GetComponent<Movement>().fuelPlaySound;
 		//Fuel =(int) player.GetComponent<Movement>().Fuel;
 		Fuel = player.GetComponent<Movement> ().Fuel;
-
-		if (Input.GetButton ("Fire1") && Fuel > 0) {
-			audio.clip = audioClip;
-			if (!audio.isPlaying) {
-				audio.loop = true;
-				audio.Play ();
-				hasPlayed = true;
-			}
-		} else if (Input.GetButton ("Fire1") && Fuel <= 0) {
-			audio.clip = deadBurn;
-			if (!audio.isPlaying) {
+		if (player.GetComponent<Movement> ().paused == false) {
+			if (Input.GetButton ("Fire1") && Fuel > 0) {
+				audio.clip = audioClip;
+				if (!audio.isPlaying) {
+					audio.loop = true;
+					audio.Play ();
+					hasPlayed = true;
+				}
+			} else if (Input.GetButton ("Fire1") && Fuel <= 0) {
+				audio.clip = deadBurn;
+				if (!audio.isPlaying) {
+					audio.loop = false;
+					audio.Play ();
+					hasPlayed = true;
+				}
+			} else {
 				audio.loop = false;
-				audio.Play ();
-				hasPlayed = true;
-			}
-		}
-		else {
-			audio.loop = false;
-			if (hasPlayed){
-				StartCoroutine(VolumeFade(audio, 0f, 0.1f));
-				hasPlayed = false;
+				if (hasPlayed) {
+					StartCoroutine (VolumeFade (audio, 0f, 0.1f));
+					hasPlayed = false;
 						           
+				}
 			}
 		}
 	}

@@ -48,6 +48,7 @@ public class Movement : MonoBehaviour {
 	//??? Brukes ikke til noe i dette scriptet, men muligens i et annet, så ikke slett.
 	public int touchTimer;
 	public bool surfaceTouched;
+	public bool paused = false;
 	//Eksplosjonsjusteringer
 	public Material explosionMaterial;
 	public Light explosionLight;
@@ -208,7 +209,6 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		//ADDED BY PETTER:
 		//Animation
 		speedCounter = speed * 10;
@@ -252,11 +252,11 @@ public class Movement : MonoBehaviour {
 		}
 
 		//Shake while flying
-		if (jetpackOn == true && speedCounter >= 2.5f * AnimCrazy) {
-			mainCamera.GetComponent<FlyShake>().fly = true;
-		} else {
-			mainCamera.GetComponent<FlyShake>().fly = false;
-		}
+//		if (jetpackOn == true && speedCounter >= 2.5f * AnimCrazy) {
+//			mainCamera.GetComponent<FlyShake>().fly = true;
+//		} else {
+//			mainCamera.GetComponent<FlyShake>().fly = false;
+//		}
 
 
 		//update fuelbar
@@ -266,11 +266,17 @@ public class Movement : MonoBehaviour {
 		{
 			if (Time.timeScale == 1)
 			{
+				mainCamera.GetComponent<LaunchShake>().paused = true;
+				mainCamera.GetComponent<PerlinShake>().paused = true;
 				Time.timeScale = 0;
+				paused = true;
 			}
 			else
 			{
+				mainCamera.GetComponent<LaunchShake>().paused = false;
+				mainCamera.GetComponent<PerlinShake>().paused = false;
 				Time.timeScale = 1;
+				paused = false;
 			}
 		}
 

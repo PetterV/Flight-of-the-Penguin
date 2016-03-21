@@ -9,6 +9,7 @@ public class LaunchShake : MonoBehaviour {
 	
 	public bool launch = false;
 //	public bool launchOnce = true;
+	public bool paused = false;
 	
 	// -------------------------------------------------------------------------
 	public void PlayShake() {
@@ -19,11 +20,12 @@ public class LaunchShake : MonoBehaviour {
 	
 	// -------------------------------------------------------------------------
 	void Update() {
-		
-		if (launch == true) {
-			launch = false;
+		if (!paused) {
+			if (launch == true) {
+				launch = false;
 //			launchOnce = false;
-			PlayShake();
+				PlayShake ();
+			}
 		}
 	}
 	
@@ -35,7 +37,7 @@ public class LaunchShake : MonoBehaviour {
 		
 		float randomStart = Random.Range(-50.0f, 50.0f);
 		
-		while (elapsed < launchDuration) {
+		while (elapsed < launchDuration && !paused) {
 			
 			elapsed += Time.deltaTime;			
 			

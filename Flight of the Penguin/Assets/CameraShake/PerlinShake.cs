@@ -9,6 +9,8 @@ public class PerlinShake : MonoBehaviour {
 	
 	public bool testDead = false;
 	public bool onlyOnce = true;
+
+	public bool paused = false;
 	
 	// -------------------------------------------------------------------------
 	public void PlayShake() {
@@ -19,11 +21,12 @@ public class PerlinShake : MonoBehaviour {
 	
 	// -------------------------------------------------------------------------
 	void Update() {
-
-		if (testDead == true && onlyOnce == true) {
-			testDead = false;
-			onlyOnce = false;
-			PlayShake();
+		if (!paused) {
+			if (testDead == true && onlyOnce == true) {
+				testDead = false;
+				onlyOnce = false;
+				PlayShake ();
+			}
 		}
 	}
 	
@@ -35,7 +38,7 @@ public class PerlinShake : MonoBehaviour {
 
 		float randomStart = Random.Range(-1000.0f, 1000.0f);
 		
-		while (elapsed < duration) {
+		while (elapsed < duration && !paused) {
 			
 			elapsed += Time.deltaTime;			
 			

@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.465999991, y: .200000003, z: 0}
+  m_LocalPosition: {x: -.101999998, y: .115000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467486}
@@ -1071,6 +1071,7 @@ MonoBehaviour:
   launchSpeed: .400000006
   launchMagnitude: .5
   launch: 0
+  paused: 0
 --- !u!114 &11467482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1087,6 +1088,7 @@ MonoBehaviour:
   magnitude: 3
   testDead: 0
   onlyOnce: 1
+  paused: 0
 --- !u!114 &11467484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,6 +1126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sigh: {fileID: 8300000, guid: 885321b6eb277564f8536674153bb1a3, type: 3}
+  dead: 0
 --- !u!114 &11467490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1142,6 +1145,7 @@ MonoBehaviour:
   detectable: 1
   minFuel: 9
   useHelmet: 0
+  helmet: {fileID: 0}
   GravityStart: 20
   screamTimer: 0
   animStateTracker: 0
@@ -1150,6 +1154,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2067462}
   touchTimer: 0
   surfaceTouched: 0
+  paused: 0
   explosionMaterial: {fileID: 2100000, guid: 67eace36a07d5431c960100516293701, type: 2}
   explosionLight: {fileID: 10867462}
   dead: 0
@@ -1174,6 +1179,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 13299a7d48aed8e42b89a027ed569d12, type: 3}
   - {fileID: 8300000, guid: 45cd1db4408f0f74fb1e84cd1997e41a, type: 3}
   occurrence: .0500000007
+  shouldMakeSound: 1
 --- !u!114 &11467494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1201,7 +1207,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: a6ca610878f134e5a931e6c4d6e4457a, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: bdc144a5146884d489a806ba955c8df6, type: 3}
   cursorMode: 1
-  hotSpot: {x: 70, y: 70}
+  hotSpot: {x: -100, y: 55}
 --- !u!114 &11467498
 MonoBehaviour:
   m_ObjectHideFlags: 1
