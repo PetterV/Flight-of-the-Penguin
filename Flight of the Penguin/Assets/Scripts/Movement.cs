@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour {
 	//??? Brukes ikke til noe i dette scriptet, men muligens i et annet, så ikke slett.
 	public int touchTimer;
 	public bool surfaceTouched;
-	bool paused = false;
+	public bool paused = false;
 	//Eksplosjonsjusteringer
 	public Material explosionMaterial;
 	public Light explosionLight;
@@ -269,12 +269,14 @@ public class Movement : MonoBehaviour {
 				mainCamera.GetComponent<LaunchShake>().paused = true;
 				mainCamera.GetComponent<PerlinShake>().paused = true;
 				Time.timeScale = 0;
+				paused = true;
 			}
 			else
 			{
 				mainCamera.GetComponent<LaunchShake>().paused = false;
 				mainCamera.GetComponent<PerlinShake>().paused = false;
 				Time.timeScale = 1;
+				paused = false;
 			}
 		}
 

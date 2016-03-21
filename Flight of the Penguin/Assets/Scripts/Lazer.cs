@@ -22,6 +22,7 @@ public class Lazer : MonoBehaviour {
 	public GameObject obj2;
 	public GameObject obj3;
 	public GameObject obj4;
+	bool paused = false;
 	// Use this for initialization
 	void Start () {
 		if (obj1)
@@ -37,31 +38,38 @@ public class Lazer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		currTime++;
-		if (timerDelay>0)
-		{
-			if(timerDelay<currTime)
-				timerDelay=0;
-			return;
+		if (GameObject.FindWithTag("Player").GetComponent<Movement> ().paused == false) {
+			paused = true;
 		}
-		if (timerOn < currTime && !On) {
-			currTime = 0;
-			On = true;
-			foreach (GameObject obj in objects) {
-				if (obj.activeSelf)
-					obj.SetActive (false);
-				else
-					obj.SetActive (true);
+		if (GameObject.FindWithTag("Player").GetComponent<Movement> ().paused == false) {
+			paused = false;
+		}
+		if (!paused) {
+			currTime++;
+			if (timerDelay > 0) {
+				if (timerDelay < currTime)
+					timerDelay = 0;
+				return;
 			}
-		}
-		if (timerOff < currTime && On) {
-			currTime = 0;
-			On = false;
-			foreach (GameObject obj in objects) {
-				if (obj.activeSelf)
-					obj.SetActive (false);
-				else
-					obj.SetActive (true);
+			if (timerOn < currTime && !On) {
+				currTime = 0;
+				On = true;
+				foreach (GameObject obj in objects) {
+					if (obj.activeSelf)
+						obj.SetActive (false);
+					else
+						obj.SetActive (true);
+				}
+			}
+			if (timerOff < currTime && On) {
+				currTime = 0;
+				On = false;
+				foreach (GameObject obj in objects) {
+					if (obj.activeSelf)
+						obj.SetActive (false);
+					else
+						obj.SetActive (true);
+				}
 			}
 		}
 		

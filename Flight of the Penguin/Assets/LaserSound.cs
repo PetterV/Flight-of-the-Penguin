@@ -8,6 +8,7 @@ public class LaserSound : MonoBehaviour {
 	public bool fadeDown = false;
 	public bool returnVolume = true;
 	public bool mainLaserPlaying = false;
+	bool paused = false;
 
 	// Use this for initialization
 	void Start () {
