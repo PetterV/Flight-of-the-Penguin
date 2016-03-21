@@ -371,6 +371,8 @@ public class Movement : MonoBehaviour {
 			goalHit=true;
 			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
 			GameObject.FindWithTag("Helmet").SetActive(false);
+			GetComponent<PinguNoises>().shouldMakeSound = false;
+			GetComponent<OlafSigh>().dead = true;
 		}
 		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound
@@ -501,6 +503,8 @@ public class Movement : MonoBehaviour {
 			jetpackActive = false;
 			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
 			helmet.SetActive(false);
+			GetComponent<PinguNoises>().shouldMakeSound = false;
+			GetComponent<OlafSigh>().dead = true;
 		}
 	}
 }

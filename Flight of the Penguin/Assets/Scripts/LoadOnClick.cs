@@ -84,7 +84,7 @@ public class LoadOnClick : MonoBehaviour {
 
 	IEnumerator LoadWithDelay (int levelToLoad)
 	{
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.5f);
 		Application.LoadLevel (levelToLoad);
 	}
 }
