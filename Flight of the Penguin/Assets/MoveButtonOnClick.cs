@@ -68,5 +68,9 @@ public class MoveButtonOnClick : MonoBehaviour {
 			float moveTo = transform.position.x - moveSpeed;
 			transform.position = new Vector3 (moveTo, transform.position.y, transform.position.z);
 		}
+
+		if (posX < rangeRightHAC && posX > rangeLeftHAC) {
+			transform.position = new Vector3 (holdingAreaCenter.transform.position.x, transform.position.y, transform.position.z);
+		}
 	}
 }

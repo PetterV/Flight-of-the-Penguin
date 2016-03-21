@@ -8,6 +8,7 @@ public class PinguNoises : MonoBehaviour {
 	public float occurrence;
 	bool makeSound=false;
 	Animator animator;
+	public bool shouldMakeSound = true;
 	
 	void Start () {
 		player = GameObject.FindWithTag("Player");
@@ -15,29 +16,31 @@ public class PinguNoises : MonoBehaviour {
 	}
 	
 	void Update () {
-		Fuel = player.GetComponent<Movement> ().Fuel;
-		float chance = Random.Range (0.0f, 1.0f);
-		if (player.rigidbody2D.velocity.x == 0 && player.rigidbody2D.velocity.y == 0) {
-			makeSound = true;
-		}
-		if (Input.GetButtonDown ("Fire1") && makeSound && Fuel > 0) {
-			//if (chance < occurrence){
-			if (!audio.isPlaying) {
-				var noRepeat = FilterCurrentClip ();
-				int random = Random.Range (0, noRepeat.Length);
-				audio.clip = noRepeat [random];
-				audio.Play ();
-				makeSound = false;
-				PlayAnimation();
+		if (shouldMakeSound) {
+			Fuel = player.GetComponent<Movement> ().Fuel;
+			float chance = Random.Range (0.0f, 1.0f);
+			if (player.rigidbody2D.velocity.x == 0 && player.rigidbody2D.velocity.y == 0) {
+				makeSound = true;
 			}
+			if (Input.GetButtonDown ("Fire1") && makeSound && Fuel > 0) {
+				//if (chance < occurrence){
+				if (!audio.isPlaying) {
+					var noRepeat = FilterCurrentClip ();
+					int random = Random.Range (0, noRepeat.Length);
+					audio.clip = noRepeat [random];
+					audio.Play ();
+					makeSound = false;
+					PlayAnimation ();
+				}
 			
-		} else if (Input.GetButtonDown ("Fire1") && chance < occurrence && Fuel > 0) {
-			if (!audio.isPlaying) {
-				var noRepeat = FilterCurrentClip ();
-				int random = Random.Range (0, noRepeat.Length);
-				audio.clip = noRepeat [random];
-				audio.Play ();
-				//makeSound = false;
+			} else if (Input.GetButtonDown ("Fire1") && chance < occurrence && Fuel > 0) {
+				if (!audio.isPlaying) {
+					var noRepeat = FilterCurrentClip ();
+					int random = Random.Range (0, noRepeat.Length);
+					audio.clip = noRepeat [random];
+					audio.Play ();
+					//makeSound = false;
+				}
 			}
 		}
 	}

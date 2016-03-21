@@ -32,21 +32,10 @@ public class LoadOnHit : MonoBehaviour {
 	public bool completed = false;
 	public int completedTimer=50;
 	bool notHit=true;
-	//Fish Objects
-	public GameObject fish1;
-	public GameObject fish2;
-	public GameObject fish3;
-	public GameObject fish4;
+	public GameObject gameMusic;
 
-
-	
-	void Awake () {
-		completed = false;
-		//collectable = GameControl.control.checkCollectable(levelNumber);
-		fish1.particleSystem.enableEmission = false;
-		fish2.particleSystem.enableEmission = false;
-		fish3.particleSystem.enableEmission = false;
-		fish4.particleSystem.enableEmission = false;
+	void Start (){
+		gameMusic = GameObject.FindWithTag("GameMusic");
 	}
 
 	public void Update() {
@@ -61,12 +50,9 @@ public class LoadOnHit : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Player" && notHit) {
+			Destroy(gameMusic);
 			completed = true;
 			print ("Goal!");
-			fish1.particleSystem.enableEmission = true;
-			fish2.particleSystem.enableEmission = true;
-			fish3.particleSystem.enableEmission = true;
-			fish4.particleSystem.enableEmission = true;
 			notHit = false;
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
