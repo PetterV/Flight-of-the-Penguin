@@ -169,6 +169,7 @@ public class GameControl : MonoBehaviour {
 			audio.audio.volume = soundVolume/100;
 		else
 			audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> (); // getting the audiosource from the new camera in the newly loaded level
+
 	}
 
 	public void Reset()
