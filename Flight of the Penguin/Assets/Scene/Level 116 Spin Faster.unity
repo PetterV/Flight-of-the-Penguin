@@ -64827,7 +64827,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: a6ca610878f134e5a931e6c4d6e4457a, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: bdc144a5146884d489a806ba955c8df6, type: 3}
   cursorMode: 1
-  hotSpot: {x: 70, y: 70}
+  hotSpot: {x: -100, y: 55}
 --- !u!108 &1265733664
 Light:
   m_ObjectHideFlags: 0
@@ -65071,6 +65071,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1348795240}
   touchTimer: 0
   surfaceTouched: 0
+  paused: 0
   explosionMaterial: {fileID: 2100000, guid: 67eace36a07d5431c960100516293701, type: 2}
   explosionLight: {fileID: 248453060}
   dead: 0
@@ -69273,6 +69274,7 @@ MonoBehaviour:
   launchSpeed: .400000006
   launchMagnitude: .5
   launch: 0
+  paused: 0
 --- !u!114 &1348795233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69290,6 +69292,7 @@ MonoBehaviour:
   magnitude: 3
   testDead: 0
   onlyOnce: 1
+  paused: 0
 --- !u!82 &1348795234
 AudioSource:
   m_ObjectHideFlags: 0
@@ -103656,7 +103659,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431388, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 2067462, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
       propertyPath: orthographic size
