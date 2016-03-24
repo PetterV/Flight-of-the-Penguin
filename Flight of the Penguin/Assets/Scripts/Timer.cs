@@ -79,9 +79,9 @@ public class Timer : MonoBehaviour {
 //		print (zero.name);
 				int sek1floor = (int)Mathf.Floor (seconds);
 				int hundFloor = (int)Mathf.Floor (hund1 * 100);
-				print (hundFloor);
+				//print (hundFloor);
 				if (hundFloor >= 10) {
-					print (hund1);
+					//print (hund1);
 					hund1 = 0;
 					hundFloor = 0;
 					hund2++;

@@ -5,6 +5,7 @@ public class MoveFields : MonoBehaviour {
 
 	public int accX;
 	public int accY;
+	public bool affectMine = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,8 +17,22 @@ public class MoveFields : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other){
-		if (other.GetComponent<Movement>().dead != true){
+		if (other.gameObject.tag == "Player"){
+			print("something");
+			if (other.GetComponent<Movement>().dead != true){
+				other.rigidbody2D.AddForce (new Vector2(accX, accY));
+			}
+		}
+		
+		if (other.gameObject.tag == "PhysicsObject"){
 			other.rigidbody2D.AddForce (new Vector2(accX, accY));
+		}
+		
+		if (affectMine == true){
+			if (other.tag == "Mine"){
+				print("pushing mine");
+				other.rigidbody2D.AddForce (new Vector2(accX, accY));
+			}
 		}
 	}
 }
