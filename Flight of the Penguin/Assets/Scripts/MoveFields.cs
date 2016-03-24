@@ -17,19 +17,21 @@ public class MoveFields : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other){
-		if (other.GameObject.tag == "Player"){
+		if (other.gameObject.tag == "Player"){
+			print("something");
 			if (other.GetComponent<Movement>().dead != true){
 				other.rigidbody2D.AddForce (new Vector2(accX, accY));
 			}
 		}
 		
-		if (other.GameObject.tag == "PhysicsObject"){
-			other.rigidbody2D.AddForce (new Vector2(accX, accY))
+		if (other.gameObject.tag == "PhysicsObject"){
+			other.rigidbody2D.AddForce (new Vector2(accX, accY));
 		}
 		
 		if (affectMine == true){
-			if (other.GameObject.tag == "Mine" && other.GameObject.GetComponent<Rigidbody2D>() != null){
-				other.rigidbody2D.AddForce (new Vector2(accX, accY))
+			if (other.tag == "Mine"){
+				print("pushing mine");
+				other.rigidbody2D.AddForce (new Vector2(accX, accY));
 			}
 		}
 	}
