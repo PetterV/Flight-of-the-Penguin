@@ -18,9 +18,7 @@ public class MoveFields : MonoBehaviour {
 		if (other.gameObject.tag == "Player"){
 			if (other.GetComponent<Movement>().dead != true){
 				other.rigidbody2D.AddForce (new Vector2(accX, accY));
-				if(accY > 0){
-					other.GetComponent<Movement>().Gravity = other.GetComponent<Movement>().GravityStart;
-				}
+				other.GetComponent<Movement>().Gravity = other.GetComponent<Movement>().GravityStart;
 			}
 		}
 		
