@@ -33,15 +33,18 @@ public class LoadOnHit : MonoBehaviour {
 	public int completedTimer=50;
 	bool notHit=true;
 	public GameObject gameMusic;
+	private bool hitButton = false;
+	public GameObject nextButton;
 
 	void Start (){
+
 		gameMusic = GameObject.FindWithTag("GameMusic");
 	}
 
 	public void Update() {
 		if (completed) {
 			completedTimer--;
-			if(completedTimer <= 0 && Input.GetButton ("Fire1"))
+			if(completedTimer <= 0 && hitButton == true )
 			{
 				LoadScene (levelLoad);
 				Debug.Log("LEVEL");
@@ -80,8 +83,16 @@ public class LoadOnHit : MonoBehaviour {
 		return collectable;
 	}
 
+	public void createNextLevelButton(){
+
+	}
+
 	public void setCollected(bool collect)
 	{
 		collectable = collect;
+	}
+
+	public void hitTheButton(){
+		hitButton = true;
 	}
 }
