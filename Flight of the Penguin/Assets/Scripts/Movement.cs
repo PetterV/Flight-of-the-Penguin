@@ -55,6 +55,7 @@ public class Movement : MonoBehaviour {
 	//Physicsobjekter
 	Rigidbody2D pObjectToActivate;
 	float torqueToAdd = 5f;
+	public GameObject exitMenu;
 
 	//DONE WITH VARIABLES ADDED BY PETTER
 
@@ -81,6 +82,8 @@ public class Movement : MonoBehaviour {
 		if (useHelmet == false){
 			helmet.SetActive(false);
 		}
+		exitMenu = GameObject.FindWithTag ("PauseMenu");
+		exitMenu.SetActive (false);
 	}
 	
 	// FixedUpdate is called at a fixed rate not once per frame, physics here
@@ -262,21 +265,15 @@ public class Movement : MonoBehaviour {
 		//update fuelbar
 		image.fillAmount = Fuel/maxFuel;
 
-		if (Input.GetKeyDown(KeyCode.P))
+		if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown("escape"))
 		{
 			if (Time.timeScale == 1)
 			{
-				mainCamera.GetComponent<LaunchShake>().paused = true;
-				mainCamera.GetComponent<PerlinShake>().paused = true;
-				Time.timeScale = 0;
-				paused = true;
+				Pause ();
 			}
 			else
 			{
-				mainCamera.GetComponent<LaunchShake>().paused = false;
-				mainCamera.GetComponent<PerlinShake>().paused = false;
-				Time.timeScale = 1;
-				paused = false;
+				Unpause ();
 			}
 		}
 
@@ -286,10 +283,10 @@ public class Movement : MonoBehaviour {
 		}
 
 
-		if (Input.GetKey("escape") && Application.loadedLevelName != "Meny")
-			Application.LoadLevel("Meny");
-		else if	(Input.GetKey("escape") && Application.loadedLevelName == "Meny")
-			Application.Quit();
+		//if (Input.GetKey("escape") && Application.loadedLevelName != "Meny")
+		//	Application.LoadLevel("Meny");
+		//else if	(Input.GetKey("escape") && Application.loadedLevelName == "Meny")
+		//	Application.Quit();
 
 		if(Fuel < 1)
 		{
@@ -315,6 +312,22 @@ public class Movement : MonoBehaviour {
 	public Vector3 getDir()
 	{
 		return direction;
+	}
+
+	public void Pause(){
+		mainCamera.GetComponent<LaunchShake>().paused = true;
+		mainCamera.GetComponent<PerlinShake>().paused = true;
+		Time.timeScale = 0;
+		paused = true;
+		exitMenu.SetActive(true);
+	}
+
+	public void Unpause(){
+		exitMenu.SetActive(false);
+		mainCamera.GetComponent<LaunchShake>().paused = false;
+		mainCamera.GetComponent<PerlinShake>().paused = false;
+		Time.timeScale = 1;
+		paused = false;
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
