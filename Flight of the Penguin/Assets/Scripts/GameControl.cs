@@ -10,7 +10,7 @@ public class GameControl : MonoBehaviour {
 	public bool level1 = false;
 	public int deathCounter;
 	public bool collectable;
-	public int levelTime;
+	public float levelTime;
 	public static GameControl control;
 	public bool mute = false;
 	public float soundVolume = 100.0f;
@@ -26,6 +26,7 @@ public class GameControl : MonoBehaviour {
 		} else if (control != this) {
 			Destroy(gameObject);
 		}
+
 
 //
 //		if (PlayerPrefs.GetInt ("FullScreen") < 1) {
@@ -84,7 +85,7 @@ public class GameControl : MonoBehaviour {
 	{
 		return(playerData.getCollectable (levelNumber));
 	}
-	public int CheckLevelTime(int levelNumber)
+	public float CheckLevelTime(int levelNumber)
 	{
 		return(playerData.getLevelTime(levelNumber));
 	}
@@ -212,8 +213,8 @@ public class GameControl : MonoBehaviour {
 	public void LevelClear(int levelNumber, bool collected){
 		BinaryFormatter bf = new BinaryFormatter();
 		PlayerData data = new PlayerData();
-		print ("0");
-		int currentLevelTime = (int)Time.timeSinceLevelLoad;
+		print ("---------------------------"+Time.timeSinceLevelLoad);
+		float currentLevelTime = Time.timeSinceLevelLoad;
 		
 		if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
 		{
@@ -256,6 +257,9 @@ public class GameControl : MonoBehaviour {
 		file.Close();
 		
 	}
+
+
+
 	public bool checkCollectable(int levelNumber)
 	{
 		if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
@@ -287,7 +291,7 @@ class PlayerData
 	List <bool> level = new List<bool>();
 	List <bool> collect = new List<bool>();
 	List <bool> challenge = new List<bool>();
-	List <int> timed = new List<int>();//time it took to complete the level in seconds
+	List <float> timed = new List<float>();//time it took to complete the level in seconds
 	public int deathCounter;
 
 	public void Start(){
@@ -335,7 +339,7 @@ class PlayerData
 		Debug.Log (boolean);
 		level[levelNumber] = boolean;
 	}
-	public void setlevel(int levelNumber, bool boolean, bool collectable, int currLevelTime){
+	public void setlevel(int levelNumber, bool boolean, bool collectable, float currLevelTime){
 		Debug.Log ("SETINGLEVEL");
 		Debug.Log (levelNumber);
 		Debug.Log (boolean);
@@ -358,7 +362,7 @@ class PlayerData
 		Debug.Log (collect[levelNumber]);
 		return(collect [levelNumber]);
 	}
-	public int getLevelTime(int levelNumber)
+	public float getLevelTime(int levelNumber)
 	{
 		Debug.Log (levelNumber);
 		if (timed.Count==null) {
