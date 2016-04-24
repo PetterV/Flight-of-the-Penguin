@@ -33,21 +33,22 @@ public class LoadOnHit : MonoBehaviour {
 	public int completedTimer=50;
 	bool notHit=true;
 	public GameObject gameMusic;
-	private bool hitButton = false;
 	public GameObject nextButton;
+	public GameObject fuelStuff;
 
 	void Start (){
-
+		nextButton = GameObject.FindWithTag("LevelButton");
+		nextButton.SetActive (false);
 		gameMusic = GameObject.FindWithTag("GameMusic");
+		fuelStuff = GameObject.FindWithTag ("FuelStuff");
 	}
 
 	public void Update() {
 		if (completed) {
 			completedTimer--;
-			if(completedTimer <= 0 && hitButton == true )
+			if(completedTimer <= 0 )
 			{
-				LoadScene (levelLoad);
-				Debug.Log("LEVEL");
+				nextButton.SetActive(true);
 			}
 		}
 	}
@@ -57,6 +58,7 @@ public class LoadOnHit : MonoBehaviour {
 			completed = true;
 			print ("Goal!");
 			notHit = false;
+			fuelStuff.SetActive(false);
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
 
@@ -93,6 +95,7 @@ public class LoadOnHit : MonoBehaviour {
 	}
 
 	public void hitTheButton(){
-		hitButton = true;
+		LoadScene (levelLoad);
+		Debug.Log("LEVEL");
 	}
 }

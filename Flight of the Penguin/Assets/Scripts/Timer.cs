@@ -36,6 +36,7 @@ public class Timer : MonoBehaviour {
 	float timer= 0;
 	// Use this for initialization
 	void Start () {
+		startTimer = true;
 		rendererhund1 = hund1Window.GetComponent<SpriteRenderer> ();
 		rendererhund2 = hund2Window.GetComponent<SpriteRenderer>();
 		renderer = gameObject.GetComponent<SpriteRenderer>();
@@ -116,6 +117,23 @@ public class Timer : MonoBehaviour {
 	}
 
 	public void Stop(){
+		//stopped = true;
+	}
+
+	public void setTimer(int inMin2, int inMin1, int inSek2,int inSek1, int inHund2, int inHund1){
 		stopped = true;
+		hund1 = inHund1;
+		hund2 = inHund2;
+		sek1 = inSek1;
+		sek2 = inSek2;
+		min1 = inMin1;
+		min2 = inMin2;
+
+		rendererhund2.sprite = (Sprite)sprites [hund2];
+		rendererhund1.sprite = (Sprite)sprites [(int)hund1];
+		renderer4.sprite = (Sprite)sprites [min2];
+		renderer3.sprite = (Sprite)sprites [min1];
+		renderer2.sprite = (Sprite)sprites [sek2];
+		renderer.sprite = (Sprite)sprites [(int)sek1];
 	}
 }
