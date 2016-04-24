@@ -56,6 +56,7 @@ public class Movement : MonoBehaviour {
 	Rigidbody2D pObjectToActivate;
 	float torqueToAdd = 5f;
 	public GameObject exitMenu;
+	GameObject uiController;
 
 	//DONE WITH VARIABLES ADDED BY PETTER
 
@@ -84,6 +85,7 @@ public class Movement : MonoBehaviour {
 		}
 		exitMenu = GameObject.FindWithTag ("PauseMenu");
 		exitMenu.SetActive (false);
+		uiController = GameObject.FindWithTag ("UIController");
 	}
 	
 	// FixedUpdate is called at a fixed rate not once per frame, physics here
@@ -328,6 +330,9 @@ public class Movement : MonoBehaviour {
 		mainCamera.GetComponent<PerlinShake>().paused = false;
 		Time.timeScale = 1;
 		paused = false;
+		uiController.GetComponent<UIController> ().wantsToQuit = false;
+		uiController.GetComponent<UIController> ().wantsToSelect = false;
+		uiController.GetComponent<UIController> ().wantsToMenu = false;
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
