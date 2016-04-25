@@ -7460,6 +7460,7 @@ GameObject:
   - 222: {fileID: 300626912}
   - 114: {fileID: 300626911}
   - 114: {fileID: 300626910}
+  - 114: {fileID: 300626913}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -7524,7 +7525,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300626911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 300626913}
+        m_MethodName: LoadLevelFromName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level Select Screen
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &300626911
@@ -7556,6 +7569,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 2100723934}
   m_GameObject: {fileID: 300626908}
+--- !u!114 &300626913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300626908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
 --- !u!1 &304337127
 GameObject:
   m_ObjectHideFlags: 0
@@ -58561,6 +58587,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 488386, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: m_LocalPosition.x
       value: 10.7799997
@@ -58612,6 +58642,30 @@ Prefab:
     - target: {fileID: 11453144, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: m_BlockingObjects
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 300626913}
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevelFromName
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level Select Screen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
