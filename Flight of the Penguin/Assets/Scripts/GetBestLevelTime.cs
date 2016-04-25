@@ -6,6 +6,7 @@ public class GetBestLevelTime : MonoBehaviour {
 	public float levelTimer=0;
 	public bool levelCleared=false;
 	public Timer timer;
+	public GameObject levelStamp;
 	// Use this for initialization
 	void Start () {
 		levelTimer=GameControl.control.CheckLevelTime(levelNum);
@@ -22,6 +23,10 @@ public class GetBestLevelTime : MonoBehaviour {
 		hund1 = hund1 % 10;
 
 		timer.setTimer (min2, min1, sek2, sek1, hund2, hund1);
+
+		if(!levelCleared){
+			levelStamp.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame

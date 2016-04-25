@@ -394,7 +394,9 @@ public class Movement : MonoBehaviour {
 		if (other.gameObject.tag == "Goal") {
 			goalHit=true;
 			GameObject.FindWithTag("Timer").GetComponent<Timer>().Stop();
-			GameObject.FindWithTag("Helmet").SetActive(false);
+			if(useHelmet){
+				GameObject.FindWithTag("Helmet").SetActive(false);
+			}
 			GetComponent<PinguNoises>().shouldMakeSound = false;
 			GetComponent<OlafSigh>().dead = true;
 		}
