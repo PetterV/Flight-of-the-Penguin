@@ -24,7 +24,6 @@ public class LoadOnHit : MonoBehaviour {
 	 * you want to have as a goal
 	 */
 
-	int levelLoad = 0;
 	public GameObject loadingScreen;
 	public int levelNumber;
 	public bool collectable;
@@ -37,7 +36,6 @@ public class LoadOnHit : MonoBehaviour {
 	public GameObject fuelStuff;
 
 	void Start (){
-		levelLoad = GameObject.FindWithTag ("GameController").GetComponent<GameControl> ().level + 1;
 		nextButton = GameObject.FindWithTag("LevelButton");
 		nextButton.SetActive (false);
 		gameMusic = GameObject.FindWithTag("GameMusic");
@@ -77,10 +75,6 @@ public class LoadOnHit : MonoBehaviour {
 		}
 	
 	}
-		public void LoadScene(int level)
-		{
-			Application.LoadLevel(level);
-		}
 	public bool getCollected()
 	{
 		return collectable;
@@ -95,8 +89,4 @@ public class LoadOnHit : MonoBehaviour {
 		collectable = collect;
 	}
 
-	public void hitTheButton(){
-		LoadScene (levelLoad);
-		Debug.Log("LEVEL");
-	}
 }
