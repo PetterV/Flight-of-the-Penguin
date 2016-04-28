@@ -30,7 +30,7 @@ public class LoadOnHit : MonoBehaviour {
 	public Transform crashCounter;
 	public bool completed = false;
 	public int completedTimer=50;
-	bool notHit=true;
+	bool notHit = true;
 	public GameObject gameMusic;
 	public GameObject nextButton;
 	public GameObject fuelStuff;
@@ -78,10 +78,6 @@ public class LoadOnHit : MonoBehaviour {
 	public bool getCollected()
 	{
 		return collectable;
-	}
-
-	public void createNextLevelButton(){
-
 	}
 
 	public void setCollected(bool collect)

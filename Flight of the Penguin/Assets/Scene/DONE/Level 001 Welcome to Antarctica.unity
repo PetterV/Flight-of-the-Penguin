@@ -7584,6 +7584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
+  gameController: {fileID: 0}
+  levelNumber: 0
 --- !u!114 &300626914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7598,6 +7601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
+  gameController: {fileID: 0}
+  levelNumber: 0
 --- !u!1 &304337127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,7 +8074,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 14, y: 74}
+  m_AnchoredPosition: {x: -49, y: 74}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &322324381
@@ -8169,6 +8175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
+  gameController: {fileID: 0}
+  levelNumber: 0
 --- !u!1 &324535781
 GameObject:
   m_ObjectHideFlags: 0
@@ -25231,6 +25240,14 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1319666009}
+    - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: buttonLevelToLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22495582, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 1244525412}

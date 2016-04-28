@@ -390,6 +390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 3
+  gameController: {fileID: 0}
 --- !u!1 &47087284
 GameObject:
   m_ObjectHideFlags: 0
@@ -24980,6 +24982,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: buttonLevelToLoad
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 1244525412}
@@ -42230,6 +42236,7 @@ GameObject:
   - 114: {fileID: 1986349874}
   - 114: {fileID: 1986349873}
   - 114: {fileID: 1986349876}
+  - 114: {fileID: 1986349877}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -42295,7 +42302,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1986349876}
+      - m_Target: {fileID: 1986349877}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -42352,6 +42359,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
+  gameController: {fileID: 0}
+--- !u!114 &1986349877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11458654, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1157162511}
+  m_GameObject: {fileID: 1986349871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
+  gameController: {fileID: 0}
 --- !u!1001 &1987009001
 Prefab:
   m_ObjectHideFlags: 0
