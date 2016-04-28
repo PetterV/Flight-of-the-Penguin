@@ -7,10 +7,6 @@ public class LoadLevel : MonoBehaviour {
 	private int buttonLevelToLoad;
 	// Use this for initialization
 
-	void Start(){
-		buttonLevelToLoad = GameObject.FindWithTag ("GameController").GetComponent<GameControl> ().level + 1;
-	}
-
 	// Update is called once per frame
 	public void LoadLevelFromInt(int levelToLoad){
 		Application.LoadLevel (levelToLoad);
@@ -21,6 +17,8 @@ public class LoadLevel : MonoBehaviour {
 	}
 
 	public void LoadNextLevel(){
+		buttonLevelToLoad = GameObject.FindWithTag ("GameController").GetComponent<GameControl> ().level + 1;
+		print ("I'm loading " + buttonLevelToLoad);
 		Application.LoadLevel (buttonLevelToLoad);
 	}
 }
