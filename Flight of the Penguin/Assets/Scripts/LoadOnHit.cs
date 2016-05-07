@@ -26,7 +26,7 @@ public class LoadOnHit : MonoBehaviour {
 
 	public GameObject loadingScreen;
 	public int levelNumber;
-	public bool collectable;
+	//public bool collectable;
 	public Transform crashCounter;
 	public bool completed = false;
 	public int completedTimer=50;
@@ -61,13 +61,13 @@ public class LoadOnHit : MonoBehaviour {
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
 
-
+			/*
 			if(!collectable)
 				collectable = GameControl.control.checkCollectable(levelNumber);
 
 			GameControl.control.LevelClear(levelNumber, collectable);
 			// wait for click
-
+			*/
 
 		//Trigger particle fishies
 
@@ -75,6 +75,7 @@ public class LoadOnHit : MonoBehaviour {
 		}
 	
 	}
+	/*
 	public bool getCollected()
 	{
 		return collectable;
@@ -84,5 +85,5 @@ public class LoadOnHit : MonoBehaviour {
 	{
 		collectable = collect;
 	}
-
+	*/
 }
