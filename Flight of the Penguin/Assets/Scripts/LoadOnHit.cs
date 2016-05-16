@@ -24,14 +24,13 @@ public class LoadOnHit : MonoBehaviour {
 	 * you want to have as a goal
 	 */
 
-	public int levelLoad = 0;
 	public GameObject loadingScreen;
 	public int levelNumber;
-	public bool collectable;
+	//public bool collectable;
 	public Transform crashCounter;
 	public bool completed = false;
 	public int completedTimer=50;
-	bool notHit=true;
+	bool notHit = true;
 	public GameObject gameMusic;
 	public GameObject nextButton;
 	public GameObject fuelStuff;
@@ -62,13 +61,13 @@ public class LoadOnHit : MonoBehaviour {
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
 
-
+			/*
 			if(!collectable)
 				collectable = GameControl.control.checkCollectable(levelNumber);
 
 			GameControl.control.LevelClear(levelNumber, collectable);
 			// wait for click
-
+			*/
 
 		//Trigger particle fishies
 
@@ -76,26 +75,15 @@ public class LoadOnHit : MonoBehaviour {
 		}
 	
 	}
-		public void LoadScene(int level)
-		{
-			Application.LoadLevel(level);
-		}
+	/*
 	public bool getCollected()
 	{
 		return collectable;
-	}
-
-	public void createNextLevelButton(){
-
 	}
 
 	public void setCollected(bool collect)
 	{
 		collectable = collect;
 	}
-
-	public void hitTheButton(){
-		LoadScene (levelLoad);
-		Debug.Log("LEVEL");
-	}
+	*/
 }

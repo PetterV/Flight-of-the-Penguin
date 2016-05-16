@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Collectable : MonoBehaviour {
-
+	/*
 	public GameObject goal;
 	bool collected = false;
 
@@ -22,4 +22,5 @@ public class Collectable : MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
+	*/
 }

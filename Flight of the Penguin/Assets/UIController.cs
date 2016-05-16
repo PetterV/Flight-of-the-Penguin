@@ -15,6 +15,9 @@ public class UIController : MonoBehaviour {
 		reallyMenu = GameObject.FindWithTag ("ReallyMenu");
 		reallyQuit = GameObject.FindWithTag ("ReallyQuit");
 		reallySelect = GameObject.FindWithTag ("ReallySelect");
+		wantsToQuit = false;
+		wantsToMenu = false;
+		wantsToSelect = false;
 	}
 	
 	// Update is called once per frame

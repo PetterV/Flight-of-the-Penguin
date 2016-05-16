@@ -4299,6 +4299,9 @@ GameObject:
   - 61: {fileID: 178012845}
   - 114: {fileID: 178012844}
   - 61: {fileID: 178012848}
+  - 82: {fileID: 178012851}
+  - 114: {fileID: 178012850}
+  - 114: {fileID: 178012849}
   m_Layer: 2
   m_Name: GoalBlock
   m_TagString: Goal
@@ -4318,17 +4321,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7897316cb8fe427193c2ad989f41bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoad: 11
   loadingScreen: {fileID: 0}
-  levelNumber: 10
+  levelNumber: 8
   collectable: 0
   crashCounter: {fileID: 0}
   completed: 0
   completedTimer: 50
-  fish1: {fileID: 1926454269}
-  fish2: {fileID: 601221535}
-  fish3: {fileID: 405667671}
-  fish4: {fileID: 976786119}
+  gameMusic: {fileID: 0}
+  nextButton: {fileID: 0}
+  fuelStuff: {fileID: 0}
 --- !u!61 &178012845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4362,7 +4363,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3281109077
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8b60e71f9ce42475aa2d940b5e84a722, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cff99569952805d44ba2d8e35e538e50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &178012847
 Transform:
@@ -4372,7 +4373,7 @@ Transform:
   m_GameObject: {fileID: 178012843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.6500015, y: -6.63000011, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: .496813864}
+  m_LocalScale: {x: .5, y: .5, z: .264625371}
   m_Children:
   - {fileID: 1926454270}
   - {fileID: 601221539}
@@ -4393,6 +4394,98 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &178012849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11494942, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30,
+    type: 2}
+  m_PrefabInternal: {fileID: 917269234}
+  m_GameObject: {fileID: 178012843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebddb239b779ab46b52a34687cfe205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish1: {fileID: 1926454269}
+  fish2: {fileID: 601221535}
+  fish3: {fileID: 405667671}
+  fish4: {fileID: 976786119}
+--- !u!114 &178012850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11494940, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30,
+    type: 2}
+  m_PrefabInternal: {fileID: 917269234}
+  m_GameObject: {fileID: 178012843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81f695fe7cb9fc4a98810d80a361ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 5b6528937fd4d9d4ebab9feab1a67947, type: 3}
+  onlyOnce: 1
+  volume: 1
+  mineMakeSound: 0
+  audioSourceInParent: 0
+--- !u!82 &178012851
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8294942, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30,
+    type: 2}
+  m_PrefabInternal: {fileID: 917269234}
+  m_GameObject: {fileID: 178012843}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &179676364
 Prefab:
   m_ObjectHideFlags: 0
@@ -13765,7 +13858,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 917269234}
   m_GameObject: {fileID: 405667671}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -13776,7 +13869,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -14003,7 +14096,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -20381,7 +20474,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 917269234}
   m_GameObject: {fileID: 601221535}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -20392,7 +20485,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -20619,7 +20712,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -30327,7 +30420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436666, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
       propertyPath: levelNumber
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11436666, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
       propertyPath: levelLoad
@@ -31881,7 +31974,7 @@ GameObject:
   - 114: {fileID: 958892908}
   m_Layer: 0
   m_Name: GameControl
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31898,7 +31991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22513e6cfef3497ea4b8950fb1e460c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 10
+  level: 8
   level1: 0
   deathCounter: 0
   collectable: 0
@@ -32436,7 +32529,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 917269234}
   m_GameObject: {fileID: 976786119}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -32447,7 +32540,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -32674,7 +32767,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -57350,6 +57443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af12b300d68c412aa94fb06e40c9c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: .100000001
+  setVolume: 1
 --- !u!4 &1764292216
 Transform:
   m_ObjectHideFlags: 0
@@ -59248,6 +59343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sigh: {fileID: 8300000, guid: 885321b6eb277564f8536674153bb1a3, type: 3}
+  dead: 0
 --- !u!114 &1825057664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59266,6 +59362,8 @@ MonoBehaviour:
   maxFuel: 700
   detectable: 1
   minFuel: 9
+  useHelmet: 0
+  helmet: {fileID: 0}
   GravityStart: 20
   screamTimer: 0
   animStateTracker: 0
@@ -59274,8 +59372,10 @@ MonoBehaviour:
   mainCamera: {fileID: 1976081879}
   touchTimer: 0
   surfaceTouched: 0
+  paused: 0
   explosionMaterial: {fileID: 2100000, guid: 67eace36a07d5431c960100516293701, type: 2}
   explosionLight: {fileID: 1692038470}
+  exitMenu: {fileID: 0}
   dead: 0
   jetpackOn: 0
   jetpackOnTime: 0
@@ -59299,6 +59399,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 13299a7d48aed8e42b89a027ed569d12, type: 3}
   - {fileID: 8300000, guid: 45cd1db4408f0f74fb1e84cd1997e41a, type: 3}
   occurrence: .0500000007
+  shouldMakeSound: 1
 --- !u!50 &1825057666
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -60997,7 +61098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439642, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
       propertyPath: level
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41a667902a44ee8439684e721f9df4b0, type: 2}
@@ -62128,7 +62229,7 @@ ParticleSystem:
     type: 2}
   m_PrefabInternal: {fileID: 917269234}
   m_GameObject: {fileID: 1926454269}
-  lengthInSec: 3
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -62139,7 +62240,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 8
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -62366,7 +62467,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: .800000012
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 400
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -64960,6 +65061,7 @@ MonoBehaviour:
   launchSpeed: .400000006
   launchMagnitude: .5
   launch: 0
+  paused: 0
 --- !u!114 &1976081889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64977,6 +65079,7 @@ MonoBehaviour:
   magnitude: 3
   testDead: 0
   onlyOnce: 1
+  paused: 0
 --- !u!1 &1978320617
 GameObject:
   m_ObjectHideFlags: 0
