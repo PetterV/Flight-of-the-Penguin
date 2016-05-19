@@ -124,6 +124,7 @@ GameObject:
   - 114: {fileID: 11414688}
   - 114: {fileID: 11433370}
   - 114: {fileID: 11458654}
+  - 114: {fileID: 11440482}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -595,7 +596,7 @@ GameObject:
   - 114: {fileID: 11453170}
   - 114: {fileID: 11453172}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Level Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,6 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!114 &11414686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1237,7 +1239,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11458654}
+      - m_Target: {fileID: 11440482}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -1264,6 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!114 &11434774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1275,6 +1278,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7872077892462c84390b685e1cf9c620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11440482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!114 &11447414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1884,7 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e8233184414b3ab44a4bd7642892cd5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 833b22eecb9ebfe4ca949195a2a36ef1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1941,7 +1958,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Meny
+          m_StringArgument: Level Select Screen
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2034,6 +2051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!114 &11462568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2309,7 +2327,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11410772}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
