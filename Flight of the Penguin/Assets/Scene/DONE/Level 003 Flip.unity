@@ -18137,9 +18137,9 @@ Transform:
   - {fileID: 2011310460}
   - {fileID: 1594827442}
   - {fileID: 84375348}
+  - {fileID: 1805163257}
   - {fileID: 2019030366}
   - {fileID: 1926233596}
-  - {fileID: 1805163257}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1120922366
@@ -21843,6 +21843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!114 &1424018003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21940,6 +21941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!1 &1428122278
 GameObject:
   m_ObjectHideFlags: 0
@@ -26142,7 +26144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 0}
   levelNumber: 3
-  collectable: 0
   crashCounter: {fileID: 0}
   completed: 0
   completedTimer: 50
@@ -26522,8 +26523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 0
+  levelToLoad: 4
   sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!114 &1717820561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27599,7 +27601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111334709}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1001 &1808896608
 Prefab:
   m_ObjectHideFlags: 0
@@ -30561,7 +30563,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111334709}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1001 &1928242181
 Prefab:
   m_ObjectHideFlags: 0
@@ -31694,7 +31696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111334709}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &2026311992
 GameObject:
   m_ObjectHideFlags: 0
@@ -32658,6 +32660,10 @@ Prefab:
       propertyPath: reallySelect
       value: 
       objectReference: {fileID: 1345239310}
+    - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: levelToLoad
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 315304198}

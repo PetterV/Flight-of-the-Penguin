@@ -6667,7 +6667,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 0}
   levelNumber: 4
-  collectable: 0
   crashCounter: {fileID: 0}
   completed: 0
   completedTimer: 50
@@ -7920,9 +7919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d027a9a4278fa4eb8b0645008481a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchDuration: .5
-  launchSpeed: .400000006
-  launchMagnitude: .5
+  launchDuration: .25
+  launchSpeed: .200000003
+  launchMagnitude: .25
   launch: 0
   paused: 0
 --- !u!114 &404809891
@@ -9125,6 +9124,18 @@ Prefab:
       propertyPath: Fuel
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 11467480, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: launchDuration
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467480, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: launchSpeed
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467480, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: launchMagnitude
+      value: .25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
   m_RootGameObject: {fileID: 1637338389}
@@ -9959,7 +9970,7 @@ AudioSource:
   m_GameObject: {fileID: 518516503}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f5c937d3a9e2f2944a19851cd2f92d11, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1c76e2586c7957244a8adcae858ad969, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -20180,7 +20191,7 @@ Prefab:
     - target: {fileID: 8251680, guid: ef7c5f815ad870d4994dbc146e6b7d23, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f5c937d3a9e2f2944a19851cd2f92d11, type: 3}
+      objectReference: {fileID: 8300000, guid: 1c76e2586c7957244a8adcae858ad969, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef7c5f815ad870d4994dbc146e6b7d23, type: 2}
   m_RootGameObject: {fileID: 518516503}
@@ -20859,6 +20870,7 @@ GameObject:
   - 114: {fileID: 1011353693}
   - 114: {fileID: 1011353692}
   - 114: {fileID: 1011353695}
+  - 114: {fileID: 1011353696}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -20924,7 +20936,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1011353695}
+      - m_Target: {fileID: 1011353696}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -20981,6 +20993,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 0
+--- !u!114 &1011353696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11458654, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1850452064}
+  m_GameObject: {fileID: 1011353690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!1 &1014956878
 GameObject:
   m_ObjectHideFlags: 0
@@ -35747,6 +35775,14 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 404809888}
+    - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: levelToLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: buttonLevelToLoad
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 952431064}
@@ -40248,6 +40284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 0
   sceneToLoad: 
+  buttonLevelToLoad: 5
 --- !u!1 &2019424424
 GameObject:
   m_ObjectHideFlags: 0
