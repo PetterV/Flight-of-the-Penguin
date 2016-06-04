@@ -24,13 +24,13 @@ public class GetBestLevelTime : MonoBehaviour {
 
 		timer.setTimer (min2, min1, sek2, sek1, hund2, hund1);
 
-		if(!levelCleared){
-			levelStamp.SetActive(false);
-		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(!levelCleared){
+			levelStamp.SetActive(false);
+		}
 	}
 }
