@@ -21523,6 +21523,14 @@ Prefab:
       propertyPath: buttonLevelToLoad
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 565905205}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 758346409}
@@ -23051,7 +23059,7 @@ Transform:
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!95 &882406679
 Animator:
   serializedVersion: 3
@@ -42132,7 +42140,7 @@ Transform:
   - {fileID: 1586324410}
   - {fileID: 575632665}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!1001 &1550776768
 Prefab:
   m_ObjectHideFlags: 0
@@ -47921,6 +47929,7 @@ GameObject:
   - 114: {fileID: 1766252010}
   - 114: {fileID: 1766252009}
   - 114: {fileID: 1766252008}
+  - 114: {fileID: 1766252013}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -48016,7 +48025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1766252008}
+      - m_Target: {fileID: 1766252013}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -48059,6 +48068,21 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 792319882}
   m_GameObject: {fileID: 1766252006}
+--- !u!114 &1766252013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11440482, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 792319882}
+  m_GameObject: {fileID: 1766252006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!1 &1767572003
 GameObject:
   m_ObjectHideFlags: 0
@@ -56481,7 +56505,7 @@ GameObject:
   - 114: {fileID: 2065983344}
   - 114: {fileID: 2065983343}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Level Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56555,7 +56579,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Meny
+          m_StringArgument: Level Select Screen
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -56574,7 +56598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e8233184414b3ab44a4bd7642892cd5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 833b22eecb9ebfe4ca949195a2a36ef1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

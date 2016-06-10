@@ -8855,6 +8855,14 @@ Prefab:
       propertyPath: buttonLevelToLoad
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1497723849}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 1072112477}
@@ -13865,7 +13873,7 @@ GameObject:
   - 114: {fileID: 982248761}
   - 114: {fileID: 982248760}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Level Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13939,7 +13947,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Meny
+          m_StringArgument: Level Select Screen
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -13958,7 +13966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e8233184414b3ab44a4bd7642892cd5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 833b22eecb9ebfe4ca949195a2a36ef1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16137,6 +16145,7 @@ GameObject:
   - 114: {fileID: 1165284494}
   - 114: {fileID: 1165284493}
   - 114: {fileID: 1165284492}
+  - 114: {fileID: 1165284497}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -16232,7 +16241,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1165284492}
+      - m_Target: {fileID: 1165284497}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -16275,6 +16284,21 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 626924546}
   m_GameObject: {fileID: 1165284490}
+--- !u!114 &1165284497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11440482, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 626924546}
+  m_GameObject: {fileID: 1165284490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!1 &1167038803
 GameObject:
   m_ObjectHideFlags: 0
@@ -22926,7 +22950,7 @@ Prefab:
     - target: {fileID: 8251680, guid: ef7c5f815ad870d4994dbc146e6b7d23, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 22e88c28bb6d9464d94821829396acb8, type: 3}
+      objectReference: {fileID: 8300000, guid: 2f8ac9c0ac002447eb897b9ce634c3ac, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef7c5f815ad870d4994dbc146e6b7d23, type: 2}
   m_RootGameObject: {fileID: 2001248321}
@@ -28588,7 +28612,7 @@ AudioSource:
   m_GameObject: {fileID: 2001248321}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 22e88c28bb6d9464d94821829396acb8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2f8ac9c0ac002447eb897b9ce634c3ac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

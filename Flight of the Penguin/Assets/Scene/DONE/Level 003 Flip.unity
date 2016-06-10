@@ -1023,7 +1023,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111334709}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &84653600
 GameObject:
   m_ObjectHideFlags: 0
@@ -18135,8 +18135,8 @@ Transform:
   m_Children:
   - {fileID: 1479007273}
   - {fileID: 2011310460}
-  - {fileID: 1594827442}
   - {fileID: 84375348}
+  - {fileID: 1594827442}
   - {fileID: 1805163257}
   - {fileID: 2019030366}
   - {fileID: 1926233596}
@@ -21804,6 +21804,7 @@ GameObject:
   - 114: {fileID: 1424018003}
   - 114: {fileID: 1424018002}
   - 114: {fileID: 1424018006}
+  - 114: {fileID: 1424018007}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -21884,7 +21885,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1424018006}
+      - m_Target: {fileID: 1424018007}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -21931,6 +21932,21 @@ CanvasRenderer:
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11458654, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090912191}
+  m_GameObject: {fileID: 1424018000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
+--- !u!114 &1424018007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11440482, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
     type: 2}
   m_PrefabInternal: {fileID: 2090912191}
   m_GameObject: {fileID: 1424018000}
@@ -24460,7 +24476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111334709}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1600420921
 Prefab:
   m_ObjectHideFlags: 0
@@ -26523,9 +26539,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 4
+  levelToLoad: 0
   sceneToLoad: 
-  buttonLevelToLoad: 0
+  buttonLevelToLoad: 4
 --- !u!114 &1717820561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30429,7 +30445,7 @@ GameObject:
   - 114: {fileID: 1924913975}
   - 114: {fileID: 1924913974}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Level Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30503,7 +30519,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Meny
+          m_StringArgument: Level Select Screen
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -30522,7 +30538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e8233184414b3ab44a4bd7642892cd5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 833b22eecb9ebfe4ca949195a2a36ef1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32662,7 +32678,19 @@ Prefab:
       objectReference: {fileID: 1345239310}
     - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: levelToLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: buttonLevelToLoad
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1717820560}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}

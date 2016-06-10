@@ -4126,11 +4126,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467490, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
       propertyPath: Fuel
-      value: 240
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 11467490, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
       propertyPath: maxFuel
-      value: 240
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 11467474, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
       propertyPath: offset.y
@@ -31385,7 +31385,7 @@ Transform:
   m_LocalScale: {x: .212158695, y: .212158784, z: .212158799}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 108
+  m_RootOrder: 107
 --- !u!95 &609667749
 Animator:
   serializedVersion: 3
@@ -34487,7 +34487,7 @@ GameObject:
   - 114: {fileID: 677859387}
   - 114: {fileID: 677859386}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Level Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34561,7 +34561,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Meny
+          m_StringArgument: Level Select Screen
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -34580,7 +34580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e8233184414b3ab44a4bd7642892cd5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 833b22eecb9ebfe4ca949195a2a36ef1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -37750,7 +37750,7 @@ Transform:
   m_LocalScale: {x: .163982809, y: .188580185, z: .163982809}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 107
+  m_RootOrder: 109
 --- !u!1 &721288701
 GameObject:
   m_ObjectHideFlags: 0
@@ -46644,7 +46644,7 @@ Transform:
   - {fileID: 2105213855}
   - {fileID: 1580018304}
   m_Father: {fileID: 0}
-  m_RootOrder: 109
+  m_RootOrder: 108
 --- !u!114 &908640763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79405,10 +79405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278072b1c3bb442dd99306110ed59520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fuel: 240
+  Fuel: 160
   Gravity: 32
   image: {fileID: 0}
-  maxFuel: 240
+  maxFuel: 160
   detectable: 1
   minFuel: 9
   useHelmet: 1
@@ -84877,6 +84877,7 @@ GameObject:
   - 114: {fileID: 1611161212}
   - 114: {fileID: 1611161211}
   - 114: {fileID: 1611161210}
+  - 114: {fileID: 1611161215}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -84972,7 +84973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611161210}
+      - m_Target: {fileID: 1611161215}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -85015,6 +85016,21 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1965863186}
   m_GameObject: {fileID: 1611161208}
+--- !u!114 &1611161215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11440482, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1965863186}
+  m_GameObject: {fileID: 1611161208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!1 &1612524562
 GameObject:
   m_ObjectHideFlags: 0
@@ -104869,6 +104885,14 @@ Prefab:
     - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: buttonLevelToLoad
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 228812535}
+    - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
