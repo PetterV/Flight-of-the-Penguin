@@ -20222,7 +20222,7 @@ Transform:
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!95 &747656027
 Animator:
   serializedVersion: 3
@@ -21530,6 +21530,10 @@ Prefab:
     - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 462570, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
@@ -34502,7 +34506,7 @@ Transform:
   m_PrefabInternal: {fileID: 792319882}
   m_GameObject: {fileID: 1294377673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: -4551}
+  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: 0}
   m_LocalScale: {x: 29.286005, y: 29.2860088, z: 24.6423149}
   m_Children: []
   m_Father: {fileID: 565905204}
@@ -42140,7 +42144,7 @@ Transform:
   - {fileID: 1586324410}
   - {fileID: 575632665}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1001 &1550776768
 Prefab:
   m_ObjectHideFlags: 0
