@@ -6256,7 +6256,7 @@ Transform:
   m_PrefabInternal: {fileID: 2110892730}
   m_GameObject: {fileID: 219212750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: -4551}
+  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: 0}
   m_LocalScale: {x: 29.286005, y: 29.2860088, z: 24.6423149}
   m_Children: []
   m_Father: {fileID: 335178925}
@@ -11697,7 +11697,7 @@ Transform:
   m_LocalScale: {x: .28038013, y: .28038013, z: .28038013}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 40
 --- !u!1 &349291205
 GameObject:
   m_ObjectHideFlags: 0
@@ -22378,7 +22378,7 @@ Transform:
   - {fileID: 52069510}
   - {fileID: 1405362054}
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 39
 --- !u!1 &732853515
 GameObject:
   m_ObjectHideFlags: 0
@@ -32080,7 +32080,7 @@ Transform:
   m_LocalScale: {x: .378486812, y: .378486812, z: 1.892434}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1001 &1124338379
 Prefab:
   m_ObjectHideFlags: 0
@@ -39820,7 +39820,7 @@ Transform:
   - {fileID: 492724102}
   - {fileID: 218179617}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
 --- !u!1 &1439740347
 GameObject:
   m_ObjectHideFlags: 0
@@ -40861,7 +40861,7 @@ Transform:
   m_LocalScale: {x: .265452504, y: .265452534, z: .265452504}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
 --- !u!1001 &1491610998
 Prefab:
   m_ObjectHideFlags: 0
@@ -40968,7 +40968,7 @@ Transform:
   m_LocalScale: {x: .265452504, y: .265452504, z: .265452504}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &1493457065
 Prefab:
   m_ObjectHideFlags: 0
@@ -57217,6 +57217,10 @@ Prefab:
     - target: {fileID: 11410772, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: buttonLevelToLoad
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 462570, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}

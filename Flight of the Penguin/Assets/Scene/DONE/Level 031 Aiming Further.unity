@@ -2845,6 +2845,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 462570, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 1895143131}
@@ -44690,7 +44694,7 @@ Transform:
   m_PrefabInternal: {fileID: 62729298}
   m_GameObject: {fileID: 1140325302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: -4551}
+  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: 0}
   m_LocalScale: {x: 29.286005, y: 29.2860088, z: 24.6423149}
   m_Children: []
   m_Father: {fileID: 530915743}
@@ -54776,6 +54780,14 @@ Prefab:
     - target: {fileID: 431388, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067462, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: orthographic size
+      value: 6.42000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467474, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: offset.y
+      value: -.810000002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
@@ -72947,7 +72959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dampTime: .0199999996
   target: {fileID: 46445648}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: -.810000002, z: 0}
   offsetSpeed: .100000001
 --- !u!81 &2054916144
 AudioListener:
@@ -72994,7 +73006,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 6.42000008
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2

@@ -28615,6 +28615,14 @@ Prefab:
       propertyPath: useHelmet
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2067462, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: orthographic size
+      value: 5.1500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467474, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
+      propertyPath: offset.x
+      value: .800000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6fc49acc698a4acbacfa07e4c34c7e5, type: 2}
   m_RootGameObject: {fileID: 1637338389}
@@ -29780,7 +29788,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 5.1500001
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -29929,7 +29937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dampTime: .0199999996
   target: {fileID: 69527705}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: .800000012, y: 0, z: 0}
   offsetSpeed: .100000001
 --- !u!81 &495053336
 AudioListener:
@@ -57539,6 +57547,10 @@ Prefab:
       propertyPath: buttonLevelToLoad
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 462570, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 952431064}
@@ -62104,7 +62116,7 @@ AudioSource:
   m_GameObject: {fileID: 1046874597}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 414390e1509e8104a80b30f729f110fb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8652e8b38e41f441d8ad7c8eaa3a513c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -105990,7 +106002,7 @@ Transform:
   m_PrefabInternal: {fileID: 967698201}
   m_GameObject: {fileID: 1818152424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: -4551}
+  m_LocalPosition: {x: -3.5999999, y: -39.5999985, z: 0}
   m_LocalScale: {x: 29.286005, y: 29.2860088, z: 24.6423149}
   m_Children: []
   m_Father: {fileID: 1120871266}
@@ -113085,6 +113097,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 8251680, guid: ef7c5f815ad870d4994dbc146e6b7d23, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8652e8b38e41f441d8ad7c8eaa3a513c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef7c5f815ad870d4994dbc146e6b7d23, type: 2}
   m_RootGameObject: {fileID: 1046874597}
