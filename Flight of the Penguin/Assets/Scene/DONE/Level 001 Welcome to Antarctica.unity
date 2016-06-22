@@ -7460,9 +7460,6 @@ GameObject:
   - 222: {fileID: 300626912}
   - 114: {fileID: 300626911}
   - 114: {fileID: 300626910}
-  - 114: {fileID: 300626915}
-  - 114: {fileID: 300626914}
-  - 114: {fileID: 300626916}
   - 114: {fileID: 300626913}
   m_Layer: 5
   m_Name: LevelSelect
@@ -7496,7 +7493,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2100723934}
   m_GameObject: {fileID: 300626908}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -7577,51 +7574,6 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 300626908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelToLoad: 0
-  sceneToLoad: 
-  buttonLevelToLoad: 0
---- !u!114 &300626914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11458654, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
-    type: 2}
-  m_PrefabInternal: {fileID: 2100723934}
-  m_GameObject: {fileID: 300626908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelToLoad: 0
-  sceneToLoad: 
-  buttonLevelToLoad: 0
---- !u!114 &300626915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11433370, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
-    type: 2}
-  m_PrefabInternal: {fileID: 2100723934}
-  m_GameObject: {fileID: 300626908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelToLoad: 0
-  sceneToLoad: 
-  buttonLevelToLoad: 0
---- !u!114 &300626916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11440482, guid: 3d3b8aa2f9e27415597f2b17d96ef0be,
-    type: 2}
-  m_PrefabInternal: {fileID: 2100723934}
   m_GameObject: {fileID: 300626908}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -9058,7 +9010,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576591885}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &346840044
 GameObject:
   m_ObjectHideFlags: 0
@@ -41070,7 +41022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576591885}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1497848188
 GameObject:
   m_ObjectHideFlags: 0
@@ -43202,9 +43154,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2024646577}
+  - {fileID: 1659568598}
   - {fileID: 346119813}
   - {fileID: 1496886908}
-  - {fileID: 1659568598}
   - {fileID: 1030302303}
   - {fileID: 1887053752}
   m_Father: {fileID: 0}
@@ -46597,7 +46549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576591885}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1660198191
 GameObject:
   m_ObjectHideFlags: 0
@@ -58745,7 +58697,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414688, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11495588, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -58755,7 +58707,10 @@ Prefab:
       propertyPath: buttonLevelToLoad
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11433370, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+    - {fileID: 11458654, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
+    - {fileID: 11440482, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3d3b8aa2f9e27415597f2b17d96ef0be, type: 2}
   m_RootGameObject: {fileID: 1244525412}
   m_IsPrefabParent: 0

@@ -10,7 +10,7 @@ public class MoveButtonOnClick : MonoBehaviour {
 	bool moveRight = false;
 	public int pageNumber;
 	int currentPage = 0;
-	GameObject gameControl;
+	GameObject levelSelectController;
 
 	//Holding Areas
 	public GameObject holdingAreaLeft;
@@ -20,17 +20,17 @@ public class MoveButtonOnClick : MonoBehaviour {
 	float rangeLeftHAC;
 
 	void Start(){
-		gameControl = GameObject.FindWithTag ("GameController");
-		moveSpeed = gameControl.GetComponent<LoadOnClick> ().buttonTransitionSpeed;
-		holdingAreaLeft = gameControl.GetComponent<LoadOnClick> ().holdingAreaLeft;
-		holdingAreaRight = gameControl.GetComponent<LoadOnClick> ().holdingAreaRight;
-		holdingAreaCenter = gameControl.GetComponent<LoadOnClick> ().holdingAreaCenter;
+		levelSelectController = GameObject.FindWithTag ("LevelSelectController");
+		moveSpeed = levelSelectController.GetComponent<LoadOnClick> ().buttonTransitionSpeed;
+		holdingAreaLeft = levelSelectController.GetComponent<LoadOnClick> ().holdingAreaLeft;
+		holdingAreaRight = levelSelectController.GetComponent<LoadOnClick> ().holdingAreaRight;
+		holdingAreaCenter = levelSelectController.GetComponent<LoadOnClick> ().holdingAreaCenter;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		float safeRangeHAC = moveSpeed / 2;
-		currentPage = gameControl.GetComponent<LoadOnClick> ().currentPage;
+		currentPage = levelSelectController.GetComponent<LoadOnClick> ().currentPage;
 		posX = transform.position.x;
 		rangeLeftHAC = holdingAreaCenter.transform.position.x - safeRangeHAC;
 		rangeRightHAC = holdingAreaCenter.transform.position.x + safeRangeHAC;

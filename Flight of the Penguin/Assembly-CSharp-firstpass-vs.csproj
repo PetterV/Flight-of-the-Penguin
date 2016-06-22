@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{081CB151-BEF0-1D34-0DEC-2F3DA6A7A1E1}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_9;UNITY_4_6;UNITY_64;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Plugins\Steamworks.NET\CallbackDispatcher.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\CallbackIdentity.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\ISteamMatchmakingResponses.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\InteropHelp.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\Packsize.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\Steam.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\NativeMethods.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\SteamCallbacks.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\SteamConstants.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\SteamEnums.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\SteamStructs.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamapplist.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamapps.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamclient.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamcontroller.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamfriends.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameserver.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameserverhttp.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameserverinventory.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameservernetworking.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameserverstats.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameserverugc.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamgameserverutils.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamhtmlsurface.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamhttp.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteaminventory.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteammatchmaking.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteammusic.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteammusicremote.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamnetworking.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamremotestorage.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamscreenshots.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamugc.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamunifiedmessages.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamuser.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamuserstats.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamutils.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\autogen\isteamvideo.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\MatchmakingTypes\gameserveritem_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\MatchmakingTypes\servernetadr_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClient\HSteamPipe.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClient\HSteamUser.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClient\SteamAPIWarningMessageHook_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClient\SteamAPI_CheckCallbackRegistered_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClient\SteamAPI_PostAPIResultInProcess_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClientPublic\CGameID.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClientPublic\CSteamID.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamClientPublic\HAuthTicket.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamFriends\FriendsGroupID_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamHTMLSurface\HHTMLBrowser.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamHTTP\HTTPCookieContainerHandle.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamHTTP\HTTPRequestHandle.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamInventory\SteamInventoryResult_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamInventory\SteamItemDef_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamInventory\SteamItemInstanceID_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamMatchmaking\HServerListRequest.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamMatchmaking\HServerQuery.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamNetworking\SNetListenSocket_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamNetworking\SNetSocket_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamRemoteStorage\PublishedFileId_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamRemoteStorage\PublishedFileUpdateHandle_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamRemoteStorage\UGCFileWriteStreamHandle_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamRemoteStorage\UGCHandle_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamScreenshots\ScreenshotHandle.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamTypes\AccountID_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamTypes\AppId_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamTypes\DepotId_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamTypes\ManifestId_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamTypes\SteamAPICall_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamUGC\UGCQueryHandle_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamUGC\UGCUpdateHandle_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamUnifiedMessages\ClientUnifiedMessageHandle.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamUserStats\SteamLeaderboardEntries_t.cs" />
+     <Compile Include="Assets\Plugins\Steamworks.NET\types\SteamUserStats\SteamLeaderboard_t.cs" />
+     <None Include="Assets\Plugins\Steamworks.NET\redist\steam_appid.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.9/Standalone/UnityEngine.UI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
