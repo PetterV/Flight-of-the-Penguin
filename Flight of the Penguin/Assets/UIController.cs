@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour {
 	public bool wantsToSelect = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		reallyMenu = GameObject.FindWithTag ("ReallyMenu");
 		reallyQuit = GameObject.FindWithTag ("ReallyQuit");
 		reallySelect = GameObject.FindWithTag ("ReallySelect");
