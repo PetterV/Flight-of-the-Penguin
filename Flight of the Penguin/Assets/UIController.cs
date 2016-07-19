@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour {
 	public GameObject reallyQuit;
 	public GameObject reallyMenu;
 	public GameObject reallySelect;
+	public GameObject player;
 	public bool wantsToQuit = false;
 	public bool wantsToMenu = false;
 	public bool wantsToSelect = false;
@@ -18,6 +19,7 @@ public class UIController : MonoBehaviour {
 		wantsToQuit = false;
 		wantsToMenu = false;
 		wantsToSelect = false;
+		player = GameObject.FindWithTag ("Player");
 	}
 	
 	// Update is called once per frame
@@ -64,5 +66,9 @@ public class UIController : MonoBehaviour {
 	public void LoadMenu(string menuName){
 		Application.LoadLevel (menuName);
 		print ("Load" + menuName);
+	}
+
+	public void UnpauseButton (){
+		player.GetComponent<Movement>().Unpause();
 	}
 }

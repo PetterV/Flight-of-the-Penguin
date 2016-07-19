@@ -86,8 +86,11 @@ public class Movement : MonoBehaviour {
 		exitMenu = GameObject.FindWithTag ("PauseMenu");
 		exitMenu.SetActive (false);
 		uiController = GameObject.FindWithTag ("UIController");
+		if (Time.timeScale != 1) {
+			Unpause ();
+		}
 	}
-	
+
 	// FixedUpdate is called at a fixed rate not once per frame, physics here
 	void FixedUpdate ()
 	{
@@ -267,7 +270,7 @@ public class Movement : MonoBehaviour {
 		//update fuelbar
 		image.fillAmount = Fuel/maxFuel;
 
-		if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown("escape"))
+		if ( !goalHit && (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown("escape")))
 		{
 			if (Time.timeScale == 1)
 			{
