@@ -58,6 +58,7 @@ public class Movement : MonoBehaviour {
 	public GameObject exitMenu;
 	GameObject uiController;
 	private Renderer rend;
+	GameObject engineSoundObject;
 
 	//DONE WITH VARIABLES ADDED BY PETTER
 
@@ -90,7 +91,6 @@ public class Movement : MonoBehaviour {
 		if (Time.timeScale != 1) {
 			Unpause ();
 		}
-		rend = GetComponent<Renderer>();
 	}
 
 	// FixedUpdate is called at a fixed rate not once per frame, physics here
@@ -404,6 +404,7 @@ public class Movement : MonoBehaviour {
 			}
 			GetComponent<PinguNoises>().shouldMakeSound = false;
 			GetComponent<OlafSigh>().dead = true;
+			GameObject.FindWithTag("JetPackSounds").GetComponent<JetpackSound>().levelDone = true;
 		}
 		if (other.gameObject.tag == "Laser" && debug == false) {
 			//play explosions and 2 sec later restart? feels nice with insta restart. mby sound

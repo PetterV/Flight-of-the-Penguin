@@ -129,7 +129,7 @@ GameObject:
   - 114: {fileID: 11467468}
   m_Layer: 2
   m_Name: JetPackSounds
-  m_TagString: Untagged
+  m_TagString: JetPackSounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.7799997, y: .880999982, z: 0}
+  m_LocalPosition: {x: -.0199999996, y: 34.9469986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467486}
@@ -491,7 +491,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 5.53999996
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -990,6 +990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 6b2f92e5b1abe434c97608a69b4613ba, type: 3}
   deadBurn: {fileID: 8300000, guid: a158d3899033558438c5caa1f980bb18, type: 3}
+  levelDone: 0
 --- !u!114 &11467470
 MonoBehaviour:
   m_ObjectHideFlags: 1

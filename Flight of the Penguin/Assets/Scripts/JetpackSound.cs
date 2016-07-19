@@ -9,10 +9,10 @@ public class JetpackSound : MonoBehaviour {
 	public AudioClip deadBurn;
 	bool fuelPlaySound;// Use this for initialization
 	bool hasPlayed = false;
-
+	public bool levelDone = false;
+	
 	void Start () {
 		player = GameObject.FindWithTag("Player");
-
 	}
 
 	// Update is called once per frame
@@ -20,15 +20,15 @@ public class JetpackSound : MonoBehaviour {
 		 //GetComponent<Movement>().fuelPlaySound;
 		//Fuel =(int) player.GetComponent<Movement>().Fuel;
 		Fuel = player.GetComponent<Movement> ().Fuel;
-		if (player.GetComponent<Movement> ().paused == false) {
-			if (Input.GetButton ("Fire1") && Fuel > 0) {
+		if (player.GetComponent<Movement> ().paused == false ) {
+			if (Input.GetButton ("Fire1") && Fuel > 0 && !levelDone ) {
 				audio.clip = audioClip;
 				if (!audio.isPlaying) {
 					audio.loop = true;
 					audio.Play ();
 					hasPlayed = true;
 				}
-			} else if (Input.GetButton ("Fire1") && Fuel <= 0) {
+			} else if (Input.GetButton ("Fire1") && Fuel <= 0 && !levelDone ) {
 				audio.clip = deadBurn;
 				if (!audio.isPlaying) {
 					audio.loop = false;
