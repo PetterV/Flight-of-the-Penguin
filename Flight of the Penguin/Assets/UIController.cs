@@ -10,9 +10,13 @@ public class UIController : MonoBehaviour {
 	public bool wantsToQuit = false;
 	public bool wantsToMenu = false;
 	public bool wantsToSelect = false;
+	GameObject fuelStuff;
+	GameObject timerBox;
+	bool showUI = true;
 
 	// Use this for initialization
 	void Awake () {
+		showUI = true;
 		reallyMenu = GameObject.FindWithTag ("ReallyMenu");
 		reallyQuit = GameObject.FindWithTag ("ReallyQuit");
 		reallySelect = GameObject.FindWithTag ("ReallySelect");
@@ -20,6 +24,8 @@ public class UIController : MonoBehaviour {
 		wantsToMenu = false;
 		wantsToSelect = false;
 		player = GameObject.FindWithTag ("Player");
+		fuelStuff = GameObject.FindWithTag("FuelStuff");
+		timerBox = GameObject.FindWithTag("TimerBox");
 	}
 	
 	// Update is called once per frame
@@ -43,6 +49,9 @@ public class UIController : MonoBehaviour {
 		}
 		if (wantsToSelect == false) {
 			reallySelect.SetActive(false);
+		}
+		if ( Input.GetKeyDown(KeyCode.U)){
+			UIOnOff();
 		}
 	}
 
@@ -70,5 +79,18 @@ public class UIController : MonoBehaviour {
 
 	public void UnpauseButton (){
 		player.GetComponent<Movement>().Unpause();
+	}
+
+	public void UIOnOff (){
+		if ( showUI ) {
+			showUI = false;
+			fuelStuff.SetActive(false);
+			timerBox.SetActive(false);
+		}
+		else if ( !showUI ) {
+			showUI = true;
+			fuelStuff.SetActive(true);
+			timerBox.SetActive(true);
+		}
 	}
 }
