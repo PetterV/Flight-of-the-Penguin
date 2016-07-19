@@ -25,7 +25,7 @@ public class Persistence : MonoBehaviour {
 			
 		}
 //		
-//		
+//		musicSource.volume = GameObject.FindWithTag("GameController").GetComponent<GameControl>().soundVolume;
 	}
 	
 	// Update is called once per frame
