@@ -57,6 +57,7 @@ public class Movement : MonoBehaviour {
 	float torqueToAdd = 5f;
 	public GameObject exitMenu;
 	GameObject uiController;
+	private Renderer rend;
 
 	//DONE WITH VARIABLES ADDED BY PETTER
 
@@ -89,6 +90,7 @@ public class Movement : MonoBehaviour {
 		if (Time.timeScale != 1) {
 			Unpause ();
 		}
+		rend = GetComponent<Renderer>();
 	}
 
 	// FixedUpdate is called at a fixed rate not once per frame, physics here
@@ -220,15 +222,15 @@ public class Movement : MonoBehaviour {
 		//ADDED BY PETTER:
 		//Animation
 		speedCounter = speed * 10;
-		if (speedCounter <= 0.01f) {
+		if (speedCounter <= 0.01f && !inCannon ) {
 			animator.SetInteger ("FlySpeed", 0);
 			animStateTracker = 0;
 		}
-		if (jetpackActive && speedCounter < AnimCrazy && animStateTracker == 0 && Fuel > 0){
+		if (jetpackActive && speedCounter < AnimCrazy && animStateTracker == 0 && Fuel > 0 && !inCannon ){
 			animator.SetInteger("FlySpeed", 1);
 			animStateTracker = 1;
 		}
-		if (jetpackActive && speedCounter >= AnimCrazy) {
+		if (jetpackActive && speedCounter >= AnimCrazy && !inCannon ) {
 			animator.SetInteger ("FlySpeed", 2);
 			animStateTracker = 2;
 			screamTimer++;
@@ -241,16 +243,16 @@ public class Movement : MonoBehaviour {
 			Application.LoadLevel (Application.loadedLevelName);
 		}
 		//This one is currently the cause of a lot of the quick-switching.
-		if (!jetpackActive && speedCounter >= 2 * AnimCrazy) {
+		if (!jetpackActive && speedCounter >= 2 * AnimCrazy && !inCannon ) {
 			animator.SetInteger ("FlySpeed", 2);
 			animStateTracker = 2;
 			screamTimer++;
 		}
-		else if (!jetpackActive && speedCounter >= AnimCrazy && animStateTracker == 0) {
+		else if (!jetpackActive && speedCounter >= AnimCrazy && animStateTracker == 0 && !inCannon ) {
 			animator.SetInteger ("FlySpeed", 1);
 			animStateTracker = 1;
 		}
-		else if (!jetpackActive && speedCounter >= AnimCrazy && animStateTracker == 2 && screamTimer >= screamLength) {
+		else if (!jetpackActive && speedCounter >= AnimCrazy && animStateTracker == 2 && screamTimer >= screamLength && !inCannon ) {
 			animator.SetInteger ("FlySpeed", 1);
 			animStateTracker = 1;
 			screamTimer = 0;
@@ -499,17 +501,17 @@ public class Movement : MonoBehaviour {
 	}
 
 	void CannonOn() {
-//		print("On");
+		print("On");
 		jetpackOn = false;
 		inCannon = true;
-		gameObject.renderer.enabled = false;
+		animator.SetInteger("FlySpeed", 5);
 	}
 
 	void CannonOff() {
 		print("off");
 		jetpackOn = true;
 		inCannon = false;
-		gameObject.renderer.enabled = true;
+		animator.SetInteger("FlySpeed", 2);
 	}
 
 
