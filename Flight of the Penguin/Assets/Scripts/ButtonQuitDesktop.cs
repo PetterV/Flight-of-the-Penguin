@@ -7,7 +7,9 @@ public class ButtonQuitDesktop : MonoBehaviour {
 
 	void Start(){
 		quitCanvas = GameObject.FindWithTag ("QuitOverlay");
-		quitCanvas.SetActive (false);
+		if (quitCanvas){
+			quitCanvas.SetActive (false);
+		}
 	}
 
 	public void AskToQuit(){

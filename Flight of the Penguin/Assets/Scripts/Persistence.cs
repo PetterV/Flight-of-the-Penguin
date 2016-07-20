@@ -13,8 +13,6 @@ public class Persistence : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		musicObject = GameObject.FindGameObjectsWithTag ("GameMusic");
-		musicSource = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource> ();
 		if (musicObject.Length == 1 ) {
 			audio.Play ();
 		}
@@ -24,15 +22,19 @@ public class Persistence : MonoBehaviour {
 			}
 			
 		}
-//		
-//		musicSource.volume = GameObject.FindWithTag("GameController").GetComponent<GameControl>().soundVolume;
+
+		musicSource.volume = setVolume;
 	}
 	
 	// Update is called once per frame
 	void Awake(){
-//		musicSource.volume = setVolume;
+	//	musicSource.volume = setVolume;
 		DontDestroyOnLoad (this.gameObject);
+		musicObject = GameObject.FindGameObjectsWithTag ("GameMusic");
+		musicSource = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource> ();
+		setVolume = GameObject.FindWithTag("GameController").GetComponent<GameControl>().soundVolume/100;
 	}
+
 
 	void Update (){
 		if (fadeDown && musicSource.volume > 0) {

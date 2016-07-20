@@ -12,14 +12,14 @@ public class OptionsGameControlInterface : MonoBehaviour {
 		gameControl = GameObject.FindWithTag("GameController");
 		isMuted = gameControl.GetComponent<GameControl>().mute;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
 	public void VolumeChange (float value){
 		gameControl.GetComponent<GameControl>().soundVolume = value;
+		GameObject.FindWithTag ("GameMusic").GetComponent<AudioSource>().volume = value;
+	}
+
+	public void EffectVolumeChange (float value){
+		gameControl.GetComponent<GameControl>().effectVolume = value;
 	}
 
 	//void MuteOnOff (){

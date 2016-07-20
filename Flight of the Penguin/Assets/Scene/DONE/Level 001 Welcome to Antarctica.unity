@@ -42449,6 +42449,7 @@ MonoBehaviour:
   levelTime: 0
   mute: 0
   soundVolume: 100
+  effectVolume: 100
 --- !u!4 &1545502921
 Transform:
   m_ObjectHideFlags: 0
@@ -53258,6 +53259,7 @@ MonoBehaviour:
   volume: 1
   mineMakeSound: 0
   audioSourceInParent: 0
+  isMusic: 1
 --- !u!82 &1887053759
 AudioSource:
   m_ObjectHideFlags: 0
@@ -58209,6 +58211,10 @@ Prefab:
     - target: {fileID: 11436666, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
       propertyPath: nextButton
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494940, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}
+      propertyPath: isMusic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eb13edbd957a4aa5a161c7e4bcb3a30, type: 2}

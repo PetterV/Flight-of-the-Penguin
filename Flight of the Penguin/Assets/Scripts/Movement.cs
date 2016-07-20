@@ -203,17 +203,6 @@ public class Movement : MonoBehaviour {
 		if (jetpackOn == true && jetpackOnTime > 100) {
 			rigidbody2D.drag = drag;
 		}
-		//Acceleration øker over tid
-//		if (jetpackOn == false) {
-//			Acceleration = StartAcceleration;
-//		}
-//		if (Acceleration <= StartAcceleration) {
-//			Acceleration = StartAcceleration;
-//		}
-//		if (jetpackOn == true && Acceleration <= MaxAcceleration ) {
-//			Acceleration = AccelGrowth * AccelFactor;
-//		}
-		//Sign: Petter (bare slett ting mellom disse to)
 		
 	}
 	

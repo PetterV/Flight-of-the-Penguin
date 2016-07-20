@@ -10,6 +10,7 @@ public class PlaySoundOnce : MonoBehaviour {
 	bool hasPlayed = false;
 	public bool mineMakeSound;
 	public bool audioSourceInParent;
+	public bool isMusic = false;
 
 	void Start (){
 		if (!audioSourceInParent) {
@@ -22,6 +23,9 @@ public class PlaySoundOnce : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D coll){
 		if (coll.gameObject.tag == "Player"){
+			if ( isMusic ) {
+				volume = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume;
+			}
 			audio.PlayOneShot(sound, volume);
 			if (onlyOnce && !hasPlayed){
 				hasPlayed = true;
@@ -29,6 +33,9 @@ public class PlaySoundOnce : MonoBehaviour {
 		}
 
 		if (coll.gameObject.tag == "Mine" && mineMakeSound){
+			if ( isMusic ) {
+				volume = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume;
+			}
 			audio.PlayOneShot(sound, volume);
 			if (onlyOnce && !hasPlayed){
 				hasPlayed = true;
@@ -39,6 +46,9 @@ public class PlaySoundOnce : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D coll){
 		if (coll.gameObject.tag == "Player"){
+			if ( isMusic ) {
+				volume = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume;
+			}
 			audio.PlayOneShot(sound, volume);
 			if (onlyOnce && !hasPlayed){
 				hasPlayed = true;
@@ -46,6 +56,9 @@ public class PlaySoundOnce : MonoBehaviour {
 		}
 		
 		if (coll.gameObject.tag == "Mine" && mineMakeSound){
+			if ( isMusic ) {
+				volume = GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume;
+			}
 			audio.PlayOneShot(sound, volume);
 			if (onlyOnce && !hasPlayed){
 				hasPlayed = true;

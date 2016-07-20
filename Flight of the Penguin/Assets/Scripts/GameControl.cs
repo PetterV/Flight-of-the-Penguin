@@ -17,6 +17,7 @@ public class GameControl : MonoBehaviour {
 	public float effectVolume = 100.0f;
 	PlayerData playerData;
 	AudioListener audio = new AudioListener();
+	GameObject musicObject;
 
 	// Use this for initialization
 	void Awake() {
@@ -77,7 +78,7 @@ public class GameControl : MonoBehaviour {
 			soundVolume = PlayerPrefs.GetInt("soundVolume");
 		}
 		//GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume = soundVolume/100;
-
+		musicObject = GameObject.FindWithTag("GameMusic");
 	}
 	
 	public bool CheckLevelClear(int levelNumber)
@@ -107,8 +108,9 @@ public class GameControl : MonoBehaviour {
 
 	void OnGUI()
 	{
+		/*
 		{
-			if (GUI.Button (new Rect (10, 100, 100, 40), "Collect")) {
+			/*if (GUI.Button (new Rect (10, 100, 100, 40), "Collect")) {
 				level1 = true;
 			}
 			if (GUI.Button (new Rect (10, 60, 100, 40), "Update")) {
@@ -155,7 +157,7 @@ public class GameControl : MonoBehaviour {
 					collectable = data.getCollectable(level);
 					levelTime = data.getLevelTime(level);
 				}
-			} 
+			}
 			else if (GUI.Button (new Rect (10, 220, 100, 40), "Reset")) {
 				if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
 				{
@@ -174,6 +176,7 @@ public class GameControl : MonoBehaviour {
 				}
 			}
 		}
+		*/
 	}
 	// Update is called once per frame
 	void Update () {
@@ -181,7 +184,7 @@ public class GameControl : MonoBehaviour {
 		//	audio.audio.volume = soundVolume/100;
 		//else
 		//	audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> (); // getting the audiosource from the new camera in the newly loaded level
-		GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume = soundVolume/100;
+		//musicObject.GetComponent<AudioSource>().volume = soundVolume/100;
 	}
 
 	public void Reset()
