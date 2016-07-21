@@ -55,7 +55,7 @@ public class LoadOnHit : MonoBehaviour {
 		if (coll.gameObject.tag == "Player" && notHit) {
 			Destroy(gameMusic);
 			completed = true;
-			print ("Goal!");
+			//print ("Goal!");
 			notHit = false;
 			fuelStuff.SetActive(false);
 			if(loadingScreen)
