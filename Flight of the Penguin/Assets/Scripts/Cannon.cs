@@ -12,6 +12,9 @@ public class Cannon : MonoBehaviour {
 	int noShootTime= 10;
 	bool pinguCollision =false;
 	Vector3 mousePosition;
+
+	public ParticleSystem cannonSmoke;
+	public ParticleSystem cannonFire;
 	
 
 	// Use this for initialization
@@ -65,6 +68,9 @@ public class Cannon : MonoBehaviour {
 				other.rigidbody2D.velocity=new Vector2(force.x*CannonStrength,force.y*CannonStrength);
 				}
 				print (force);
+				
+					cannonSmoke.Play ();
+					cannonFire.Play ();
 			}
 			else
 				other.rigidbody2D.velocity=new Vector2(0,0);
