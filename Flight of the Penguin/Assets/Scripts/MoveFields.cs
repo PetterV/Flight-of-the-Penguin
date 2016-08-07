@@ -27,9 +27,12 @@ public class MoveFields : MonoBehaviour {
 		}
 		
 		if (affectMine == true){
-			if (other.tag == "Mine"){
+			if (other.tag == "Mine" || other.tag == "Ball"){
 				other.rigidbody2D.AddForce (new Vector2(accX, accY));
 			}
+
 		}
+
+
 	}
 }
