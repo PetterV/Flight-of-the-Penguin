@@ -18,7 +18,7 @@ public class FlyShake : MonoBehaviour {
 	}
 	
 	// -------------------------------------------------------------------------
-	void Update() {
+	void FixedUpdate() {
 		
 		if (fly == true) {
 			//			flyOnce = false;

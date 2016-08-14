@@ -19,7 +19,7 @@ public class LaunchShake : MonoBehaviour {
 	}
 	
 	// -------------------------------------------------------------------------
-	void Update() {
+	void FixedUpdate() {
 		if (!paused) {
 			if (launch == true) {
 				launch = false;
