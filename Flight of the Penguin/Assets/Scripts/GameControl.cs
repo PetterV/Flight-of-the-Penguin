@@ -14,10 +14,8 @@ public class GameControl : MonoBehaviour {
 	public static GameControl control;
 	public bool mute = false;
 	public float soundVolume = 100.0f;
-	public float effectVolume = 100.0f;
 	PlayerData playerData;
 	AudioListener audio = new AudioListener();
-	GameObject musicObject;
 
 	// Use this for initialization
 	void Awake() {
@@ -57,28 +55,44 @@ public class GameControl : MonoBehaviour {
 				
 			}
 
-			//if(PlayerPrefs.HasKey("soundVolume"))
-			//{
-			//	soundVolume = PlayerPrefs.GetInt("soundVolume");
-			//}
+			if(PlayerPrefs.HasKey("soundVolume"))
+			{
+				soundVolume = PlayerPrefs.GetInt("soundVolume");
+			}
 
 		}
-
-
-
+		else {
+			BinaryFormatter bf = new BinaryFormatter();
+			PlayerData data = new PlayerData();
+			print ("0");
+			
+			if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+			{
+				
+				FileStream filed = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+				data = (PlayerData)bf.Deserialize(filed);
+				filed.Close();
+				
+				
+			}
+			
+			
+			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+			
+			data.Start();
+			
+			data.setlevel(level, level1);
+		//	print ("Saved");
+			bf.Serialize(file, data);
+			print (level1);
+			file.Close();
+		}
 	}
 
 	void Start()
 	{
 		audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> ();//works when changing level
-		//audio.audio.volume = soundVolume/100;
 		GameObject.FindWithTag("GameMusic").GetComponent<Persistence>().ReturnMusic();
-		if(PlayerPrefs.HasKey("soundVolume"))
-		{
-			soundVolume = PlayerPrefs.GetInt("soundVolume");
-		}
-		//GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume = soundVolume/100;
-		musicObject = GameObject.FindWithTag("GameMusic");
 	}
 	
 	public bool CheckLevelClear(int levelNumber)
@@ -108,9 +122,8 @@ public class GameControl : MonoBehaviour {
 
 	void OnGUI()
 	{
-		/*
 		{
-			/*if (GUI.Button (new Rect (10, 100, 100, 40), "Collect")) {
+			if (GUI.Button (new Rect (10, 100, 100, 40), "Collect")) {
 				level1 = true;
 			}
 			if (GUI.Button (new Rect (10, 60, 100, 40), "Update")) {
@@ -157,7 +170,7 @@ public class GameControl : MonoBehaviour {
 					collectable = data.getCollectable(level);
 					levelTime = data.getLevelTime(level);
 				}
-			}
+			} 
 			else if (GUI.Button (new Rect (10, 220, 100, 40), "Reset")) {
 				if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
 				{
@@ -176,15 +189,14 @@ public class GameControl : MonoBehaviour {
 				}
 			}
 		}
-		*/
 	}
 	// Update is called once per frame
 	void Update () {
-		//if(audio) //dont do this every frame. make a function call from options volume slider?
-		//	audio.audio.volume = soundVolume/100;
-		//else
-		//	audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> (); // getting the audiosource from the new camera in the newly loaded level
-		//musicObject.GetComponent<AudioSource>().volume = soundVolume/100;
+		if(audio) //dont do this every frame. make a function call from options volume slider?
+			audio.audio.volume = soundVolume/100;
+		else
+			audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> (); // getting the audiosource from the new camera in the newly loaded level
+
 	}
 
 	public void Reset()
@@ -298,11 +310,6 @@ public class GameControl : MonoBehaviour {
 		int i = (int) Mathf.Floor(soundVolume);
 		PlayerPrefs.SetInt("soundVolume",i);
 	}
-	public void ChangedVolume(){
-		int i = (int) Mathf.Floor(soundVolume);
-		PlayerPrefs.SetInt("soundVolume",i);
-		GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume = soundVolume/100;
-	}
 }
 [Serializable]
 class PlayerData
@@ -412,6 +419,4 @@ class PlayerData
 	{
 		deathCounter++;
 	}
-
-
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class OptionsGameControlInterface : MonoBehaviour {
 
-	public GameObject gameControl;
+/*	public GameObject gameControl;
 	public bool isMuted = false;
 
 
@@ -28,4 +28,5 @@ public class OptionsGameControlInterface : MonoBehaviour {
 	//		gameControl.GetComponent<GameControl>().mute = true;
 	//	}
 	//}
+*/
 }
