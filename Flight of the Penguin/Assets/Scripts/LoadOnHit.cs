@@ -61,13 +61,10 @@ public class LoadOnHit : MonoBehaviour {
 			if(loadingScreen)
 				loadingScreen.SetActive(true);
 
-			/*
-			if(!collectable)
-				collectable = GameControl.control.checkCollectable(levelNumber);
 
-			GameControl.control.LevelClear(levelNumber, collectable);
+			GameControl.control.LevelClear(levelNumber,true);
 			// wait for click
-			*/
+
 
 		//Trigger particle fishies
 

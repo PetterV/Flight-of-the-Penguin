@@ -34,59 +34,69 @@ public class GameControl : MonoBehaviour {
 //		} else
 //			Screen.fullScreen = false;
 
-		if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
-		{
-			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
-			playerData = (PlayerData)bf.Deserialize(file);
-			file.Close();
-			playerData.Start();
-			level1 = playerData.getlevel(level);
-			collectable = playerData.getCollectable(level);
-			levelTime = playerData.getLevelTime(level);
+		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+			playerData = (PlayerData)bf.Deserialize (file);
+			file.Close ();
+			playerData.Start ();
+			level1 = playerData.getlevel (level);
+			collectable = playerData.getCollectable (level);
+			levelTime = playerData.getLevelTime (level);
 
 
-			if(PlayerPrefs.HasKey("Mute"))
-			{
-				if(PlayerPrefs.GetInt("Mute")>0)
+			if (PlayerPrefs.HasKey ("Mute")) {
+				if (PlayerPrefs.GetInt ("Mute") > 0)
 					mute = true;
 				else
 					mute = false;
 				
 			}
 
-			if(PlayerPrefs.HasKey("soundVolume"))
-			{
-				soundVolume = PlayerPrefs.GetInt("soundVolume");
+			if (PlayerPrefs.HasKey ("soundVolume")) {
+				soundVolume = PlayerPrefs.GetInt ("soundVolume");
 			}
 
-		}
-		else {
-			BinaryFormatter bf = new BinaryFormatter();
-			PlayerData data = new PlayerData();
+		} else {
+
+			Debug.Log("-------------new-----------");
+			BinaryFormatter bf = new BinaryFormatter ();
+			PlayerData data = new PlayerData ();
 			print ("0");
+		
+			if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
 			
-			if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
-			{
-				
-				FileStream filed = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
-				data = (PlayerData)bf.Deserialize(filed);
-				filed.Close();
-				
-				
+				FileStream filed = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+				data = (PlayerData)bf.Deserialize (filed);
+				filed.Close ();
+			
+			
 			}
-			
-			
-			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-			
-			data.Start();
-			
-			data.setlevel(level, level1);
-		//	print ("Saved");
-			bf.Serialize(file, data);
+		
+		
+			FileStream file = File.Create (Application.persistentDataPath + "/playerInfo.dat");
+		
+			data.Start ();
+		
+			data.setlevel (level, level1);
+			print ("Saved");
+			bf.Serialize (file, data);
 			print (level1);
-			file.Close();
+			file.Close ();
 		}
+		if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+		{
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+			PlayerData data = (PlayerData)bf.Deserialize(file);
+			playerData = data;
+			file.Close();
+			
+			level1 = data.getlevel(level);
+			collectable = data.getCollectable(level);
+			levelTime = data.getLevelTime(level);
+		}
+
 	}
 
 	void Start()
@@ -376,27 +386,25 @@ class PlayerData
 			timed [levelNumber] = currLevelTime;
 	}
 	public bool getlevel(int levelNumber){
-		Debug.Log (levelNumber);
-		Debug.Log (level);
+//		Debug.Log ("level " + levelNumber);
+//		Debug.Log (level);
 		
 		return level[levelNumber];
 	}
 
 	public bool getCollectable(int levelNumber)
 	{
-		Debug.Log ("GetCollectable");
-		Debug.Log (collect[levelNumber]);
 		return(collect [levelNumber]);
 	}
 	public float getLevelTime(int levelNumber)
 	{
-		Debug.Log (levelNumber);
+		Debug.Log ("level "+levelNumber);
 		if (timed.Count==null) {
 			for (int i = 0; i<200; i++)
 				timed.Add (0);
 			Debug.Log(".............................................");
 		}
-		Debug.Log (timed.Count);
+//		Debug.Log (timed.Count);
 		Debug.Log ("GetLevelTime");
 		Debug.Log (timed[levelNumber]);
 		return(timed [levelNumber]);
