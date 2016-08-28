@@ -28,4 +28,8 @@ public class LoadLevel : MonoBehaviour {
 	//	print ("I'm loading " + buttonLevelToLoad);
 		Application.LoadLevel (buttonLevelToLoad);
 	}
+
+	public void ThisLevelAgain() {
+		Application.LoadLevel(Application.loadedLevelName);
+	}
 }
