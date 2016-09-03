@@ -130,7 +130,7 @@ public class GameControl : MonoBehaviour {
 		return(playerData.getDeath ());
 	}
 
-	void OnGUI()
+	/*void OnGUI()
 	{
 		{
 			if (GUI.Button (new Rect (10, 100, 100, 40), "Collect")) {
@@ -199,7 +199,7 @@ public class GameControl : MonoBehaviour {
 				}
 			}
 		}
-	}
+	}*/
 	// Update is called once per frame
 	void Update () {
 		if(audio) //dont do this every frame. make a function call from options volume slider?
