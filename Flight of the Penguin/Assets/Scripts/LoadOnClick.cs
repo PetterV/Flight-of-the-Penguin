@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class LoadOnClick : MonoBehaviour {
 	public GameObject loadingScreen;
@@ -8,6 +9,8 @@ public class LoadOnClick : MonoBehaviour {
 	public float buttonTransitionSpeed = 10;
 	public int numOfPages = 5;
 	public int currentPage = 0;
+	public GameObject leftButtontoEnable;
+	public GameObject rightButtontoEnable;
 
 	//Holding areas for pages
 	public GameObject holdingAreaLeft;
@@ -64,6 +67,10 @@ public class LoadOnClick : MonoBehaviour {
 				currentPage++;
 			}
 		}
+		leftButtontoEnable.GetComponent<Button> ().interactable = true;
+		if (currentPage == numOfPages) {
+			rightButtontoEnable.GetComponent<Button>().interactable = false;
+		}
 	}
 
 	public void DecreaseCurrentPage(){
@@ -73,6 +80,10 @@ public class LoadOnClick : MonoBehaviour {
 			if (currentPage > 0){
 				currentPage--;
 			}
+		}
+		rightButtontoEnable.GetComponent<Button> ().interactable = true;
+		if (currentPage < 1) {
+			leftButtontoEnable.GetComponent<Button>().interactable = false;
 		}
 	}
 

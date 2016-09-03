@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Button : MonoBehaviour {
+public class OldButtonScript : MonoBehaviour {
 	public Sprite standardSprite;
 	public Sprite hoverSprite; // Drag your first sprite here
 	public Sprite clickSprite; // Drag your second sprite here
