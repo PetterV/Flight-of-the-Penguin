@@ -1048,14 +1048,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167480}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54a76b05bea773f42b7e40eb9abafb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyDuration: 1
-  flySpeed: 3
-  flyMagnitude: 5
+  flyDuration: .300000012
+  flySpeed: 5
+  flyMagnitude: .200000003
   fly: 0
 --- !u!114 &11467480
 MonoBehaviour:
@@ -1068,8 +1068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d027a9a4278fa4eb8b0645008481a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchDuration: .100000001
-  launchSpeed: 3
+  launchDuration: .200000003
+  launchSpeed: 5
   launchMagnitude: 1
   launch: 0
   paused: 0
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: 86fe3a9b09b544876b57e668a0c4b1d7, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: fb5fb48c6c43e47bd9739f7cb1bb7d52, type: 3}
   cursorMode: 1
-  hotSpot: {x: 0, y: 0}
+  hotSpot: {x: -40, y: 0}
 --- !u!114 &11467498
 MonoBehaviour:
   m_ObjectHideFlags: 1

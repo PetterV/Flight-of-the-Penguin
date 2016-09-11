@@ -7,8 +7,8 @@ public class GetBestLevelTime : MonoBehaviour {
 	public bool levelCleared=false;
 	public Timer timer;
 	public GameObject levelStamp;
-//	public GameObject underParSign;
-//	public GameObject underParValue;
+	public float parTime;
+	public GameObject parMedal;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +34,9 @@ public class GetBestLevelTime : MonoBehaviour {
 	void Update () {
 		if (!levelCleared) {
 			levelStamp.SetActive (false);
+		}
+		if (levelTimer == 0 || levelTimer > parTime) {
+			parMedal.SetActive(false);
 		}
 		//if(underParValue > levelTimer){
 		//	underParSigne.SetActive(false);

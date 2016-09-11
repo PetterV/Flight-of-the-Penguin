@@ -7,16 +7,16 @@ public class CursorChanger : MonoBehaviour {
 	public CursorMode cursorMode = CursorMode.Auto;
 	public Vector2 hotSpot = Vector2.zero;
 	bool mouseDown = false;
-	void Awake() {
-		Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+	void Start() {
+		Cursor.SetCursor(cursorTexture, new Vector2(hotSpot.x+cursorTexture.width/2,hotSpot.y+cursorTexture.height/2), cursorMode);
 	}
 	void Update() {
 		//optimize? check if change needed
 		if (Input.GetButton ("Fire1") && !mouseDown) {
-			Cursor.SetCursor (cursorTextureDown, hotSpot, cursorMode);
+			Cursor.SetCursor (cursorTextureDown,new Vector2(hotSpot.x+cursorTextureDown.width/2,hotSpot.y+cursorTextureDown.height/2), cursorMode);
 			mouseDown = true;
 		} else if (!Input.GetButton ("Fire1") && mouseDown) {
-			Cursor.SetCursor (cursorTexture, hotSpot, cursorMode);
+			Cursor.SetCursor (cursorTexture, new Vector2(hotSpot.x+cursorTexture.width/2,hotSpot.y+cursorTexture.height/2), cursorMode);
 			mouseDown = false;
 		}
 	}

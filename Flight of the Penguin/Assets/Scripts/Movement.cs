@@ -117,6 +117,7 @@ public class Movement : MonoBehaviour {
 			jetpackActive = Input.GetButton ("Fire1");
 		else
 			jetpackActive = false;
+			
 		
 		//mosue not close to pingu
 		if ((mousePosition.x < rigidbody2D.position.x - MouseProx || mousePosition.x > rigidbody2D.position.x + MouseProx ||
@@ -133,6 +134,9 @@ public class Movement : MonoBehaviour {
 				Fuel -= minFuel;
 				jetpackOnTime = 0;
 			}
+
+
+
 			Fuel -= 1;
 			fuelPlaySound = true;
 			float accel = Acceleration;
@@ -142,6 +146,9 @@ public class Movement : MonoBehaviour {
 			}
 			if (jetpackOnTime >= 10){
 				accel = Acceleration;
+				//SHAKE TEST
+				mainCamera.GetComponent<FlyShake>().fly = true;
+				//SHAKE TEST END
 			}
 			Vector3 force = new Vector3 (mousePosition.x - rigidbody2D.position.x, mousePosition.y - rigidbody2D.position.y, 0).normalized;
 			//image.fillAmount =image.fillAmount - (1/(percent*100));
@@ -199,6 +206,9 @@ public class Movement : MonoBehaviour {
 		//Sets linear drag depending on whether player is flying or not
 		if (jetpackOn == false) {
 			rigidbody2D.drag = dragFall;
+			//SHAKE TEST
+			mainCamera.GetComponent<FlyShake>().fly = false;
+			//SHAKE TEST END
 		}
 		if (jetpackOn == true && jetpackOnTime > 100) {
 			rigidbody2D.drag = drag;
