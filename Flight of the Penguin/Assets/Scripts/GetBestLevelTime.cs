@@ -27,19 +27,12 @@ public class GetBestLevelTime : MonoBehaviour {
 
 		timer.setTimer (min2, min1, sek2, sek1, hund2, hund1);
 
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
+		//Fix stamps and medals here
 		if (!levelCleared) {
 			levelStamp.SetActive (false);
 		}
 		if (levelTimer == 0 || levelTimer > parTime) {
 			parMedal.SetActive(false);
 		}
-		//if(underParValue > levelTimer){
-		//	underParSigne.SetActive(false);
-		//}
 	}
 }
