@@ -101,13 +101,13 @@ RectTransform:
   m_GameObject: {fileID: 41679821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.53746033, y: 1.25613487, z: 1.08462834}
+  m_LocalScale: {x: 1.59511936, y: 1.25613487, z: 1.08462834}
   m_Children: []
   m_Father: {fileID: 1702498804}
   m_RootOrder: 8
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 246.100006, y: 9.89999962}
+  m_AnchoredPosition: {x: 251, y: 9.89999962}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &41679823
@@ -1386,6 +1386,7 @@ GameObject:
   - 222: {fileID: 1378758067}
   - 114: {fileID: 1378758066}
   - 114: {fileID: 1378758065}
+  - 114: {fileID: 1378758068}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -1450,7 +1451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1418702595}
+      - m_Target: {fileID: 1378758068}
         m_MethodName: LoadLevelFromName
         m_Mode: 5
         m_Arguments:
@@ -1491,6 +1492,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378758063}
+--- !u!114 &1378758068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378758063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc02e0a78f500443beafa705b99ada7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: 0
+  sceneToLoad: 
+  buttonLevelToLoad: 0
 --- !u!1 &1391120388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1604,8 @@ MonoBehaviour:
   mute: 0
   soundVolume: 100
   effectVolume: 100
+  screenshakeOff: 0
+  screenshakeStrength: 100
 --- !u!4 &1418702594
 Transform:
   m_ObjectHideFlags: 0

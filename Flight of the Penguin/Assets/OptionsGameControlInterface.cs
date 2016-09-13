@@ -3,7 +3,7 @@ using System.Collections;
 
 public class OptionsGameControlInterface : MonoBehaviour {
 
-/*	public GameObject gameControl;
+	public GameObject gameControl;
 	public bool isMuted = false;
 
 
@@ -22,11 +22,19 @@ public class OptionsGameControlInterface : MonoBehaviour {
 		gameControl.GetComponent<GameControl>().effectVolume = value;
 	}
 
+	public void ScreenshakeChange (float value){
+		gameControl.GetComponent<GameControl> ().screenshakeStrength = value;
+	}
+
+	public void ScreenshakeOnOff(){
+		gameControl.GetComponent<GameControl> ().screenshakeOff = !gameControl.GetComponent<GameControl> ().screenshakeOff;
+	}
+
 	//void MuteOnOff (){
 	//	if (isMuted == false ){
 	//		isMuted = true;
 	//		gameControl.GetComponent<GameControl>().mute = true;
 	//	}
 	//}
-*/
+
 }

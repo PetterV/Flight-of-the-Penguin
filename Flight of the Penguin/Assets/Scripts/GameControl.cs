@@ -14,8 +14,12 @@ public class GameControl : MonoBehaviour {
 	public static GameControl control;
 	public bool mute = false;
 	public float soundVolume = 100.0f;
+	public float effectVolume = 100.0f;
+	public bool screenshakeOff = false;
+	public float screenshakeStrength = 100.0f; 
 	PlayerData playerData;
 	AudioListener audio = new AudioListener();
+	GameObject musicObject;
 
 	// Use this for initialization
 	void Awake() {
@@ -103,6 +107,15 @@ public class GameControl : MonoBehaviour {
 	{
 		audio = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<AudioListener> ();//works when changing level
 		GameObject.FindWithTag("GameMusic").GetComponent<Persistence>().ReturnMusic();
+		if(PlayerPrefs.HasKey("soundVolume"))
+		{
+			soundVolume = PlayerPrefs.GetInt("soundVolume");
+		}
+		//GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume = soundVolume/100;
+		musicObject = GameObject.FindWithTag("GameMusic");
+		if (PlayerPrefs.HasKey ("effectVolume")) {
+			effectVolume = PlayerPrefs.GetInt("effectVolume");
+		}
 	}
 	
 	public bool CheckLevelClear(int levelNumber)
@@ -314,11 +327,27 @@ public class GameControl : MonoBehaviour {
 	{
 		int i = (int) Mathf.Floor(soundVolume);
 		PlayerPrefs.SetInt("soundVolume",i);
+		int eff = (int)Mathf.Floor (effectVolume);
+		PlayerPrefs.SetInt ("effectVolume", eff);
 	}
 	void OnApplicationQuit()
 	{
 		int i = (int) Mathf.Floor(soundVolume);
 		PlayerPrefs.SetInt("soundVolume",i);
+		int eff = (int)Mathf.Floor (effectVolume);
+		PlayerPrefs.SetInt ("effectVolume", eff);
+	}
+	public void ChangedVolume(){
+		int i = (int) Mathf.Floor(soundVolume);
+		PlayerPrefs.SetInt("soundVolume",i);
+		GameObject.FindWithTag("GameMusic").GetComponent<AudioSource>().volume = soundVolume/100;
+	}
+	public void ChangedEffectVolume(){
+		int eff = (int) Mathf.Floor(effectVolume);
+		PlayerPrefs.SetInt("effectVolume",eff);
+		GameObject.FindWithTag("Player").GetComponent<AudioSource>().volume = effectVolume/100;
+		GameObject.FindWithTag("MainCamera").GetComponent<AudioSource>().volume = effectVolume/100;
+		GameObject.FindWithTag("JetPackSounds").GetComponent<AudioSource>().volume = effectVolume/100;
 	}
 }
 [Serializable]
