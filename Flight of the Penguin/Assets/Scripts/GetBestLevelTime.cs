@@ -28,11 +28,13 @@ public class GetBestLevelTime : MonoBehaviour {
 		timer.setTimer (min2, min1, sek2, sek1, hund2, hund1);
 
 		//Fix stamps and medals here
-		if (!levelCleared) {
+		if (!levelCleared && levelStamp) {
 			levelStamp.SetActive (false);
 		}
 		if (levelTimer == 0 || levelTimer > parTime) {
-			parMedal.SetActive(false);
+			if (parMedal){
+				parMedal.SetActive(false);
+			}
 		}
 	}
 }
