@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.7799997, y: .880999982, z: 0}
+  m_LocalPosition: {x: 10.7799997, y: 1.05999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467486}
@@ -480,7 +480,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .0392156877, g: .160784319, b: .235294119, a: 0}
+  m_BackGroundColor: {r: .062716268, g: .28824389, b: .426470578, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -558,7 +558,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: .5
+  m_Pitch: .800000012
   Loop: 0
   Mute: 0
   Priority: 128
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a37bc2f65c40cd48a2f8c0d10d24f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 6b2f92e5b1abe434c97608a69b4613ba, type: 3}
+  audioClip: {fileID: 8300000, guid: d3ea555e3a92b4844aac7b9c1204444d, type: 3}
   deadBurn: {fileID: 8300000, guid: a158d3899033558438c5caa1f980bb18, type: 3}
   levelDone: 0
 --- !u!114 &11467470
@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d823863b34e4648afb042b39991109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: .200000003
-  speed: 10
+  duration: .600000024
+  speed: 8
   magnitude: 3
   testDead: 0
   onlyOnce: 1
@@ -1180,6 +1180,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c41118333a8e34f4182be2a465406ac3, type: 3}
   - {fileID: 8300000, guid: 13299a7d48aed8e42b89a027ed569d12, type: 3}
   - {fileID: 8300000, guid: 45cd1db4408f0f74fb1e84cd1997e41a, type: 3}
+  - {fileID: 8300000, guid: 091e2569030387545b98e3b3c73807c8, type: 3}
+  - {fileID: 8300000, guid: 7f04917cc0b643047abcb348783eb3fe, type: 3}
+  - {fileID: 8300000, guid: f73e2b8a2e9f3634688033366e440695, type: 3}
+  - {fileID: 8300000, guid: 7c8b713498204f148b9a5dd0d8e022d3, type: 3}
+  - {fileID: 8300000, guid: 32302afecd737c341827c6d89a82a4aa, type: 3}
+  - {fileID: 8300000, guid: 7301864dbbacce34e83735188e0f148f, type: 3}
   occurrence: .0500000007
   shouldMakeSound: 1
 --- !u!114 &11467494
