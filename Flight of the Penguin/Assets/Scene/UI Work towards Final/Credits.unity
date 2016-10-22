@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 86fe3a9b09b544876b57e668a0c4b1d7, type: 3}
   cursorTextureDown: {fileID: 2800000, guid: fb5fb48c6c43e47bd9739f7cb1bb7d52, type: 3}
-  cursorMode: 1
+  cursorMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!108 &71517200
 Light:
@@ -339,6 +339,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c41118333a8e34f4182be2a465406ac3, type: 3}
   - {fileID: 8300000, guid: 13299a7d48aed8e42b89a027ed569d12, type: 3}
   - {fileID: 8300000, guid: 45cd1db4408f0f74fb1e84cd1997e41a, type: 3}
+  - {fileID: 8300000, guid: 091e2569030387545b98e3b3c73807c8, type: 3}
+  - {fileID: 8300000, guid: 7f04917cc0b643047abcb348783eb3fe, type: 3}
+  - {fileID: 8300000, guid: f73e2b8a2e9f3634688033366e440695, type: 3}
+  - {fileID: 8300000, guid: 7c8b713498204f148b9a5dd0d8e022d3, type: 3}
+  - {fileID: 8300000, guid: 32302afecd737c341827c6d89a82a4aa, type: 3}
+  - {fileID: 8300000, guid: 7301864dbbacce34e83735188e0f148f, type: 3}
   occurrence: .0500000007
   shouldMakeSound: 1
 --- !u!82 &71517207
@@ -561,7 +567,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Rasmus Valand Fredriksen
 
-    Art'
+    Art / Penguin Voice'
 --- !u!222 &112008473
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1349,13 +1355,13 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 192287105}
   m_GameObject: {fileID: 481458904}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54a76b05bea773f42b7e40eb9abafb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyDuration: .100000001
-  flySpeed: .699999988
+  flyDuration: .400000006
+  flySpeed: 4
   flyMagnitude: .100000001
   fly: 0
 --- !u!114 &481458908
@@ -1370,9 +1376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d027a9a4278fa4eb8b0645008481a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchDuration: .5
-  launchSpeed: .400000006
-  launchMagnitude: .5
+  launchDuration: .300000012
+  launchSpeed: 6
+  launchMagnitude: .150000006
   launch: 0
   paused: 0
 --- !u!114 &481458909
@@ -1387,8 +1393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d823863b34e4648afb042b39991109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: .5
-  speed: 10
+  duration: .600000024
+  speed: 8
   magnitude: 3
   testDead: 0
   onlyOnce: 1
@@ -3339,7 +3345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a37bc2f65c40cd48a2f8c0d10d24f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 6b2f92e5b1abe434c97608a69b4613ba, type: 3}
+  audioClip: {fileID: 8300000, guid: d3ea555e3a92b4844aac7b9c1204444d, type: 3}
   deadBurn: {fileID: 8300000, guid: a158d3899033558438c5caa1f980bb18, type: 3}
   levelDone: 0
 --- !u!82 &1080547977
@@ -3354,7 +3360,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: .5
+  m_Pitch: .800000012
   Loop: 0
   Mute: 0
   Priority: 128
@@ -4109,7 +4115,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Eirik Hjorthaug Kiil
 
-    Design'
+    Game / Level Design'
 --- !u!222 &1798987814
 CanvasRenderer:
   m_ObjectHideFlags: 0
