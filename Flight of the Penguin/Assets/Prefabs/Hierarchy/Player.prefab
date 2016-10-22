@@ -269,7 +269,6 @@ GameObject:
   - 114: {fileID: 11467498}
   - 58: {fileID: 5867464}
   - 108: {fileID: 10867464}
-  - 114: {fileID: 11467496}
   m_Layer: 2
   m_Name: Olaf
   m_TagString: Player
@@ -284,7 +283,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.7799997, y: 1.05999994, z: 0}
+  m_LocalPosition: {x: 10.7799997, y: .880999982, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467486}
@@ -557,8 +556,8 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: .800000012
+  m_Volume: .889999986
+  m_Pitch: .639999986
   Loop: 0
   Mute: 0
   Priority: 128
@@ -673,7 +672,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: .479000002
+  m_Volume: 1
   m_Pitch: 1.09000003
   Loop: 0
   Mute: 0
@@ -1201,21 +1200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite1: {fileID: 0}
   sprite2: {fileID: 0}
---- !u!114 &11467496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b8cd0ce86e4469d962220a375236a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 86fe3a9b09b544876b57e668a0c4b1d7, type: 3}
-  cursorTextureDown: {fileID: 2800000, guid: fb5fb48c6c43e47bd9739f7cb1bb7d52, type: 3}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!114 &11467498
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -906,6 +906,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 995500710}
   - 114: {fileID: 995500709}
+  - 114: {fileID: 995500714}
   - 114: {fileID: 995500711}
   - 114: {fileID: 995500712}
   - 114: {fileID: 995500713}
@@ -998,6 +999,22 @@ MonoBehaviour:
   levelToLoad: 0
   sceneToLoad: 
   buttonLevelToLoad: 0
+--- !u!114 &995500714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11470832, guid: 41a667902a44ee8439684e721f9df4b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1552393734}
+  m_GameObject: {fileID: 995500708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b8cd0ce86e4469d962220a375236a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 86fe3a9b09b544876b57e668a0c4b1d7, type: 3}
+  cursorTextureDown: {fileID: 2800000, guid: fb5fb48c6c43e47bd9739f7cb1bb7d52, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &1013941317
 GameObject:
   m_ObjectHideFlags: 0
