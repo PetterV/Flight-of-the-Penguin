@@ -379,6 +379,7 @@ class PlayerData
 		}
 	}
 
+
 	public void Reset ()
 	{
 		deathCounter = 0;
@@ -397,7 +398,7 @@ class PlayerData
 				timed [i] = 0;
 
 	}
-	
+
 	public void setlevel(int levelNumber, bool boolean){
 		Debug.Log ("SETINGLEVEL");
 		Debug.Log (levelNumber);

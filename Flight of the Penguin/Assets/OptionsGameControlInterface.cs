@@ -30,6 +30,10 @@ public class OptionsGameControlInterface : MonoBehaviour {
 		gameControl.GetComponent<GameControl> ().screenshakeOff = !gameControl.GetComponent<GameControl> ().screenshakeOff;
 	}
 
+	public void RunResetEffect(){
+		gameControl.GetComponent<GameControl> ().Reset();
+	}
+
 	//void MuteOnOff (){
 	//	if (isMuted == false ){
 	//		isMuted = true;
